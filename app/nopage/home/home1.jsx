@@ -9,10 +9,10 @@ import 'swiper/css/autoplay';
 
 export default function Home() {
     return (
-        <div className="relative min-h-screen overflow-hidden">
+        <div className="relative overflow-hidden">
 
 
-            <div className="relative z-10 bg-white text-black px-4 lg:px-0 py-6 lg:pt-8 flex justify-center">
+            <div className="relative z-10 mb-10 bg-white text-black px-4 lg:px-0 py-6 lg:pt-8 flex justify-center">
                 <motion.section
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ export default function Home() {
                             transition={{ duration: 0.4 }}
                             className="text-2xl lg:text-5xl font-bold mb-4 lg:mb-6 leading-tight uppercase"
                         >
-                            🚀 Launch Your Professional Website In Just ⏱️
+                            🚀 Get Your Professional Website In Just ⏱️
                             <motion.span
                                 initial={{ scale: 0.9 }}
                                 animate={{ scale: 1 }}

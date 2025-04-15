@@ -5,7 +5,7 @@ export default function Page(){
     return(
         <>
         <Home1/>
-        {/* <Home2/> */}
+        <Home2/>
         </>
     )
 };
