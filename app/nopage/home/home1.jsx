@@ -166,7 +166,7 @@ export default function Home() {
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                     href="/form-page"
-                                    className="w-full bg-[#16FF00] hover:bg-[#FFED00] text-black font-semibold py-3 rounded-lg transition-all duration-300 flex justify-center items-center gap-2 relative overflow-hidden"
+                                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 rounded-lg transition-all duration-300 flex justify-center items-center gap-2 relative overflow-hidden"
                                 >
                                     <span className="relative z-10">
                                         ✏️ Get Free Consultation →

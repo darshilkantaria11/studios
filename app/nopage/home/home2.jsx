@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 export default function Home() {
     const logos = [
         "/nextjs-logo.svg",
+        "/google-search-console1.png",
         "/vercel-logo.svg",
-        "/google-search-console.png",
-        "/shopify-logo.png",
         "/google-analytics-logo.png",
-        "/tailwind.png",
+        "/shopify-logo.png",
         "/googlemybusiness1.jpeg",
+        "/tailwind.png",
     ];
 
     return (
-        <section className="py-10  overflow-hidden">
+        <section className=" py-10 overflow-hidden">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

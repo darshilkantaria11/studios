@@ -6,3 +6,40 @@ body {
 
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* home 3 css */
+
+.bg-testimonial-avatar {
+  background: linear-gradient(45deg, #4F46E5 0%, #EC4899 100%);
+}
+
+.hover-card-shadow {
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-card-shadow:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+/* home 3 css */
+
+
+/* home 4 css */
+.feature-list li {
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: slideIn 0.6s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.feature-list li:nth-child(1) { animation-delay: 0.1s; }
+.feature-list li:nth-child(2) { animation-delay: 0.2s; }
+.feature-list li:nth-child(3) { animation-delay: 0.3s; }
+.feature-list li:nth-child(4) { animation-delay: 0.4s; }
+/* home 4 css */
