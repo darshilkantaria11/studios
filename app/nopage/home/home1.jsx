@@ -33,7 +33,9 @@ export default function Home() {
                             transition={{ duration: 0.4 }}
                             className="text-2xl lg:text-5xl font-bold mb-4 lg:mb-6 leading-tight uppercase"
                         >
-                            🚀 Get Your Professional Website In Just ⏱️
+                            <span className='mr-1'>🚀 Get Your Professional</span>
+                            <br className="hidden lg:block" />
+                            Website In Just ⏱️
                             <motion.span
                                 initial={{ scale: 0.9 }}
                                 animate={{ scale: 1 }}
@@ -42,6 +44,7 @@ export default function Home() {
                                 2 Weeks
                             </motion.span>
                         </motion.h1>
+
 
                         {/* Subheadline */}
                         <motion.p
