@@ -27,7 +27,7 @@ const testimonials = [
 
 export default function Testimonials() {
     return (
-        <section className="py-10 bg-gray-100">
+        <section className="py-10 ">
             <div className="container mx-auto px-4">
                 {/* Section Header */}
                 <motion.div

@@ -95,19 +95,31 @@ export default function ServicesPage() {
 
     return (
         <div className="min-h-screen bg-white">
-            <div className="container mx-auto px-4 py-20">
+            <div className="container mx-auto px-4 py-8 ">
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6"
+                    className="text-3xl md:text-5xl font-bold text-center text-gray-900 mb-6"
                 >
                     Services That Drive Real Results
 
                 </motion.h1>
-                <p className="text-center text-gray-600 text-lg mb-16 max-w-3xl mx-auto">
+                <p className="text-center text-gray-600 text-md lg:text-lg mb-6 max-w-3xl mx-auto">
                     We don&apos;t just build websites — we build businesses. Our services are tailored to help you convert visitors into customers and grow fast.
 
                 </p>
+
+                <div className=" mb-12 text-white text-center ">
+                    <Link href="/">
+                        <motion.div
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transition cursor-pointer"
+                        >
+                            Get Free Consultation →
+                        </motion.div>
+                    </Link>
+                </div>
 
 
 
@@ -119,8 +131,8 @@ export default function ServicesPage() {
                             key={service.title}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            whileHover={{ scale: 1.03 }}
-                            transition={{ delay: index * 0.1 }}
+                            whileHover={{ scale: 1.05 }}
+                            // transition={{ delay: index * 0.1 }}
                             className={`group relative ${service.color}  rounded-2xl p-6 text-white shadow-xl`}
                         >
                             <Link href={service.link}>
@@ -189,7 +201,7 @@ export default function ServicesPage() {
                 </div>
 
                 {/* CTA Section */}
-                <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white text-center py-20 px-6 rounded-2xl shadow-2xl">
+                <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-20 px-6 rounded-2xl shadow-2xl mb-10">
                     <motion.h3
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -209,7 +221,7 @@ export default function ServicesPage() {
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="inline-block bg-white text-orange-600 font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transition cursor-pointer"
+                            className="inline-block bg-white text-black font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transition cursor-pointer"
                         >
                             Get Free Consultation →
                         </motion.div>
