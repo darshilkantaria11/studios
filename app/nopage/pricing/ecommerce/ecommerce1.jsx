@@ -6,89 +6,102 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const PricingTiers = () => {
+const EcommercePricingTiers = () => {
     const router = useRouter();
 
     const tiers = [
         {
             name: "Starter",
-            price: "$999",
+            price: "$1799",
             features: [
-                "5–7 Custom Pages Designed to Match Your Brand",
-                "On-Page SEO for Higher Google Rankings",
-                "Social Media Integration",
-                "Interactive Contact Form",
-                "Fast Loading Speeds",
-                "Google Indexing & Analytics Setup",
-                "1 Year Free Hosting Included",
-                "WhatsApp Chat Integration",
+                "Up to 5 Product Categories ",
+                "Unlimited Products per Category",
+                "5GB Image Storage",
+                "On-Page SEO for Product Visibility",
+                "Payment Gateway Integration (e.g., Stripe, Razorpay)",
+                "User-Friendly Shopping Cart & Checkout",
+                "Email Order Notifications to Customer & Store Owner",
+                "Responsive Design for Mobile & Desktop",
+                "Admin Panel Setup to Add, Update, Delete Products",
+                "Login with Google for Customers",
+                "My Orders Page with Order History & Cancel Option",
+                "1 Year Free Hosting",
                 "Unlimited Revisions Until Launch"
             ],
             color: "from-blue-100 to-blue-50",
-            popular: false
+            popular: true
         },
         {
             name: "Growth",
-            price: "$1299",
+            price: "$2199",
             features: [
                 "Everything in Starter Plan",
-                "12–15 Pages for More Content and Expansion",
-                "Advanced SEO for Better Visibility",
-                "Integrated Blog System",
-                "Custom Booking Forms",
-                "Priority Development Timeline",
-                "Dedicated Project Manager",
-                "1-Month Post-Launch Support",
-                "Unlimited Revisions for 30 Days After Launch"
+                "7–10 Product Categories",
+                "10GB Image Storage",
+                "Admin Dashboard with Daily Metrics (Orders, Revenue, etc.)",
+                "Invoice Generator for Customer Orders",
+                "Advanced SEO with Structured Data Markup",
+                "Add to Favourite Functionality for Customers",
+                "Product Ratings with Customer Reviews",
+                "Coupon & Discount Code System",
+                "Order Management Dashboard",
+                "1-Month Post-Launch Technical Support",
+                "30 Days Unlimited Revisions"
             ],
             color: "from-purple-100 to-purple-50",
             popular: true
         },
         {
             name: "Enterprise",
-            price: "$1699+",
+            price: "$2699+",
             features: [
                 "Everything in Growth Plan",
-                "Unlimited Pages for Large-Scale Projects",
-                "Tailored Solutions Based on Your Unique Business Requirements",
-                "3rd Party API Integrations (e.g. CRMs, Payment Systems)",
-                "Ongoing Performance & Analytics Dashboard",
-                "24/7 Premium Support"
+                "Unlimited Product Categories & Listings",
+                "Advanced Admin Dashboard (Real-Time Sales, Traffic, Inventory)",
+                "Custom CRM Integration & API Support",
+                "Role-Based Admin Access (e.g., Product Manager, Order Handler)",
+                "Advanced Invoice & Tax Rules Generator",
+                "Custom Landing Pages for Campaigns or Products",
+                "3 Months Free Technical Support Post-Launch",
+                "Priority Support with Dedicated Account Manager",
+                "Performance Optimization & Speed Enhancements",
+                "Tailored Features as per your Specific Business Needs"
             ],
             color: "from-orange-100 to-orange-50",
             popular: false
         }
+        
     ];
 
     const faqs = [
         {
-            question: "When do I need to make a payment?",
-            answer: "We request full payment only after the project is completed and you're fully satisfied with the results. This approach ensures you have complete confidence in our work before any payment is made."
+            question: "Will my e-commerce website accept online payments?",
+            answer: "Yes. All plans include secure payment gateway integration such as Stripe, PayPal, or Razorpay."
         },
         {
-            question: "How do you handle hosting and domain services?",
-            answer: "We take care of purchasing and setting up your hosting and domain services on your behalf. Once the project is completed, we provide you with full access and ownership details."
+            question: "Can I manage orders and inventory myself?",
+            answer: "Absolutely. You'll receive a simple dashboard to add, remove, or update products and manage orders."
         },
         {
-            question: "Are there any hidden or additional costs?",
-            answer: "No. All costs are transparently outlined in the initial proposal. Any additional features or services will be discussed and agreed upon before implementation."
+            question: "Do I need to buy hosting separately?",
+            answer: "No. All packages include 1 year of fast, secure hosting — handled by us."
         },
         {
-            question: "Can you accommodate a one-page website or landing page?",
-            answer: "Absolutely. We offer customized solutions for one-page websites or landing pages at a reduced rate. Contact us to discuss your specific needs."
+            question: "Can I request custom features?",
+            answer: "Yes. Especially in the Enterprise plan, we tailor functionality to fit your unique business needs."
         },
         {
-            question: "How do you ensure website security and performance?",
-            answer: "We implement best practices for website security, including SSL certificates and regular updates. Our hosting solutions are optimized for performance, ensuring fast load times and reliability."
+            question: "Will my site be mobile-friendly?",
+            answer: "Definitely. Every e-commerce website we build is optimized for both mobile and desktop."
         }
     ];
-     const [openIndex, setOpenIndex] = useState(null);
-        const toggle = (index) => setOpenIndex(openIndex === index ? null : index);
+
+    const [openIndex, setOpenIndex] = useState(null);
+    const toggle = (index) => setOpenIndex(openIndex === index ? null : index);
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             <div className="container mx-auto px-4 py-12">
-                {/* Hero Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -96,15 +109,15 @@ const PricingTiers = () => {
                 >
                     <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
                         <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                            Get Your Website Done Right
+                            Sell Smarter, Not Harder
                         </span>
                         <br />
-                        Without the Headache
+                        Launch Your Online Store with Confidence
                     </h1>
                     <p className="text-lg text-gray-600 mt-2 mb-8">
-                        Professionally built, mobile-friendly, and ready to grow your business — all for a predictable price.
+                        Beautifully built, conversion-focused, and optimized for growth — your e-commerce success starts here.
                     </p>
-                    <div className=" mb-2  text-white text-center ">
+                    <div className="mb-2 text-white text-center">
                         <Link href="/">
                             <motion.div
                                 whileHover={{ scale: 1.05 }}
@@ -117,7 +130,6 @@ const PricingTiers = () => {
                     </div>
                 </motion.div>
 
-                {/* Pricing Grid */}
                 <div className="grid lg:grid-cols-3 gap-8 mb-20">
                     {tiers.map((tier, index) => (
                         <motion.div
@@ -140,7 +152,6 @@ const PricingTiers = () => {
                                     </div>
                                 </div>
 
-                                {/* Features List */}
                                 <ul className="space-y-4 flex-1 mb-8">
                                     {tier.features.map((feature, fIndex) => (
                                         <motion.li
@@ -156,7 +167,6 @@ const PricingTiers = () => {
                                     ))}
                                 </ul>
 
-                                {/* CTA Button */}
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
@@ -172,13 +182,12 @@ const PricingTiers = () => {
                                 </motion.button>
                             </div>
 
-                            {/* Smooth Hover Border */}
                             <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-200 rounded-2xl pointer-events-none transition-all duration-300 ease-in-out" />
                         </motion.div>
                     ))}
                 </div>
 
-                <h2 className="text-3xl mt-8 font-bold text-center text-gray-900 mb-10">Website Development Pricing FAQs</h2>
+                <h2 className="text-3xl mt-8 font-bold text-center text-gray-900 mb-10">E-commerce Website FAQs</h2>
                 <div className="max-w-4xl mx-auto space-y-6">
                     {faqs.map((faq, i) => (
                         <div
@@ -209,10 +218,9 @@ const PricingTiers = () => {
                         </div>
                     ))}
                 </div>
-
             </div>
         </div>
     );
 };
 
-export default PricingTiers;
+export default EcommercePricingTiers;

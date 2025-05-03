@@ -20,7 +20,7 @@ export default function PricingPage() {
             color: "bg-blue-600",
             icon: <ShoppingCart className="w-8 h-8" />,
             startingPrice: "$1,799",
-            link: "/pricing/ecommerce-pricing",
+            link: "/pricing/e-commerce-website-pricing",
             popular: true
         },
         {
