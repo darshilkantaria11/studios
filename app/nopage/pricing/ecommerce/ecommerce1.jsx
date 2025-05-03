@@ -70,7 +70,7 @@ const EcommercePricingTiers = () => {
             color: "from-orange-100 to-orange-50",
             popular: false
         }
-        
+
     ];
 
     const faqs = [
@@ -100,7 +100,7 @@ const EcommercePricingTiers = () => {
     const toggle = (index) => setOpenIndex(openIndex === index ? null : index);
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+        <div className="min-h-screen ">
             <div className="container mx-auto px-4 py-12">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -218,6 +218,36 @@ const EcommercePricingTiers = () => {
                         </div>
                     ))}
                 </div>
+                {/* Final CTA Section */}
+                <div className="mt-20 text-center bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl py-16 px-6 shadow-lg">
+                    <motion.h3
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+                    >
+                        Still Have Questions?
+                    </motion.h3>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="text-lg text-gray-600 mb-8 max-w-xl mx-auto"
+                    >
+                        Let's hop on a quick call to discuss your goals and how we can help — no strings attached.
+                    </motion.p>
+                    <Link href="/contact">
+                        <motion.div
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition"
+                        >
+                            Get Free Consultation →
+                        </motion.div>
+                    </Link>
+                </div>
+
             </div>
         </div>
     );
