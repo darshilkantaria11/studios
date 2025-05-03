@@ -1,3 +1,5 @@
+// app/seo-pricing/page.tsx
+
 "use client";
 
 import { CheckCircle, ChevronRight, ChevronDown } from 'lucide-react';
@@ -6,93 +8,80 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const EcommercePricingTiers = () => {
+const SEOPricingTiers = () => {
     const router = useRouter();
 
     const tiers = [
         {
-            name: "Starter",
-            price: "$1799",
+            name: "Starter SEO",
+            price: "$333/month",
             features: [
-                "Up to 5 Product Categories ",
-                "Unlimited Products per Category",
-                "5GB Image Storage",
-                "On-Page SEO for Product Visibility",
-                "Payment Gateway Integration (e.g., Stripe, Razorpay)",
-                "User-Friendly Shopping Cart & Checkout",
-                "Email Order Notifications to Customer & Store Owner",
-                "Responsive Design for Mobile & Desktop",
-                "Admin Panel Setup to Add, Update, Delete Products",
-                "Login with Google for Customers",
-                "My Orders Page with Order History & Cancel Option",
-                "1 Year Free Hosting",
-                "Unlimited Revisions Until Launch"
+                "Keyword Research for Up to 5 Pages",
+                "On-Page Optimization (Titles, Meta, Headers)",
+                "Basic Technical SEO (Speed, Mobile)",
+                "Google Search Console Setup",
+                "SEO-Optimized Sitemap Submission",
+                "Monthly SEO Report",
+                "1 Round of Revisions per Month"
             ],
-            color: "from-blue-100 to-blue-50",
+            color: "from-green-100 to-green-50",
             popular: false
         },
         {
-            name: "Growth",
-            price: "$2199",
+            name: "Growth SEO",
+            price: "$666/month",
             features: [
                 "Everything in Starter Plan",
-                "7–10 Product Categories",
-                "10GB Image Storage",
-                "Admin Dashboard with Daily Metrics (Orders, Revenue, etc.)",
-                "Invoice Generator for Customer Orders",
-                "Advanced SEO with Structured Data Markup",
-                "Add to Favourite Functionality for Customers",
-                "Product Ratings with Customer Reviews",
-                "Coupon & Discount Code System",
-                "Order Management Dashboard",
-                "1-Month Post-Launch Technical Support",
-                "30 Days Unlimited Revisions"
+                "Keyword Strategy for 10+ Pages",
+                "Internal Linking Strategy",
+                "Google Analytics Setup & Goals",
+                "Local SEO Optimization (Google Business Profile)",
+                "2 Blog Posts per Month (SEO Optimized)",
+                "Technical SEO Audit & Fixes",
+                "2 Rounds of Revisions per Month"
             ],
-            color: "from-purple-100 to-purple-50",
+            color: "from-indigo-100 to-indigo-50",
             popular: true
         },
         {
-            name: "Enterprise",
-            price: "$2699+",
+            name: "Enterprise SEO",
+            price: "$999/month",
             features: [
                 "Everything in Growth Plan",
-                "Unlimited Product Categories & Listings",
-                "Advanced Admin Dashboard (Real-Time Sales, Traffic, Inventory)",
-                "Custom CRM Integration & API Support",
-                "Role-Based Admin Access (e.g., Product Manager, Order Handler)",
-                "Advanced Invoice & Tax Rules Generator",
-                "Custom Landing Pages for Campaigns or Products",
-                "3 Months Free Technical Support Post-Launch",
-                "Priority Support with Dedicated Account Manager",
-                "Performance Optimization & Speed Enhancements",
-                "Tailored Features as per your Specific Business Needs"
+                "Advanced Keyword Cluster Mapping",
+                "Content Strategy with 4 SEO Blogs per Month",
+                "High-Quality Backlink Outreach",
+                "Conversion Rate Optimization (CRO) Suggestions",
+                "Competitor SEO Analysis",
+                "Dedicated SEO Manager",
+                "Priority Reporting & Strategy Calls",
+                "Custom Technical Implementations as Needed"
             ],
-            color: "from-orange-100 to-orange-50",
+            color: "from-yellow-100 to-yellow-50",
             popular: false
         }
-        
     ];
 
     const faqs = [
         {
-            question: "Will my e-commerce website accept online payments?",
-            answer: "Yes. All plans include secure payment gateway integration such as Stripe, PayPal, or Razorpay."
+            question: "How long does it take to see SEO results?",
+            answer: "SEO is a long-term strategy. You can start seeing measurable improvements in 3-6 months, depending on your industry and competition."
         },
         {
-            question: "Can I manage orders and inventory myself?",
-            answer: "Absolutely. You'll receive a simple dashboard to add, remove, or update products and manage orders."
+            question: "Is content included in the plans?",
+            answer: "Yes. The Growth and Enterprise plans include monthly SEO-optimized blog posts to improve rankings and traffic."
         },
         {
-            question: "Do I need to buy hosting separately?",
-            answer: "No. All packages include 1 year of fast, secure hosting — handled by us."
+            question: "Do I get reports and updates?",
+            answer: "Absolutely. All plans come with monthly reports showing traffic, rankings, and action items completed."
         },
         {
-            question: "Can I request custom features?",
-            answer: "Yes. Especially in the Enterprise plan, we tailor functionality to fit your unique business needs."
+            question: "Is this a one-time service or monthly?",
+            answer: "The pricing shown is per month. SEO is most effective when implemented consistently over time."
         },
         {
-            question: "Will my site be mobile-friendly?",
-            answer: "Definitely. Every e-commerce website we build is optimized for both mobile and desktop."
+            question: "Do you handle technical SEO fixes?",
+            answer: "Yes. All plans include basic technical SEO, while Growth and Enterprise plans come with detailed audits and fixes."
         }
     ];
 
@@ -108,23 +97,23 @@ const EcommercePricingTiers = () => {
                     className="text-center mb-20 max-w-4xl mx-auto"
                 >
                     <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-                        <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                            Sell Smarter, Not Harder
+                        <span className="bg-gradient-to-r from-green-600 to-indigo-600 bg-clip-text text-transparent">
+                            Climb the Rankings
                         </span>
                         <br />
-                        Launch Your Online Store with Confidence
+                        Grow Your Traffic with SEO That Works
                     </h1>
                     <p className="text-lg text-gray-600 mt-2 mb-8">
-                        Beautifully built, conversion-focused, and optimized for growth — your e-commerce success starts here.
+                        Transparent SEO pricing plans tailored to drive results, attract leads, and grow your business sustainably.
                     </p>
                     <div className="mb-2 text-white text-center">
                         <Link href="/">
                             <motion.div
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transition cursor-pointer"
+                                className="inline-block bg-gradient-to-r from-green-600 to-indigo-600 text-white font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transition cursor-pointer"
                             >
-                                Get Free Consultation →
+                                Get Free SEO Audit →
                             </motion.div>
                         </Link>
                     </div>
@@ -139,7 +128,7 @@ const EcommercePricingTiers = () => {
                             className={`relative bg-gradient-to-b ${tier.color} rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out group overflow-hidden`}
                         >
                             {tier.popular && (
-                                <div className="absolute top-0 right-0 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-1 rounded-bl-xl">
+                                <div className="absolute top-0 right-0 bg-gradient-to-r from-indigo-600 to-green-600 text-white px-6 py-1 rounded-bl-xl">
                                     Most Popular
                                 </div>
                             )}
@@ -171,23 +160,23 @@ const EcommercePricingTiers = () => {
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     className={`w-full py-4 rounded-xl font-bold text-white transition-all duration-300 ease-in-out
-                    ${tier.popular
-                                            ? 'bg-gradient-to-r from-purple-600 to-blue-600 hover:shadow-xl'
+                                        ${tier.popular
+                                            ? 'bg-gradient-to-r from-indigo-600 to-green-600 hover:shadow-xl'
                                             : 'bg-gray-900 hover:bg-gray-800'}
-                  `}
-                                    onClick={() => router.push(`/get-started?plan=${tier.name.toLowerCase()}`)}
+                                    `}
+                                    onClick={() => router.push(`/get-started?plan=${tier.name.toLowerCase().replace(" ", "-")}`)}
                                 >
                                     Get Started with {tier.name}
                                     <ChevronRight className="w-4 h-4 inline-block ml-2" />
                                 </motion.button>
                             </div>
 
-                            <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-200 rounded-2xl pointer-events-none transition-all duration-300 ease-in-out" />
+                            <div className="absolute inset-0 border-2 border-transparent group-hover:border-green-200 rounded-2xl pointer-events-none transition-all duration-300 ease-in-out" />
                         </motion.div>
                     ))}
                 </div>
 
-                <h2 className="text-3xl mt-8 font-bold text-center text-gray-900 mb-10">E-commerce Website FAQs</h2>
+                <h2 className="text-3xl mt-8 font-bold text-center text-gray-900 mb-10">SEO Service FAQs</h2>
                 <div className="max-w-4xl mx-auto space-y-6">
                     {faqs.map((faq, i) => (
                         <div
@@ -223,4 +212,4 @@ const EcommercePricingTiers = () => {
     );
 };
 
-export default EcommercePricingTiers;
+export default SEOPricingTiers;
