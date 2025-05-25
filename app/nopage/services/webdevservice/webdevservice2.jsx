@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import Link from 'next/link';
 
+
+
 export default function GrowthSection() {
   return (
     <section className="py-16 px-4 lg:px-0 bg-white">

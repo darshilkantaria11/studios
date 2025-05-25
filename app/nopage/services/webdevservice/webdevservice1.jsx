@@ -35,7 +35,7 @@ export default function Home() {
                         >
                             <span className='mr-1'>🚀 Get Your Professional</span>
                             <br className="hidden lg:block" />
-                            Website In Just ⏱️
+                            <span className='bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>Website</span> In Just ⏱️
                             <motion.span
                                 initial={{ scale: 0.9 }}
                                 animate={{ scale: 1 }}
@@ -103,7 +103,7 @@ export default function Home() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.4 }}
-                            className="border-l-0 lg:border-l-4 border-blue-600 pl-0 lg:pl-4 py-2 text-center lg:text-left hidden lg:block"
+                            className="border-l-0 lg:border-l-4 border-blue-600 bg-[linear-gradient(to_right,_#dbeafe_10%,_#ffffff_90%)] pl-0 lg:pl-4 py-2 text-center lg:text-left hidden lg:block"
                         >
                             <p className="italic text-sm lg:text-base">"From concept to launch in 12 days - our sales increased 140%"</p>
                             <p className="font-medium mt-1 lg:mt-2 text-sm">- Gulfside Painting, Company Owner</p>
