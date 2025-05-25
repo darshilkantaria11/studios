@@ -17,7 +17,7 @@ export default function ServicesPage() {
                 "Custom design that matches your brand and style",
                 "Fast, secure, and built using the latest technology"
             ],
-            link: "/services/web-development"
+            link: "/services/website-development-services"
         },
         {
             title: "E-Commerce Websites",

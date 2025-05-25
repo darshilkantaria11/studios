@@ -27,7 +27,7 @@ export default function PricingPage() {
             title: "SEO & Growth",
             color: "bg-lime-600",
             icon: <TrendingUp className="w-8 h-8" />,
-            startingPrice: "$299/month",
+            startingPrice: "$333/month",
             link: "/pricing/seo-pricing",
             popular: false
         }
@@ -172,6 +172,7 @@ export default function PricingPage() {
                         </motion.div>
                     </Link>
                 </div>
+                
             </div>
         </div>
     );
