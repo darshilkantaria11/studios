@@ -82,7 +82,7 @@ export default function GrowthSection() {
 
         {/* Success Story */}
 
-        <section className="bg-gray-100 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl">
+        <section className="bg-blue-50 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/clean-gray-paper.png')] bg-repeat opacity-5" aria-hidden="true"></div>
 
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

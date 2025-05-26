@@ -121,7 +121,7 @@ export default function GrowthSection() {
                 </div>
 
                 {/* Success Story */}
-                <section className="bg-gray-100 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl">
+                <section className="bg-green-50 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl">
                     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         {/* Text Side */}
                         <div className="space-y-8">
