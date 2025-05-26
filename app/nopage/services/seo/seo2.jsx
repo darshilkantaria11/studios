@@ -1,13 +1,65 @@
 
 "use client";
 
-import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
+
+import { useState } from 'react';
 
 
 
 
 export default function GrowthSection() {
+    const [openIndex, setOpenIndex] = useState(null);
+
+    const toggle = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
+    const faqs = [
+        {
+            question: "Can I see the SEO plan before starting?",
+            answer: "Yes. We first understand your business goals, then share a clear SEO strategy — including keyword plan, content ideas, and estimated timeline — so you know exactly what’s being done."
+        },
+        {
+            question: "Do I need a website to get SEO services?",
+            answer: "Yes, SEO works on your website. If you don’t have one, we can build it first or improve your current one to make it SEO-ready. A strong foundation is key for ranking."
+        },
+        {
+            question: "How long does it take to see results?",
+            answer: "SEO is not instant. It usually takes 2–3 months to see visible improvements, depending on competition and your current online presence. But the results are long-term and organic."
+        },
+        {
+            question: "Will my website rank #1 on Google?",
+            answer: "We aim for top rankings, but no agency can guarantee #1. What we guarantee is improved visibility, targeted traffic, and better performance using ethical SEO practices."
+        },
+        {
+            question: "Do you work on local SEO for my city or area?",
+            answer: "Yes. We optimize your business for local searches — including Google My Business setup, local keywords, and map rankings — so nearby customers can easily find you."
+        },
+        {
+            question: "What if I stop SEO after a few months?",
+            answer: "SEO is like a gym — consistency brings results. If you stop, rankings may drop slowly over time as competitors continue. We recommend regular maintenance for steady growth."
+        },
+        {
+            question: "Do you provide reports or tracking?",
+            answer: "Yes. You get monthly reports showing keyword rankings, traffic growth, and what actions were taken. Everything is transparent, so you can measure your ROI."
+        },
+        {
+            question: "Is content creation included in your SEO plans?",
+            answer: "Yes. Our plans include writing SEO-optimized blogs and web content tailored to your business and keywords. Content is king — and we handle it for you."
+        },
+        {
+            question: "Will SEO help my sales or just increase traffic?",
+            answer: "We focus on bringing *relevant* traffic — people who are actually looking for your product or service. More visibility + right visitors = more leads and sales."
+        },
+        {
+            question: "Do you offer support or help with changes?",
+            answer: "Yes. We offer support for SEO fixes, content updates, or quick help even after delivery. We stay with you as your long-term growth partner."
+        }
+    ];
+
+
     return (
         <section className="py-16 px-4 lg:px-0 bg-white">
             <div className="container mx-auto">
@@ -186,6 +238,64 @@ export default function GrowthSection() {
                     </Link>
                 </section>
 
+                <div className="mb-28">
+                    <h2 className="text-3xl font-bold text-center text-gray-900 mb-10 ]">Frequently Asked Questions</h2>
+                    <div className="max-w-4xl mx-auto space-y-6">
+                        {faqs.map((faq, i) => (
+                            <div
+                                key={i}
+                                className="border-b border-gray-200 pb-4 cursor-pointer"
+                                onClick={() => toggle(i)}
+                            >
+                                <div className="flex justify-between items-center">
+                                    <h3 className="text-lg font-medium text-gray-900">{faq.question}</h3>
+                                    <motion.div
+                                        animate={{ rotate: openIndex === i ? 180 : 0 }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        <ChevronDown className="w-5 h-5 text-black" />
+                                    </motion.div>
+                                </div>
+                                <AnimatePresence initial={false}>
+                                    {openIndex === i && (
+                                        <motion.div
+                                            key="content"
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: 'auto', opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.3 }}
+                                            className="overflow-hidden"
+                                        >
+                                            <p className="mt-2 text-gray-600 text-sm">{faq.answer}</p>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="text-center bg-gradient-to-r from-blue-600 to-green-500 rounded-2xl p-8 shadow-2xl"
+                >
+                    <div className="max-w-2xl mx-auto">
+                        <h3 className="text-3xl font-bold text-white mb-4">
+                            Want to Rank Higher & Get More Leads?
+                        </h3>
+                        <p className="text-green-100 mb-8">
+                            Let us help you grow with smart SEO strategies that drive traffic and real business results. Let's start your SEO journey today.
+                        </p>
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
+                        >
+                            Get Free SEO Consultation →
+                        </motion.button>
+                    </div>
+                </motion.div>
 
 
             </div>

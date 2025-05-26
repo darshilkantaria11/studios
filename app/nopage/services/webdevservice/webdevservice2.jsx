@@ -1,14 +1,62 @@
 // components/GrowthSection.tsx
 "use client";
 
-import { motion } from 'framer-motion';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
+
+import { useState } from 'react';
 
 
 
 export default function GrowthSection() {
+
+
+  const faqs = [
+    {
+      question: "What types of websites do you build under Website Development?",
+      answer: "We build all kinds of custom websites — business websites, landing pages, portfolio sites, service-based websites, and more. Each site is tailored specifically for your industry, goals, and audience."
+    },
+    {
+      question: "Will my website work well on mobile phones and tablets?",
+      answer: "Yes. Every website we build is 100% responsive, meaning it works perfectly on all screen sizes — mobiles, tablets, laptops, and desktops. It’s designed for a smooth user experience everywhere."
+    },
+    {
+      question: "How fast can you deliver my website?",
+      answer: "Most websites are completed within 10–14 days after we receive your final content. If you’re in a rush, we also offer express delivery. We keep the process fast and smooth without compromising on quality."
+    },
+    {
+      question: "Can I request changes after the site is built?",
+      answer: "Absolutely. We offer free revisions even after the website is delivered. Whether it’s a small tweak or a new section, we make sure the final result matches your expectations."
+    },
+    {
+      question: "Is hosting included or do I need to buy it separately?",
+      answer: "We include free basic hosting in all our website development packages. It's fast, secure, and perfect for small businesses. If you ever need an upgrade, we’ll guide you through it."
+    },
+    {
+      question: "Do you help me get a domain name?",
+      answer: "Yes. If you don’t already have a domain, we help you find and purchase the best one for your brand. We handle the entire process so you don’t have to worry about the technical stuff."
+    },
+    {
+      question: "Will my website be optimized for speed and security?",
+      answer: "Yes. Your site will be fast-loading, have HTTPS security with SSL, and include essential protections like anti-spam and firewall tools. It’s built using the latest modern tech."
+    },
+    {
+      question: "What happens after the website is live? Do you provide support?",
+      answer: "Yes. We provide free lifetime support for basic updates like changing text or images. You’ll always have us by your side. For bigger changes, we offer affordable upgrade packages."
+    },
+    {
+      question: "What if I don’t have any content or images?",
+      answer: "No worries! We can help with professional copywriting and use high-quality stock images if needed. If you already have content, we’ll polish it and make it look great."
+    }
+  ];
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggle = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+
   return (
     <section className="py-16 px-4 lg:px-0 bg-white">
       <div className="container mx-auto">
@@ -303,8 +351,42 @@ export default function GrowthSection() {
 
 
 
-
-
+        <div className="mb-28">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10 ]">Frequently Asked Questions</h2>
+          <div className="max-w-4xl mx-auto space-y-6">
+            {faqs.map((faq, i) => (
+              <div
+                key={i}
+                className="border-b border-gray-200 pb-4 cursor-pointer"
+                onClick={() => toggle(i)}
+              >
+                <div className="flex justify-between items-center">
+                  <h3 className="text-lg font-medium text-gray-900">{faq.question}</h3>
+                  <motion.div
+                    animate={{ rotate: openIndex === i ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ChevronDown className="w-5 h-5 text-black" />
+                  </motion.div>
+                </div>
+                <AnimatePresence initial={false}>
+                  {openIndex === i && (
+                    <motion.div
+                      key="content"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="overflow-hidden"
+                    >
+                      <p className="mt-2 text-gray-600 text-sm">{faq.answer}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
+        </div>
 
 
 

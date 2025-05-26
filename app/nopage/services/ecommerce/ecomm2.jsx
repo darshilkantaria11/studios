@@ -1,10 +1,13 @@
 "use client";
 
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { SparklesIcon, ChatBubbleLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 import { CheckBadgeIcon } from '@heroicons/react/24/solid'
 import { FaWhatsapp } from 'react-icons/fa'
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
+
+import { useState } from 'react';
 
 export default function GrowthSection() {
 
@@ -47,6 +50,56 @@ export default function GrowthSection() {
             desc: "Optional integration with CRM tools, email, and WhatsApp for full automation.",
         },
     ];
+
+
+    const faqs = [
+        {
+            question: "Can I request changes after the site is delivered?",
+            answer: "Yes, we provide free revisions after delivery. Whether it’s product changes, layout tweaks, or new sections — we make sure everything looks and works exactly how you want it."
+        },
+        {
+            question: "Is hosting included or do I need to buy it separately?",
+            answer: "Free basic hosting is included in all e-commerce packages. It’s fast and secure. If you need advanced features like high traffic support or custom email, we’ll guide you accordingly."
+        },
+        {
+            question: "Do you help with buying a domain?",
+            answer: "Yes, if you don’t already own one, we help you choose and purchase the best domain for your brand. We handle all the technical work so you stay stress-free."
+        },
+        {
+            question: "Will I be able to manage products and orders myself?",
+            answer: "Yes. You’ll get a clean, easy-to-use dashboard where you can add products, manage orders, apply discounts, and track everything — no coding or tech skills needed."
+        },
+        {
+            question: "Will my online store work on mobile and load fast?",
+            answer: "Absolutely. Your store will be fully responsive and optimized for speed — ensuring fast loading times and a smooth shopping experience on all devices."
+        },
+        {
+            question: "Can I accept online payments like UPI, cards, or COD?",
+            answer: "Yes. We integrate Razorpay, Paytm, Cashfree or any payment gateway you prefer. Your customers can pay using UPI, cards, wallets, or even opt for cash on delivery."
+        },
+        {
+            question: "Can I connect WhatsApp for order updates or support?",
+            answer: "Yes. We integrate WhatsApp for order confirmation, customer chat, and even abandoned cart recovery. It helps increase sales and builds trust with your buyers."
+        },
+        {
+            question: "Is my e-commerce website secure?",
+            answer: "Yes. Every store comes with SSL encryption, protection against spam/bots, and daily backups. Your customer data and payments are always safe."
+        },
+        {
+            question: "Do you offer support after launch?",
+            answer: "Of course. We provide lifetime support for basic fixes, updates, or help. Whether you need to upload a new product or fix a layout issue — we’re just a message away."
+        }
+    ];
+
+
+
+    const [openIndex, setOpenIndex] = useState(null);
+
+    const toggle = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
+
+
 
 
 
@@ -316,6 +369,45 @@ export default function GrowthSection() {
 
 
                 </section>
+
+                <div className="mb-28">
+                    <h2 className="text-3xl font-bold text-center text-gray-900 mb-10 ]">Frequently Asked Questions</h2>
+                    <div className="max-w-4xl mx-auto space-y-6">
+                        {faqs.map((faq, i) => (
+                            <div
+                                key={i}
+                                className="border-b border-gray-200 pb-4 cursor-pointer"
+                                onClick={() => toggle(i)}
+                            >
+                                <div className="flex justify-between items-center">
+                                    <h3 className="text-lg font-medium text-gray-900">{faq.question}</h3>
+                                    <motion.div
+                                        animate={{ rotate: openIndex === i ? 180 : 0 }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        <ChevronDown className="w-5 h-5 text-black" />
+                                    </motion.div>
+                                </div>
+                                <AnimatePresence initial={false}>
+                                    {openIndex === i && (
+                                        <motion.div
+                                            key="content"
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: 'auto', opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.3 }}
+                                            className="overflow-hidden"
+                                        >
+                                            <p className="mt-2 text-gray-600 text-sm">{faq.answer}</p>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
