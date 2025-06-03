@@ -78,7 +78,7 @@ export default function GrowthSection() {
         </motion.div>
 
         {/* Reality Check Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24 overflow-x-hidden">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -131,12 +131,50 @@ export default function GrowthSection() {
         {/* Success Story */}
 
         <section className="bg-blue-50 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl">
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/clean-gray-paper.png')] bg-repeat opacity-5" aria-hidden="true"></div>
 
+          <p className="text-blue-600 font-semibold uppercase tracking-wide text-xs mb-2">✨ Proven Impact</p>
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+            {/* Image Side */}
+            <div className="order-1 lg:order-2 p-2 overflow-hidden shadow-2xl bg-white">
+              {/* Video Section */}
+              <div className="w-full h-auto shadow-2xl border-4 border-[#a0d8cb]">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source src="/gulfside.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              {/* Text Section */}
+              <div className="p-6 md:p-10 bg-gray-50">
+                <div className="max-w-3xl mx-auto text-center">
+                  <p className="text-lg md:text-xl text-gray-800 font-medium leading-relaxed">
+                    “Partnering with <span className="font-semibold text-blue-700">DK Studios</span> was the best move we made. Their expertise took us from overlooked to fully booked in record time.”
+                  </p>
+                  <span className="block mt-4 text-gray-600 font-semibold">– Gulfside Painting, Sarasota, Florida</span>
+                  <div className="mt-6">
+                    <a
+                      href="https://gulfsidepainting.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-800 transition"
+                    >
+                      Visit gulfsidepainting.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Text Side */}
-            <div className="space-y-8">
-              <p className="text-blue-600 font-semibold uppercase tracking-wide text-xs">✨ Proven Impact</p>
+            <div className="order-2 lg:order-1 space-y-8">
+              {/* <p className="text-blue-600 font-semibold uppercase tracking-wide text-xs">✨ Proven Impact</p> */}
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
                 From <span className="text-red-500">Zero Visibility</span> to <span className="text-green-600">Fully Booked</span> in <span className="bg-black text-white p-2 rounded-xl">Just 6 Months</span>
               </h2>
@@ -175,55 +213,15 @@ export default function GrowthSection() {
                   href="/contact"
                   className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
                 >
-                  Ready for Your Transformation? Get a Free Consultation
+                  Get a Free Consultation
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </a>
               </div>
             </div>
-
-            {/* Image Side */}
-            <div className=" p-2 overflow-hidden shadow-2xl bg-white">
-              {/* Video Section */}
-              <div className="w-full h-auto shadow-2xl border-4 border-[#a0d8cb] ">
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover"
-                >
-                  <source src="/gulfside.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-
-              {/* Text Section */}
-              <div className="p-6 md:p-10 bg-gray-50">
-                <div className="max-w-3xl mx-auto text-center">
-                  <p className="text-lg md:text-xl text-gray-800 font-medium leading-relaxed">
-                    “Partnering with <span className="font-semibold text-blue-700">DK Studios</span> was the best move we made. Their expertise took us from overlooked to fully booked in record time.”
-                  </p>
-
-                  <span className="block mt-4 text-gray-600 font-semibold">– Gulfside Painting, Sarasota, Florida</span>
-
-                  <div className="mt-6">
-                    <a
-                      href="https://gulfsidepainting.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-800 transition"
-                    >
-                      Visit gulfsidepainting.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
           </div>
+
         </section>
 
 
@@ -303,7 +301,7 @@ export default function GrowthSection() {
           className="bg-white rounded-3xl p-10 mb-20 border border-blue-100 shadow-md"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            {/* Text Side */}
+            
             <div>
               <h3 className="text-3xl font-extrabold mb-4 text-gray-900">
                 Real Results. Real Business Growth.
@@ -331,7 +329,7 @@ export default function GrowthSection() {
               </div>
             </div>
 
-            {/* Visual Side */}
+           
             <div className="relative  rounded-2xl overflow-hidden  flex items-center justify-center">
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div

@@ -118,7 +118,7 @@ export default function Home() {
                             transition={{ type: 'spring', stiffness: 200 }}
                             className="bg-blue-600 text-white px-4 py-2 lg:px-6 lg:py-3 rounded-full text-center text-sm cursor-pointer hover:bg-blue-700 transition-colors relative overflow-hidden"
                         >
-                            <span className="relative z-10">🎁 Fill the form and receive free  design Templates </span>
+                            <span className="relative z-10 font-semibold ">🎁 Fill the form and receive free  design Templates → </span>
                             <div className="absolute inset-0 flex justify-center items-center opacity-0 hover:opacity-100 transition-opacity">
                                 <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shine" />
                             </div>
@@ -169,7 +169,7 @@ export default function Home() {
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                     href="/form-page"
-                                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 rounded-lg transition-all duration-300 flex justify-center items-center gap-2 relative overflow-hidden"
+                                    className="w-full bg-gradient-to-r from-blue-700 to-purple-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 flex justify-center items-center gap-2 relative overflow-hidden"
                                 >
                                     <span className="relative z-10">
                                         ✏️ Get Free Consultation →

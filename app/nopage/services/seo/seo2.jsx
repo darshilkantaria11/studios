@@ -92,7 +92,7 @@ export default function GrowthSection() {
                                     desc: "We optimize your existing pages and create blog content that ranks and sells."
                                 },
                                 {
-                                    title: "📍 Local SEO & Maps Setup",
+                                    title: "📍 GoogleMyBusiness & Maps Setup",
                                     desc: "Dominate local search with optimized Google Business Profiles, citations, and localized content."
                                 },
                                 {
@@ -119,17 +119,18 @@ export default function GrowthSection() {
 
 
                 <section className="mt-8 bg-yellow-50 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl">
-                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/clean-gray-paper.png')] bg-repeat opacity-5" aria-hidden="true"></div>
+                    
 
-                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    {/* Change grid to flex-col-reverse on mobile and row on large screens */}
+                            <p className="text-green-600 font-semibold uppercase tracking-wide text-xs mb-2">📊 SEO That Delivers</p>
+                    <div className="relative z-10 flex flex-col-reverse lg:flex-row gap-12 items-center">
+
                         {/* Text Side */}
-                        <div className="space-y-8">
-                            <p className="text-green-600 font-semibold uppercase tracking-wide text-xs">📊 SEO That Delivers</p>
+                        <div className="space-y-8 lg:w-1/2">
                             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
-                                From <span className="text-red-500">Invisible on Google</span> to <span className="text-green-600">Top Rankings & Daily Leads</span> in Under <span className="bg-black text-white px-2 py-1 rounded-xl">6 Months</span>
+                                From <span className="text-red-500">Invisible on Google</span> to <span className="text-green-600">Top Rankings & Daily Leads</span> in Under <span className="bg-black text-white px-2 py-1 rounded-xl inline-block">6 Months</span>
                             </h2>
 
-                            {/* Timeline Steps */}
                             <div className="space-y-6 border-l-2 border-green-300 pl-6">
                                 {[
                                     {
@@ -161,67 +162,56 @@ export default function GrowthSection() {
                                 ))}
                             </div>
 
-                            {/* CTA */}
                             <div className="pt-6">
                                 <a
                                     href="/contact"
                                     className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
                                 >
-                                    Want Results Like This? Claim Your Free SEO Audit
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                    </svg>
+                                    Want Results Like This? Claim Your Free SEO Audit →
+                                    
                                 </a>
                             </div>
                         </div>
 
-                        {/* Image Side */}
-                        <div className="p-2 overflow-hidden shadow-2xl bg-white">
-                            {/* Video Section */}
-                            <div className="w-full h-auto shadow-2xl border-4 border-[#a0d8cb] ">
-                                <video
-                                    autoPlay
-                                    muted
-                                    loop
-                                    playsInline
-                                    className="w-full h-full object-cover"
-                                >
-                                    <source src="/gulfsideseo.mp4" type="video/mp4" />
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div className="mt-6 bg-green-50 border-l-4 border-green-400 p-4 rounded-xl shadow-sm">
-                                <p className="text-sm md:text-base text-gray-800 font-medium">
-                                    <span className="text-green-700 font-semibold">Proof of Ranking:</span> This video shows Gulfside Painting ranking <span className="font-bold text-blue-600">#1 on Google</span> for the search term <span className="italic">“affordable painting contractors Sarasota Florida”</span>. A direct result of our targeted SEO strategy.
-                                </p>
-                            </div>
+                        {/* Video/Testimonial Side */}
+                        <div className="lg:w-1/2">
+                            <div className="p-2 overflow-hidden shadow-2xl bg-white">
+                                <div className="w-full h-auto shadow-2xl border-4 border-[#a0d8cb]">
+                                    <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+                                        <source src="/gulfsideseo.mp4" type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
 
-
-                            {/* Text Section */}
-                            <div className="p-2 bg-gray-50">
-                                <div className="max-w-3xl mx-auto text-center">
-                                    <p className="text-md md:text-lg text-gray-800 font-medium leading-relaxed">
-                                        “Working with <span className="font-semibold text-green-700">DK Studios</span> completely transformed our online presence. We're now getting daily leads — all thanks to their SEO strategy.”
+                                <div className="mt-6 bg-green-50 border-l-4 border-green-400 p-4 rounded-xl shadow-sm">
+                                    <p className="text-sm md:text-base text-gray-800 font-medium">
+                                        <span className="text-green-700 font-semibold">Proof of Ranking:</span> This video shows Gulfside Painting ranking <span className="font-bold text-blue-600">#1 on Google</span> for the search term <span className="italic">“affordable painting contractors Sarasota Florida”</span>. A direct result of our targeted SEO strategy.
                                     </p>
+                                </div>
 
-                                    <span className="block mt-4 text-gray-600 font-semibold test-md">– Gulfside Painting, Sarasota, Florida</span>
-
-                                    <div className="mt-6">
-                                        <a
-                                            href="https://gulfsidepainting.com"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-block bg-green-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-green-700 transition"
-                                        >
-                                            Visit gulfsidepainting.com
-                                        </a>
+                                <div className="p-2 bg-gray-50">
+                                    <div className="max-w-3xl mx-auto text-center">
+                                        <p className="text-md md:text-lg text-gray-800 font-medium leading-relaxed">
+                                            “Working with <span className="font-semibold text-green-700">DK Studios</span> completely transformed our online presence. We're now getting daily leads — all thanks to their SEO strategy.”
+                                        </p>
+                                        <span className="block mt-4 text-gray-600 font-semibold test-md">– Gulfside Painting, Sarasota, Florida</span>
+                                        <div className="mt-6">
+                                            <a
+                                                href="https://gulfsidepainting.com"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-block bg-green-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-green-700 transition"
+                                            >
+                                                Visit gulfsidepainting.com
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </section>
+
 
                 <section className="bg-green-50 py-12 px-6 md:px-20 rounded-3xl shadow-lg my-16 text-center">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">

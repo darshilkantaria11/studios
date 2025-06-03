@@ -125,7 +125,7 @@ export default function GrowthSection() {
                 </motion.div>
 
                 {/* Comparison Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24 overflow-x-hidden">
                     <motion.div
                         initial={{ x: -50, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
@@ -175,10 +175,39 @@ export default function GrowthSection() {
 
                 {/* Success Story */}
                 <section className="bg-green-50 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl">
+                    <p className="text-blue-600 font-semibold uppercase tracking-wide text-xs mb-2">✨ Real Client Success</p>
                     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        {/* Text Side */}
-                        <div className="space-y-8">
-                            <p className="text-blue-600 font-semibold uppercase tracking-wide text-xs">✨ Real Client Success</p>
+
+                        {/* Video/Image Side - Show first on mobile */}
+                        <div className="order-1 lg:order-2 p-2 overflow-hidden shadow-2xl bg-white">
+                            <div className="w-full h-auto border-4 border-red-800">
+                                <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+                                    <source src="/cosmos.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div className="p-6 md:p-10 bg-gray-50">
+                                <div className="text-center">
+                                    <p className="text-lg text-gray-800 font-medium">
+                                        “Our store now handles everything — product sales, tarot bookings, reiki appointments. <span className="font-semibold text-blue-700">DK Studios</span> made it all seamless.”
+                                    </p>
+                                    <span className="block mt-4 text-gray-600 font-semibold">– Chitrangdaa shany , Owner </span>
+                                    <div className="mt-6">
+                                        <a
+                                            href="https://cosmostarothealing.com"
+                                            target="_blank"
+                                            className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition"
+                                        >
+                                            Visit cosmostarothealing.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Text Side - Show second on mobile */}
+                        <div className="order-2 lg:order-1 space-y-8">
+                            
                             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
                                 From <span className="text-red-500">Offline Bookings</span> to <span className="text-green-600">Fully Managed E-Store</span> in Just <span className="bg-black text-white inline-block px-2 rounded-xl">19 Days</span>
                             </h2>
@@ -215,39 +244,14 @@ export default function GrowthSection() {
                                     href="/contact"
                                     className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
                                 >
-                                    Get Free Consultation to Start Your Store
+                                    Get Free Consultation to Start Your Store →
                                 </Link>
                             </div>
                         </div>
 
-                        {/* Video/Image Side */}
-                        <div className="p-2 overflow-hidden shadow-2xl bg-white">
-                            <div className="w-full h-auto border-4 border-red-800">
-                                <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-                                    <source src="/cosmos.mp4" type="video/mp4" />
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div className="p-6 md:p-10 bg-gray-50">
-                                <div className="text-center">
-                                    <p className="text-lg text-gray-800 font-medium">
-                                        “Our store now handles everything — product sales, tarot bookings, reiki appointments. <span className="font-semibold text-blue-700">DK Studios</span> made it all seamless.”
-                                    </p>
-                                    <span className="block mt-4 text-gray-600 font-semibold">– Chitrangdaa shany , Owner </span>
-                                    <div className="mt-6">
-                                        <a
-                                            href="https://cosmostarothealing.com"
-                                            target="_blank"
-                                            className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition"
-                                        >
-                                            Visit cosmostarothealing.com
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </section>
+
 
 
                 {/* CTA Section */}
