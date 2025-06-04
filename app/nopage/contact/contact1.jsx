@@ -10,12 +10,7 @@ const ContactUs = () => {
     message: ''
   });
 
-  // State for auto-suggest options
-  const [suggestions, setSuggestions] = useState({
-    name: [],
-    phone: [],
-    email: []
-  });
+
 
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -32,22 +27,7 @@ const ContactUs = () => {
     setTimeout(() => setCopied(false), 1500);
   };
 
-  // Load saved data from localStorage
-  useEffect(() => {
-    const savedContacts = JSON.parse(localStorage.getItem('contactFormData') || '[]');
-
-    if (savedContacts.length > 0) {
-      const names = [...new Set(savedContacts.map(contact => contact.name))];
-      const phones = [...new Set(savedContacts.map(contact => contact.phone))];
-      const emails = [...new Set(savedContacts.map(contact => contact.email))];
-
-      setSuggestions({
-        name: names,
-        phone: phones,
-        email: emails
-      });
-    }
-  }, []);
+  
 
   // Handle form field changes
   const handleChange = (e) => {
@@ -56,23 +36,36 @@ const ContactUs = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    // Save form data to localStorage
-    const savedContacts = JSON.parse(localStorage.getItem('contactFormData') || '[]');
-    const newContacts = [...savedContacts, formData];
-    localStorage.setItem('contactFormData', JSON.stringify(newContacts));
+  const savedContacts = JSON.parse(localStorage.getItem('contactFormData') || '[]');
+  const newContacts = [...savedContacts, formData];
+  localStorage.setItem('contactFormData', JSON.stringify(newContacts));
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitMessage('Thanks for reaching out! We\'ll get back to you soon.');
-      // Reset form
+  // Send form data to backend
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.ok) {
+      setSubmitMessage("Thanks for reaching out! We'll get back to you soon.");
       setFormData({ name: '', phone: '', email: '', message: '' });
-    }, 1500);
-  };
+    } else {
+      setSubmitMessage("Failed to send message. Please try again later.");
+    }
+  } catch (err) {
+    console.error(err);
+    setSubmitMessage("Error occurred. Please try again.");
+  }
+
+  setIsSubmitting(false);
+};
+
 
   // Select suggestion
   const selectSuggestion = (field, value) => {
@@ -189,21 +182,7 @@ const ContactUs = () => {
                       autoComplete="off"
                       required
                     />
-                    {suggestions.name.length > 0 && formData.name && (
-                      <div className="absolute z-10 mt-1 w-full bg-white shadow-lg rounded-md border border-gray-200">
-                        {suggestions.name
-                          .filter(name => name.toLowerCase().includes(formData.name.toLowerCase()))
-                          .map((name, index) => (
-                            <div
-                              key={index}
-                              className="px-4 py-2 hover:bg-blue-50 cursor-pointer"
-                              onClick={() => selectSuggestion('name', name)}
-                            >
-                              {name}
-                            </div>
-                          ))}
-                      </div>
-                    )}
+                    
                   </div>
                 </div>
 
@@ -225,21 +204,7 @@ const ContactUs = () => {
                         autoComplete="off"
                         required
                       />
-                      {suggestions.phone.length > 0 && formData.phone && (
-                        <div className="absolute z-10 mt-1 w-full bg-white shadow-lg rounded-md border border-gray-200">
-                          {suggestions.phone
-                            .filter(phone => phone.includes(formData.phone))
-                            .map((phone, index) => (
-                              <div
-                                key={index}
-                                className="px-4 py-2 hover:bg-blue-50 cursor-pointer"
-                                onClick={() => selectSuggestion('phone', phone)}
-                              >
-                                {phone}
-                              </div>
-                            ))}
-                        </div>
-                      )}
+                      
                     </div>
                   </div>
 
@@ -260,21 +225,7 @@ const ContactUs = () => {
                         autoComplete="off"
                         required
                       />
-                      {suggestions.email.length > 0 && formData.email && (
-                        <div className="absolute z-10 mt-1 w-full bg-white shadow-lg rounded-md border border-gray-200">
-                          {suggestions.email
-                            .filter(email => email.includes(formData.email))
-                            .map((email, index) => (
-                              <div
-                                key={index}
-                                className="px-4 py-2 hover:bg-blue-50 cursor-pointer"
-                                onClick={() => selectSuggestion('email', email)}
-                              >
-                                {email}
-                              </div>
-                            ))}
-                        </div>
-                      )}
+                      
                     </div>
                   </div>
                 </div>
