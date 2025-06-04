@@ -16,7 +16,7 @@ const Navbar = () => {
         { name: 'Pricing', href: '/pricing' },
         { name: 'Our Projects', href: '/projects' },
         { name: 'Blog', href: '/blog' },
-        { name: 'Contact Us', href: '/contact' },
+        { name: 'Contact Us', href: '/contact-us' },
     ];
 
     const containerVariants = {
