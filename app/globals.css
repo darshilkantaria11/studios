@@ -63,3 +63,16 @@ body {
 .animate-pulse-slow {
   animation: pulse-slow 6s ease-in-out infinite;
 }
+
+
+/* projects */
+.clipped-corners {
+  clip-path: polygon(
+    20px 0%,  /* top-left cut */
+    100% 0%,
+    100% calc(100% - 20px),  /* bottom-right cut */
+    calc(100% - 20px) 100%,
+    0% 100%,
+    0% 20px
+  );
+}

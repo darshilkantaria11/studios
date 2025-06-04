@@ -85,8 +85,8 @@ export default function Footer() {
                                     </Link>
                                 </motion.li>
                                 <motion.li whileHover={{ x: 5 }}>
-                                    <Link href="/contact" className="text-gray-600 hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:bg-clip-text hover:text-transparent transition-all">
-                                        Contact
+                                    <Link href="/contact-us" className="text-gray-600 hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:bg-clip-text hover:text-transparent transition-all">
+                                        Contact Us
                                     </Link>
                                 </motion.li>
                             </ul>
@@ -106,8 +106,8 @@ export default function Footer() {
                             <ul className="space-y-4">
                                 <motion.li whileHover={{ x: 5 }} className="flex items-center gap-2">
                                     <Mail className="w-5 h-5 text-blue-600" />
-                                    <a href="mailto:contact@devstudio.com" className="text-gray-600">
-                                        contact@devstudio.com
+                                    <a href="mailto:help.dkstudios@gmail.com" className="text-gray-600">
+                                        help.dkstudios@gmail.com
                                     </a>
                                 </motion.li>
                                 <motion.li whileHover={{ x: 5 }} className="flex items-center gap-2">
