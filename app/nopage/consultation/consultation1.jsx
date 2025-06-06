@@ -84,6 +84,7 @@ const ContactUs = () => {
             setCurrentBudgetQuestion(prev => prev + 1);
         } else {
             // Submit budget answers
+            setStep(3);
             submitBudgetAnswers(updatedAnswers);
         }
     };
@@ -96,19 +97,21 @@ const ContactUs = () => {
                 budgetAnswers: answers
             };
 
-            const res = await fetch('/api/budget-answers', {
+            fetch('/api/budget-answers', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
-            });
-
-            if (res.ok) {
-                setStep(3);
-            } else {
-                console.log('Failed to submit budget answers');
-            }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        console.log('Failed to submit budget answers');
+                    }
+                })
+                .catch(err => {
+                    console.log('Background submission error:', err);
+                });
         } catch (err) {
-            console.error('Error submitting budget answers:', err);
+            console.log('Error submitting budget answers:', err);
         }
     };
 
@@ -154,25 +157,23 @@ const ContactUs = () => {
         const savedContacts = JSON.parse(localStorage.getItem('contactFormData') || '[]');
         const newContacts = [...savedContacts, formData];
         localStorage.setItem('contactFormData', JSON.stringify(newContacts));
-
-        try {
-            const res = await fetch('/api/get-consultation', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
+        setStep(2);
+        fetch('/api/get-consultation', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData),
+        })
+            .then(response => {
+                if (!response.ok) {
+                    console.error('Background submission failed');
+                }
+            })
+            .catch(err => {
+                console.error('Background submission error:', err);
+            })
+            .finally(() => {
+                setIsSubmitting(false);
             });
-
-            if (res.ok) {
-                // setSubmitMessage("Thanks for reaching out! We'll get back to you soon.");
-                setStep(2);
-
-            } else {
-                setSubmitMessage("Failed to send message. Please try again later.");
-            }
-        } catch (err) {
-            console.error(err);
-            setSubmitMessage("Error occurred. Please try again.");
-        }
 
         setIsSubmitting(false);
     };
@@ -596,7 +597,7 @@ const ContactUs = () => {
                                     We've received your information and will get back to you within 24 hours with a personalized strategy and budget estimate.
                                 </motion.p>
 
-                                <motion.div
+                                {/* <motion.div
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     transition={{ delay: 0.6 }}
@@ -605,12 +606,12 @@ const ContactUs = () => {
                                         In the meantime, check out our portfolio:
                                     </p>
                                     <a
-                                        href="/portfolio"
+                                        href="/projects"
                                         className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
                                     >
                                         View Our Work
                                     </a>
-                                </motion.div>
+                                </motion.div> */}
                             </div>
                         </motion.div>
                     )}
