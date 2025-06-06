@@ -103,7 +103,7 @@ const ContactUs = () => {
               <div className="space-y-4">
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/917567393494?text=Hello%2C%20I'm%20interested%20in%20your%20services."
+                  href="https://wa.me/917567393494?text=Hello%2C%20I%20have%20visited%20your%20company%27s%20website%20Dkstudios%20and%20I%20really%20like%20it.%20I%27m%20interested%20in%20your%20services.."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between p-3 rounded-xl bg-blue-50 hover:bg-blue-100 transition"

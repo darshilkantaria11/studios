@@ -85,7 +85,7 @@ const Navbar = () => {
                             className="ml-8 flex items-center"
                         >
                             <Link
-                                href="/free-consultation"
+                                href="/get-free-consultation"
                                 className="bg-black text-white hover:bg-white hover:text-black border border-black px-4 font-medium py-3 rounded-full hover:scale-105 transition-all text-md  shadow-lg"
                             >
                                 Get Free Consultation →
@@ -128,7 +128,7 @@ const Navbar = () => {
                                 </Link>
                             ))}
                             <Link
-                                href="/free-consultation"
+                                href="/get-free-consultation"
                                 className="bg-black text-white hover:bg-white hover:text-black border border-black  block text-center px-6 py-3 rounded-lg  transition-colors font-semibold shadow-md"
                             >
                                 Get Free Consultation →

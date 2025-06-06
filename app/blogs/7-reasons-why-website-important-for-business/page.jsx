@@ -36,7 +36,7 @@ const WebsiteImportance = () => {
         prose-h2:mt-12 prose-h3:mt-8 prose-h4:mt-6
         prose-img:rounded-xl">
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-20 lg:mt-10 text-left ">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 lg:mb-20 lg:mt-10 text-left ">
                     7 Reasons Why a Website Is Important for Your Business
                 </h1>
                 <div className="max-w-3xl mx-auto ">
@@ -44,7 +44,7 @@ const WebsiteImportance = () => {
                         dkstudios <span className="mx-2">·</span> 5 June 2025 <span className="mx-2">·</span> 10 min read
                     </p>
                 </div>
-                <div className="relative w-full h-[300px] md:h-[400px] lg:h-[400px] mb-10">
+                <div className="relative w-full h-[200px] md:h-[400px] lg:h-[400px] mb-10">
                     <Image
                         src="/blogs/7-reasons-why-website-important-for-business.webp" // replace with your actual image path
                         alt="7 Reasons Why a Website Is Important for Your Business"
