@@ -10,34 +10,7 @@ const blogs = [
         link: "/blogs/7-reasons-why-website-important-for-business",
         image: "/blogs/7-reasons-why-website-important-for-business.webp",
     },
-    {
-        title: "Top 5 Web Design Trends to Watch in 2025",
-        excerpt: "Stay ahead with the latest design trends shaping websites this year—from minimalism to interactive elements that engage users.",
-        date: "June 1, 2025",
-        link: "/blogs/web-design-trends-2025",
-        image: "/blogs/design-trends-2025.jpg",
-    },
-    {
-        title: "Why Mobile-First Design is Essential in 2025",
-        excerpt: "Explore why designing for mobile first boosts user experience and search rankings in today’s mobile-dominant world.",
-        date: "June 10, 2025",
-        link: "/blogs/mobile-first-design",
-        image: "/blogs/mobile-first.jpg",
-    },
-    {
-        title: "SEO Best Practices for Web Designers",
-        excerpt: "Integrate SEO seamlessly into your design process to help your clients rank higher and attract more visitors.",
-        date: "June 20, 2025",
-        link: "/blogs/seo-for-web-designers",
-        image: "/blogs/seo-best-practices.jpg",
-    },
-    {
-        title: "Case Study: Boosting Conversions with UX Improvements",
-        excerpt: "Learn how smart UX changes transformed a client’s website traffic into valuable leads and sales.",
-        date: "June 25, 2025",
-        link: "/blogs/ux-case-study",
-        image: "/blogs/ux-case-study.jpg",
-    },
+
 ];
 
 export default function BlogPage() {
