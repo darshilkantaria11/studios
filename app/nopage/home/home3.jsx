@@ -1,168 +1,208 @@
 "use client";
-import { motion } from 'framer-motion';
-import { Star } from 'lucide-react';
-import Link from 'next/link';
+
+import { motion } from "framer-motion";
+import { Star } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const testimonials = [
     {
-      name: "Sarah Johnson",
-      position: "CTO at TechStart Inc",
-      projectLink: "/projects/techstart",
-      quote:
-        "Our website traffic tripled within 3 months of launch. The team delivered exceptional performance while maintaining our strict security requirements.",
-      linkText: "View TechStart Project",
-      image: "/images/sarah.jpg", // ← replace with actual image path
+        name: "Meet Santoki",
+        position: "CEO at Sri Ambica Laminates",
+        projectLink: "https://www.sriambicalaminates.com/",
+        quote:
+            "DK Studios delivered a tailored B2B web solution that enhanced our client engagement and streamlined our product showcase, significantly boosting our lead generation pipeline.",
+        linkText: "View Sri Ambica Laminates Project",
+        image: "/sriowner.png",
     },
     {
-      name: "David Lee",
-      position: "Founder of DevFlow",
-      projectLink: "/projects/devflow",
-      quote:
-        "The turnaround time was amazing, and the UX design nailed our brand. We've seen a 40% increase in engagement.",
-      linkText: "View DevFlow Project",
-      image: "/images/david.jpg", // ← replace with actual image path
-    },
-  ];
-  
+        name: "Owner",
+        position: "Founder & Director at Knottin Daycare Centre",
+        projectLink: "https://www.knottindaycarecentre.com/",
+        quote:
+            "The website redesign greatly improved our online visibility and parent engagement. The user-friendly interface made enrollment easier, helping us grow our community by 35%.",
+        linkText: "View Knottin Daycare Centre Project",
+        image: "/knottinowner.webp",
+    }
+
+];
 
 export default function Testimonials() {
+
+      const router = useRouter();
     return (
-        <section className="py-10 ">
+        <section
+            aria-label="Client testimonials and case studies of DK Studios web design company"
+            className="py-10"
+        >
             <div className="container mx-auto px-4">
                 {/* Section Header */}
-                <motion.div
+                <motion.header
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-8"
                 >
-                    <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-gray-900">
-                        Loved by Innovators
-                        <span className="block text-xl text-gray-600 mt-2">
-                            Helping countless businesses bring their ideas to life
-                        </span>
+                    <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-gray-900">
+                        Trusted Web Design Company Loved by Innovators
                     </h2>
-                </motion.div>
-                 <section className="bg-blue-50 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl">
+                    <p className="text-md text-gray-600 max-w-3xl mx-auto">
+                        Helping countless businesses boost their online presence and achieve
+                        growth with expert web design and SEO services.
+                    </p>
+                </motion.header>
 
-          <p className="text-blue-600 font-semibold uppercase tracking-wide text-xs mb-2">✨ Proven Impact</p>
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-            {/* Image Side */}
-            <div className="order-1 lg:order-2 p-2 overflow-hidden shadow-2xl bg-white">
-              {/* Video Section */}
-              <div className="w-full h-auto shadow-2xl border-4 border-[#a0d8cb]">
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover"
+                <article
+                    className="bg-blue-50 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl"
+                    aria-label="Case study of Gulfside Painting website design and SEO results"
                 >
-                  <source src="/gulfside.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
+                    <p className="text-blue-600 font-semibold uppercase tracking-wide text-xs mb-2">
+                        ✨ Proven Impact of Our Web Design Services
+                    </p>
+                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        {/* Video Side */}
+                        <div className="order-1 lg:order-2 p-2 overflow-hidden shadow-2xl bg-white rounded-xl">
+                            <div className="w-full h-auto shadow-2xl border-4 border-[#a0d8cb] rounded-lg overflow-hidden">
+                                <video
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    className="w-full h-full object-cover"
+                                    aria-label="Video showcasing Gulfside Painting web design project"
+                                    title="Gulfside Painting website design project video"
+                                >
+                                    <source src="/gulfside.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
 
-              {/* Text Section */}
-              <div className="p-6 md:p-10 bg-gray-50">
-                <div className="max-w-3xl mx-auto text-center">
-                  <p className="text-lg md:text-xl text-gray-800 font-medium leading-relaxed">
-                    “Partnering with <span className="font-semibold text-blue-700">DK Studios</span> was the best move we made. Their expertise took us from overlooked to fully booked in record time.”
-                  </p>
-                  <span className="block mt-4 text-gray-600 font-semibold">– Gulfside Painting, Sarasota, Florida</span>
-                  <div className="mt-6">
-                    <a
-                      href="https://gulfsidepainting.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-800 transition"
-                    >
-                      Visit gulfsidepainting.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+                            <section className="p-6 md:p-10 bg-gray-50 rounded-b-xl text-sm lg:text-xl">
+                                <blockquote className="max-w-4xl mx-auto text-center">
+                                    <p className=" text-gray-800 font-medium leading-relaxed">
+                                        “Partnering with{" "}
+                                        <span className="font-semibold text-blue-700">DK Studios</span>{" "}
+                                        was the best move we made. Their expertise took us from
+                                        overlooked to fully booked in record time.”
+                                    </p>
+                                    <footer className="mt-4 text-gray-600 font-semibold">
+                                        – Gulfside Painting, Sarasota, Florida
+                                    </footer>
+                                </blockquote>
+                                <div className="mt-6 flex justify-center">
+                                    <button
+                                        onClick={() => window.open("https://gulfsidepainting.com", "_blank", "noopener,noreferrer")}
+                                        title="Visit Gulfside Painting official website"
+                                        className="inline-block bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-800 transition"
+                                    >
+                                        Visit gulfsidepainting.com
+                                    </button>
 
-            {/* Text Side */}
-            <div className="order-2 lg:order-1 space-y-8">
-              {/* <p className="text-blue-600 font-semibold uppercase tracking-wide text-xs">✨ Proven Impact</p> */}
-              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
-                From <span className="text-red-500">Zero Visibility</span> to <span className="text-green-600">Fully Booked</span> in <span className="bg-black text-white p-2 rounded-xl">Just 6 Months</span>
-              </h2>
+                                </div>
+                            </section>
+                        </div>
 
-              {/* Timeline Steps */}
-              <div className="space-y-6 border-l-2 border-blue-200 pl-6">
-                {[
-                  {
-                    title: "Starting Point: No Online Presence",
-                    desc: "Relied solely on word-of-mouth referrals.",
-                  },
-                  {
-                    title: "Our Solution: High-Performance Website",
-                    desc: "Mobile-friendly, SEO-optimized, and conversion-focused.",
-                  },
-                  {
-                    title: "Result: 20+ Major Projects Secured",
-                    desc: "Successfully booked over 20 large-scale projects along with multiple small renovation jobs within just 6 months.",
-                  },
-                  {
-                    title: "Ongoing: Steady Leads Flow",
-                    desc: "Inquiries continue due to high search visibility.",
-                  },
-                ].map((step, idx) => (
-                  <div key={idx} className="relative pl-4">
-                    <div className="absolute -left-[14px] top-2 w-3 h-3 bg-blue-500 rounded-full border-2 border-white shadow-md"></div>
-                    <p className="font-semibold text-base text-gray-800">{step.title}</p>
-                    <p className="text-sm text-gray-600">{step.desc}</p>
-                  </div>
-                ))}
-              </div>
+                        {/* Text Side */}
+                        <div className="order-2 lg:order-1 space-y-8">
+                            <h3 className="text-2xl lg:text-3xl font-extrabold text-gray-900 leading-snug">
+                                From{" "}
+                                <span className="text-red-500">Zero Online Visibility</span> to{" "}
+                                <span className="text-green-600">Fully Booked</span> in Just{" "}
+                                <span className="bg-black text-white p-2 rounded-xl inline-block">6 Months</span>
+                            </h3>
 
-              {/* CTA */}
-              <div className="pt-6">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
+                            <dl className="space-y-6 border-l-2 border-blue-200 pl-6">
+                                {[
+                                    {
+                                        title: "Starting Point: No Online Presence",
+                                        desc: "Relied solely on word-of-mouth referrals without a professional website.",
+                                    },
+                                    {
+                                        title: "Our Solution: High-Performance Website",
+                                        desc: "Developed a mobile-friendly, SEO-optimized, and conversion-focused website tailored to Gulfside Painting's needs.",
+                                    },
+                                    {
+                                        title: "Result: 20+ Major Projects Secured",
+                                        desc: "Successfully booked over 20 large-scale projects and multiple small renovation jobs within 6 months of launching the new website.",
+                                    },
+                                    {
+                                        title: "Ongoing: Steady Leads Flow",
+                                        desc: "Consistent high search visibility and organic traffic continue to generate quality leads daily.",
+                                    },
+                                ].map((step, idx) => (
+                                    <div key={idx} className="relative pl-4">
+                                        <dt>
+                                            <span className="absolute -left-[14px] top-2 w-3 h-3 bg-blue-500 rounded-full border-2 border-white shadow-md"></span>
+                                            <h3 className="font-semibold text-base text-gray-800">{step.title}</h3>
+                                        </dt>
+                                        <dd className="text-sm text-gray-600">{step.desc}</dd>
+                                    </div>
+                                ))}
+                            </dl>
+
+                            <div className="pt-6">
+                                <Link
+                                    href="/contact"
+                                    title="Get a free consultation from DK Studios web design company"
+                                    className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
+                                >
+                                    Get a Free Consultation
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                                        />
+                                    </svg>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                {/* Testimonials Grid */}
+                <section
+                    aria-label="Client testimonials for DK Studios web design company"
+                    className="grid md:grid-cols-2 gap-8 mb-10"
                 >
-                  Get a Free Consultation
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </section>
-
-
-        
-
-                {/* Testimonial Grid */}
-                <div className="grid md:grid-cols-2 gap-8 mb-10">
                     {testimonials.map((testimonial, index) => (
-                        <motion.div
+                        <motion.blockquote
                             key={index}
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow"
+                            tabIndex={0}
                         >
                             <div className="flex items-start gap-4 mb-6">
-                                <div className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 p-0.5">
-                                    <img
+                                <div
+                                    className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 p-0.5"
+                                    aria-hidden="true"
+                                >
+                                    <Image
                                         src={testimonial.image}
-                                        alt={testimonial.name}
-                                        className="w-full h-full object-cover rounded-full"
+                                        alt={`Photo of ${testimonial.name}, ${testimonial.position}`}
+                                        width={56}
+                                        height={56}
+                                        className="rounded-full object-cover"
+                                        title={`Profile image of ${testimonial.name}`}
+                                        priority
                                     />
                                 </div>
 
                                 <div>
                                     <h3 className="text-xl font-bold">{testimonial.name}</h3>
                                     <p className="text-gray-600">{testimonial.position}</p>
-                                    <div className="flex gap-1 mt-2 text-yellow-400">
+                                    <div className="flex gap-1 mt-2 text-yellow-400" aria-label="5-star rating">
                                         {[...Array(5)].map((_, i) => (
                                             <Star key={i} className="w-4 h-4 fill-current" />
                                         ))}
@@ -172,52 +212,57 @@ export default function Testimonials() {
 
                             <p className="text-gray-700 mb-6">"{testimonial.quote}"</p>
 
-                            <div className="border-t pt-6">
-                                <a
+                            <footer className="border-t pt-6">
+                                <Link
                                     href={testimonial.projectLink}
+                                    title={`Read case study: ${testimonial.name} project`}
                                     className="text-blue-600 hover:text-blue-700 font-medium flex items-center gap-2 group"
                                 >
                                     {testimonial.linkText}
-                                    <span className="group-hover:translate-x-1 transition-transform">
+                                    <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">
                                         →
                                     </span>
-                                </a>
-                            </div>
-                        </motion.div>
+                                </Link>
+                            </footer>
+                        </motion.blockquote>
                     ))}
-                </div>
+                </section>
+
                 <div className="text-center mb-10">
                     <Link
-                        href="/clients" // <-- update this path as needed
+                        href="/projects"
+                        title="See more success stories from DK Studios clients"
                         className="inline-block px-6 py-3 rounded-full border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-xs lg:text-lg transition-all"
                     >
                         See more success stories from our clients →
                     </Link>
                 </div>
 
-
-                {/* CTA Section */}
-                <motion.div
+                {/* Final CTA Section */}
+                <motion.section
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
+                    aria-label="Call to action to start web design project with DK Studios"
                     className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 shadow-2xl"
                 >
                     <div className="max-w-2xl mx-auto">
-                        <h3 className="text-3xl font-bold text-white mb-4">
-                            Ready to Transform Your Digital Presence?
-                        </h3>
+                        <h2 className="text-3xl font-bold text-white mb-4">
+                            Ready to Transform Your Digital Presence with a Leading Web Design Company?
+                        </h2>
                         <p className="text-blue-100 mb-8">
-                            Be part of the success stories we're proud to build. Start Your Project Now !
+                            Join the growing list of successful businesses powered by our expert
+                            web design and digital marketing solutions.
                         </p>
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-white text-black px-8 py-4 rounded-full font-bold  transition-colors"
+                            className="bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
+                            aria-label="Get a free web design consultation from DK Studios"
                         >
                             Get Free Consultation →
                         </motion.button>
                     </div>
-                </motion.div>
+                </motion.section>
             </div>
         </section>
     );

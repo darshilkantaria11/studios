@@ -2,21 +2,19 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'; // Updated import
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
-import Logo from "../../../public/Logo1.png"
-
-
+import Logo from "../../../public/Logo1.png";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const navItems = [
-        { name: 'Our Services', href: '/services' },
-        { name: 'Pricing', href: '/pricing' },
-        { name: 'Our Projects', href: '/projects' },
-        { name: 'Blogs', href: '/blogs' },
-        { name: 'Contact Us', href: '/contact-us' },
+        { name: 'Our Services', href: '/services', title: 'View Our Web Design & Development Services' },
+        // { name: 'Pricing', href: '/pricing', title: 'Check Our Affordable Web Design Pricing' },
+        { name: 'Our Projects', href: '/projects', title: 'See Our Past Web Design Projects' },
+        { name: 'Blogs', href: '/blogs', title: 'Read Blogs About Website Design & SEO' },
+        { name: 'Contact Us', href: '/contact-us', title: 'Contact Our Web Design Company' },
     ];
 
     const containerVariants = {
@@ -30,33 +28,31 @@ const Navbar = () => {
     };
 
     return (
-        <motion.nav
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5, type: 'spring' }}
-            className="sticky top-0 z-50 bg-white "
-        >
-            <div className="container mx-auto ">
+        <header className="sticky top-0 z-50 bg-white shadow-sm" role="banner">
+            <div className="container mx-auto">
                 <div className="flex justify-between items-center h-20 px-2 lg:px-0">
-                    {/* Logo with hover effect */}
-                    <Link href="/">
-                        <motion.div
-                            whileHover={{ scale: 1.05 }}
-                            className="w-[120px] lg:w-[150px] cursor-pointer" // adjust width to match text logo size
-                        >
-                            <Image
-                                src={Logo} // replace with your logo path
-                                alt="Company Logo"
-                                width={150}
-                                height={50}
-                                className="w-full h-auto"
-                                priority
-                            />
-                        </motion.div>
-                    </Link>
+                    {/* Logo with semantic h1 for homepage SEO */}
+                    <div className="m-0 p-0 text-lg font-semibold">
+                        <Link href="/" title="Web Design Company - Home">
+                            <motion.div
+                                whileHover={{ scale: 1.05 }}
+                                className="w-[120px] lg:w-[150px] cursor-pointer"
+                            >
+                                <Image
+                                    src={Logo}
+                                    alt="DK Studios - Web Design Company Logo"
+                                    width={150}
+                                    height={50}
+                                    className="w-full h-auto"
+                                    priority
+                                    title="DK Studios - Best Web Design Company"
+                                />
+                            </motion.div>
+                        </Link>
+                    </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex items-center ">
+                    <nav aria-label="Primary Navigation" className="hidden lg:flex items-center">
                         <motion.ul
                             variants={containerVariants}
                             initial="hidden"
@@ -68,6 +64,7 @@ const Navbar = () => {
                                     <motion.div whileHover={{ scale: 1.1 }} className="inline-block">
                                         <Link
                                             href={item.href}
+                                            title={item.title}
                                             className="text-black text-md transition-colors"
                                         >
                                             {item.name}
@@ -75,7 +72,6 @@ const Navbar = () => {
                                     </motion.div>
                                 </motion.li>
                             ))}
-
                         </motion.ul>
 
                         {/* CTA Button */}
@@ -86,58 +82,63 @@ const Navbar = () => {
                         >
                             <Link
                                 href="/get-free-consultation"
-                                className="bg-black text-white hover:bg-white hover:text-black border border-black px-4 font-medium py-3 rounded-full hover:scale-105 transition-all text-md  shadow-lg"
+                                title="Book Your Free Web Design Consultation"
+                                className="bg-black text-white hover:bg-white hover:text-black border border-black px-4 font-medium py-3 rounded-full hover:scale-105 transition-all text-md shadow-lg"
                             >
                                 Get Free Consultation →
                             </Link>
                         </motion.div>
-                    </div>
+                    </nav>
 
                     {/* Mobile Menu Button */}
                     <div className="lg:hidden flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="text-black focus:outline-none p-2"
+                            aria-label={isOpen ? "Close Menu" : "Open Menu"}
                         >
                             {isOpen ? (
-                                <XMarkIcon className="h-8 w-8 z-60" aria-hidden="true" /> // Changed to XMarkIcon
+                                <XMarkIcon className="h-8 w-8" aria-hidden="true" />
                             ) : (
-                                <Bars3Icon className="h-8 w-8" aria-hidden="true" /> // Changed to Bars3Icon
+                                <Bars3Icon className="h-8 w-8" aria-hidden="true" />
                             )}
                         </button>
                     </div>
                 </div>
 
-                {/* Mobile Menu */}
+                {/* Mobile Navigation */}
                 {isOpen && (
-                    <motion.div
+                    <motion.nav
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         className="lg:hidden absolute top-16 left-0 right-0 bg-white shadow-lg"
+                        aria-label="Mobile Navigation"
                     >
                         <div className="pt-2 pb-4 space-y-4 px-4">
                             {navItems.map((item) => (
                                 <Link
                                     key={item.name}
                                     href={item.href}
+                                    title={item.title}
                                     onClick={() => setIsOpen(false)}
-                                    className="border-b block text-black hover:text-blue-600 px-4 py-3 font-2xl hover:bg-gray-50  transition-colors"
+                                    className="border-b block text-black hover:text-blue-600 px-4 py-3 font-2xl hover:bg-gray-50 transition-colors"
                                 >
                                     {item.name}
                                 </Link>
                             ))}
                             <Link
                                 href="/get-free-consultation"
-                                className="bg-black text-white hover:bg-white hover:text-black border border-black  block text-center px-6 py-3 rounded-lg  transition-colors font-semibold shadow-md"
+                                title="Book a Free Website Consultation"
+                                className="bg-black text-white hover:bg-white hover:text-black border border-black block text-center px-6 py-3 rounded-lg transition-colors font-semibold shadow-md"
                             >
                                 Get Free Consultation →
                             </Link>
                         </div>
-                    </motion.div>
+                    </motion.nav>
                 )}
             </div>
-        </motion.nav>
+        </header>
     );
 };
 

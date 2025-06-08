@@ -1,15 +1,16 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
     const logos = [
         "/nextjs-logo.svg",
-        "/google-search-console1.png",
+        "/google-search-console1.webp",
         "/vercel-logo.svg",
-        "/google-analytics-logo.png",
-        "/shopify-logo.png",
+        "/google-analytics-logo.webp",
+        "/shopify-logo.webp",
         "/googlemybusiness1.jpeg",
-        "/tailwind.png",
+        "/tailwind.webp",
     ];
 
     return (
@@ -23,14 +24,14 @@ export default function Home() {
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
                         <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                            Industry-Standard
+                            Professional
                         </span>{" "}
-                        Technologies
+                        Web Design Services
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        Leveraging the same trusted technologies used by Fortune 500
-                        companies and Silicon Valley startups
+                        Creating stunning, user-friendly websites tailored to grow your business and boost online presence. Trusted by startups, small businesses, and enterprises alike.
                     </p>
+
                 </motion.div>
 
                 {/* Scrolling Logo Marquee */}
@@ -40,14 +41,19 @@ export default function Home() {
                             <motion.div
                                 key={index}
                                 whileHover={{ scale: 1.1 }}
-                                className="flex-shrink-0 h-16 w-32  transition-transform"
+                                className="relative flex-shrink-0 h-16 w-32 transition-transform"
                             >
-                                <img
+                                <Image
                                     src={logo}
                                     alt={`Tech logo ${index}`}
-                                    className="h-full w-full object-contain"
+                                    className="object-contain"
+                                    fill
+                                    sizes="(max-width: 768px) 100px, 128px"
+                                    title="tech logos"
                                 />
                             </motion.div>
+
+
                         ))}
                     </div>
                 </div>
