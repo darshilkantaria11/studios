@@ -30,7 +30,7 @@ const testimonials = [
 
 export default function Testimonials() {
 
-      const router = useRouter();
+    const router = useRouter();
     return (
         <section
             aria-label="Client testimonials and case studies of DK Studios web design company"
@@ -180,53 +180,69 @@ export default function Testimonials() {
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow"
+                            className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow focus:outline-none focus:ring-2 focus:ring-blue-500"
                             tabIndex={0}
+                            aria-label={`Testimonial by ${testimonial.name}, ${testimonial.position}`}
                         >
-                            <div className="flex items-start gap-4 mb-6">
-                                <div
-                                    className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 p-0.5"
-                                    aria-hidden="true"
-                                >
-                                    <Image
-                                        src={testimonial.image}
-                                        alt={`Photo of ${testimonial.name}, ${testimonial.position}`}
-                                        width={56}
-                                        height={56}
-                                        className="rounded-full object-cover"
-                                        title={`Profile image of ${testimonial.name}`}
-                                        priority
-                                    />
-                                </div>
+                            <article>
+                                {/* Profile Image and Info */}
+                                <div className="flex items-start gap-4 mb-6">
+                                    {/* Profile Image */}
+                                    <div
+                                        className="w-16 h-16 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 p-0.5 shadow-md aspect-square"
+                                        aria-hidden="true"
+                                    >
+                                        <div className="w-full h-full rounded-full overflow-hidden">
+                                            <Image
+                                                src={testimonial.image}
+                                                alt={`Photo of ${testimonial.name}, ${testimonial.position}`}
+                                                width={64}
+                                                height={64}
+                                                className="w-full h-full object-cover rounded-full"
+                                                title={`Profile image of ${testimonial.name}, ${testimonial.position} at DK Studios Web Design Company`}
+                                                priority
+                                            />
+                                        </div>
+                                    </div>
 
-                                <div>
-                                    <h3 className="text-xl font-bold">{testimonial.name}</h3>
-                                    <p className="text-gray-600">{testimonial.position}</p>
-                                    <div className="flex gap-1 mt-2 text-yellow-400" aria-label="5-star rating">
-                                        {[...Array(5)].map((_, i) => (
-                                            <Star key={i} className="w-4 h-4 fill-current" />
-                                        ))}
+                                    {/* Name + Position + Stars */}
+                                    <div>
+                                        <h3 className="text-xl font-bold text-gray-900">{testimonial.name}</h3>
+                                        <p className="text-gray-600">{testimonial.position}</p>
+                                        <div className="flex gap-1 mt-2 text-yellow-400" aria-label="5-star rating">
+                                            {[...Array(5)].map((_, i) => (
+                                                <Star key={i} className="w-4 h-4 fill-current" />
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <p className="text-gray-700 mb-6">"{testimonial.quote}"</p>
+                                {/* Testimonial Quote */}
+                                <p className="text-gray-700 mb-6 italic leading-relaxed">
+                                    “{testimonial.quote}”
+                                </p>
 
-                            <footer className="border-t pt-6">
-                                <Link
-                                    href={testimonial.projectLink}
-                                    title={`Read case study: ${testimonial.name} project`}
-                                    className="text-blue-600 hover:text-blue-700 font-medium flex items-center gap-2 group"
-                                >
-                                    {testimonial.linkText}
-                                    <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">
-                                        →
-                                    </span>
-                                </Link>
-                            </footer>
+                                {/* Footer Link */}
+                                <footer className="border-t pt-6">
+                                    <Link
+                                        href={testimonial.projectLink}
+                                        title={`Read project case study for ${testimonial.name}`}
+                                        className="text-blue-600 hover:text-blue-700 font-medium flex items-center gap-2 group"
+                                    >
+                                        {testimonial.linkText}
+                                        <span
+                                            className="group-hover:translate-x-1 transition-transform"
+                                            aria-hidden="true"
+                                        >
+                                            →
+                                        </span>
+                                    </Link>
+                                </footer>
+                            </article>
                         </motion.blockquote>
                     ))}
                 </section>
+
 
                 <div className="text-center mb-10">
                     <Link

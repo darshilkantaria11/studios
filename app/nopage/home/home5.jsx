@@ -1,10 +1,11 @@
 "use client";
 import { motion } from 'framer-motion';
 import { MessageCircle, FileText, Settings, Rocket, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Onboarding() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" aria-label="Web Design Company Onboarding Process">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -12,21 +13,20 @@ export default function Onboarding() {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-20"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900" title="Web Design Company Onboarding Process">
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Seamless Onboarding
+              Seamless Website Design Onboarding
             </span>
             <br />
-            Made Simple & Stress-Free
+            Simple, Transparent & Stress-Free Setup
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            We follow a smooth and structured process that keeps you in the loop and makes your website go live faster.
+          <p className="text-gray-600 max-w-2xl mx-auto text-md" title="Website development onboarding steps">
+            Our web design company follows a streamlined onboarding process to help businesses launch SEO-optimized, mobile-friendly websites faster — with no hassle.
           </p>
         </motion.div>
 
         {/* Process Timeline */}
         <div className="relative">
-          {/* Progress Line */}
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
@@ -41,27 +41,27 @@ export default function Onboarding() {
               {
                 icon: <MessageCircle className="w-6 h-6" />,
                 title: "Let’s Talk",
-                text: "We understand your business, goals, and what you really need."
+                text: "We dive deep into your business goals, target audience, and preferred design style to understand your vision."
               },
               {
                 icon: <FileText className="w-6 h-6" />,
-                title: "We Plan It Right",
-                text: "We create a simple plan so you know exactly what’s coming."
+                title: "Strategic Planning",
+                text: "We craft a custom web design plan tailored to your brand and SEO goals for better search engine visibility."
               },
               {
                 icon: <Settings className="w-6 h-6" />,
-                title: "We Set It Up",
-                text: "We prepare everything in the backend to ensure a smooth launch."
+                title: "Backend Setup",
+                text: "We configure hosting, CMS, and SEO tools to ensure your website performs fast and ranks well."
               },
               {
                 icon: <Rocket className="w-6 h-6" />,
-                title: "Work Begins",
-                text: "We start building your site and keep you updated along the way."
+                title: "Design & Development",
+                text: "Our expert team starts building your site with responsive design, performance optimization, and clean code."
               },
               {
                 icon: <CheckCircle className="w-6 h-6" />,
-                title: "Final Checks",
-                text: "We test everything and make sure your site is fast, secure & ready."
+                title: "Quality Assurance",
+                text: "We test for speed, SEO readiness, mobile responsiveness, and launch your site only when it’s perfect."
               }
             ].map((step, index) => (
               <motion.div
@@ -71,19 +71,18 @@ export default function Onboarding() {
                 className="text-center"
               >
                 {/* Step Indicator */}
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center mx-auto mb-4 shadow-lg" title={`Step ${index + 1}: ${step.title}`}>
                   <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-blue-600">
                     {step.icon}
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {step.title}
                 </h3>
                 <p className="text-gray-600 text-sm">{step.text}</p>
 
-                {/* Mobile Progress Line */}
                 {index < 4 && (
                   <div className="md:hidden h-12 w-px bg-gray-200 mx-auto my-4" />
                 )}
@@ -98,21 +97,25 @@ export default function Onboarding() {
           whileInView={{ opacity: 1 }}
           className="mt-20 text-center bg-gradient-to-r from-blue-600 to-purple-600 py-16 px-4 rounded-xl text-white"
         >
-          <h3 className="text-2xl font-bold mb-6">
-            Get a Free Consultation — Your Website Will Be Live in Just 2 Weeks.
+          <h3 className="text-2xl font-bold mb-6" title="Free website consultation">
+            Book Your Free Website Consultation — Go Live in Just 2 Weeks 🚀
           </h3>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-white text-black px-8 py-4 rounded-full font-bold hover:shadow-xl transition-all"
+          <Link
+            href="/get-free-consultation"
+            title="Get a free consultation from a top web design company"
           >
-            Book Your Free Consultation →
-          </motion.button>
-          <p className="text-white text-sm mt-4">
-            We kick off your project within 48 hours of signup. Fast. Simple. Professional.
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white text-black px-8 py-4 rounded-full font-bold hover:shadow-xl transition-all"
+            >
+              Book Free Consultation →
+            </motion.button>
+          </Link>
+          <p className="text-white text-sm mt-4 max-w-xl mx-auto" title="Fast web design and launch service">
+            Our team of expert designers and developers starts your project within 48 hours. Your custom website will be live in just 14 days — optimized for performance, SEO, and conversions.
           </p>
         </motion.div>
-
       </div>
     </section>
   );

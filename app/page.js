@@ -11,7 +11,7 @@ export default function Page(){
         <Home2/>
         <Home3/>
         <Home4/>
-        {/* <Home5/> */}
+        <Home5/>
         </>
     )
 };

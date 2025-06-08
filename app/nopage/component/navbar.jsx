@@ -30,7 +30,7 @@ const Navbar = () => {
     return (
         <header className="sticky top-0 z-50 bg-white shadow-sm" role="banner">
             <div className="container mx-auto">
-                <div className="flex justify-between items-center h-20 px-2 lg:px-0">
+                <div className="flex justify-between items-center h-14 lg:h-20 px-2 lg:px-0">
                     {/* Logo with semantic h1 for homepage SEO */}
                     <div className="m-0 p-0 text-lg font-semibold">
                         <Link href="/" title="Web Design Company - Home">
