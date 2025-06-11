@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
-import Logo from "../../../public/Logo1.png";
+import Logo from "../../../public/fulllogo.png";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -40,12 +40,12 @@ const Navbar = () => {
                             >
                                 <Image
                                     src={Logo}
-                                    alt="DK Studios - Web Design Company Logo"
+                                    alt="Designuix - Web Design Company Logo"
                                     width={150}
                                     height={50}
                                     className="w-full h-auto"
                                     priority
-                                    title="DK Studios - Best Web Design Company"
+                                    title="Designuix - Best Web Design Company"
                                 />
                             </motion.div>
                         </Link>

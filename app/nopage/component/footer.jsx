@@ -19,15 +19,15 @@ export default function Footer() {
                         whileInView={{ opacity: 1, x: 0 }}
                         aria-label="Company logo and tagline"
                     >
-                        <Link href="/" title="DKSTUDIOS Home - Web Design Company">
+                        <Link href="/" title="Designuix Home - Web Design Company">
                             <p className="flex items-center gap-2 mb-6">
                                 <Image 
                                     src="/Logo1.png" 
-                                    alt="DKSTUDIOS Company Logo - Web Design Company" 
+                                    alt="Designuix Company Logo - Web Design Company" 
                                     width={120} 
                                     height={40} 
                                     priority
-                                    title="DKSTUDIOS Logo"
+                                    title="Designuix Logo"
                                 />
                             </p>
                         </Link>
@@ -52,21 +52,21 @@ export default function Footer() {
                             </h2>
                             <ul className="space-y-3">
                                 <motion.li whileHover={{ x: 5 }}>
-                                    <Link href="/services/website-development-services" title="Website Development Services by DKSTUDIOS">
+                                    <Link href="/services/website-development-services" title="Website Development Services by Designuix">
                                         <p className="text-gray-600 hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:bg-clip-text hover:text-transparent transition-all">
                                             Web Development
                                         </p>
                                     </Link>
                                 </motion.li>
                                 <motion.li whileHover={{ x: 5 }}>
-                                    <Link href="/services/ecommerce" title="E-commerce Solutions by DKSTUDIOS">
+                                    <Link href="/services/ecommerce" title="E-commerce Solutions by Designuix">
                                         <p className="text-gray-600 hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:bg-clip-text hover:text-transparent transition-all">
                                             E-commerce
                                         </p>
                                     </Link>
                                 </motion.li>
                                 <motion.li whileHover={{ x: 5 }}>
-                                    <Link href="/services/seo" title="SEO Optimization Services by DKSTUDIOS">
+                                    <Link href="/services/seo" title="SEO Optimization Services by Designuix">
                                         <p className="text-gray-600 hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:bg-clip-text hover:text-transparent transition-all">
                                             SEO Optimization
                                         </p>
@@ -87,21 +87,21 @@ export default function Footer() {
                             </h2>
                             <ul className="space-y-3">
                                 <motion.li whileHover={{ x: 5 }}>
-                                    <Link href="/projects" title="Our Projects - DKSTUDIOS">
+                                    <Link href="/projects" title="Our Projects - Designuix">
                                         <p className="text-gray-600 hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:bg-clip-text hover:text-transparent transition-all">
                                             Projects
                                         </p>
                                     </Link>
                                 </motion.li>
                                 <motion.li whileHover={{ x: 5 }}>
-                                    <Link href="/blogs" title="Blogs and Articles by DKSTUDIOS">
+                                    <Link href="/blogs" title="Blogs and Articles by Designuix">
                                         <p className="text-gray-600 hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:bg-clip-text hover:text-transparent transition-all">
                                             Blogs
                                         </p>
                                     </Link>
                                 </motion.li>
                                 <motion.li whileHover={{ x: 5 }}>
-                                    <Link href="/contact-us" title="Contact DKSTUDIOS for Web Design Services">
+                                    <Link href="/contact-us" title="Contact Designuix for Web Design Services">
                                         <p className="text-gray-600 hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:bg-clip-text hover:text-transparent transition-all">
                                             Contact Us
                                         </p>
@@ -123,11 +123,11 @@ export default function Footer() {
                                 <motion.li whileHover={{ x: 5 }} className="flex items-center gap-2">
                                     <Mail className="w-5 h-5 text-blue-600" aria-hidden="true" />
                                     <p 
-                                        href="mailto:help.dkstudios@gmail.com" 
+                                        href="mailto:contact@designuix.com" 
                                         className="text-gray-600" 
-                                        title="Email DKSTUDIOS for inquiries"
+                                        title="Email Designuix for inquiries"
                                     >
-                                        help.dkstudios@gmail.com
+                                        contact@designuix.com
                                     </p>
                                 </motion.li>
                                 <motion.li whileHover={{ x: 5 }} className="flex items-center gap-2">
@@ -137,7 +137,7 @@ export default function Footer() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-gray-600"
-                                        title="Chat with DKSTUDIOS on WhatsApp for free consultation"
+                                        title="Chat with Designuix on WhatsApp for free consultation"
                                     >
                                         +91 {whatsappNumber}
                                     </p>
@@ -152,7 +152,7 @@ export default function Footer() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     className="flex justify-center gap-6 mb-8"
-                    aria-label="Follow DKSTUDIOS on social media"
+                    aria-label="Follow Designuix on social media"
                 >
                     {[
                         { icon: <Instagram aria-hidden="true" />, link: "https://www.instagram.com/yourpage", name: "Instagram" },
@@ -167,8 +167,8 @@ export default function Footer() {
                             rel="noopener noreferrer"
                             whileHover={{ y: -5, scale: 1.1 }}
                             className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gradient-to-r from-blue-600 to-purple-600 text-gray-600 hover:text-white"
-                            aria-label={`Visit DKSTUDIOS ${social.name} page`}
-                            title={`Follow DKSTUDIOS on ${social.name}`}
+                            aria-label={`Visit Designuix ${social.name} page`}
+                            title={`Follow Designuix on ${social.name}`}
                         >
                             {social.icon}
                         </motion.a>
@@ -181,7 +181,7 @@ export default function Footer() {
                     whileInView={{ opacity: 1 }}
                     className="text-center text-gray-600 text-sm uppercase"
                 >
-                    © {new Date().getFullYear()} DKSTUDIOS. All rights reserved.
+                    © {new Date().getFullYear()} Designuix. All rights reserved.
                 </motion.div>
             </div>
         </footer>

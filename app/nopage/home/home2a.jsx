@@ -73,7 +73,7 @@ export default function ServicesPage() {
                 </p>
 
                 <div className=" mb-12 text-white text-center ">
-                    <Link href="/">
+                    <Link href="/" title="Get your free website consultation with Designuix">
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -98,7 +98,7 @@ export default function ServicesPage() {
                             // transition={{ delay: index * 0.1 }}
                             className={`group relative ${service.color}  rounded-2xl p-6 text-white shadow-xl`}
                         >
-                            <Link href={service.link}>
+                            <Link href={service.link} title={`Explore ${service.title} - Designuix`}>
                                 <div className="flex flex-col h-full justify-between">
                                     <div>
                                         <div className="flex items-center gap-4 mb-6">

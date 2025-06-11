@@ -12,7 +12,7 @@ const testimonials = [
         position: "CEO at Sri Ambica Laminates",
         projectLink: "https://www.sriambicalaminates.com/",
         quote:
-            "DK Studios delivered a tailored B2B web solution that enhanced our client engagement and streamlined our product showcase, significantly boosting our lead generation pipeline.",
+            "Designuix delivered a tailored B2B web solution that enhanced our client engagement and streamlined our product showcase, significantly boosting our lead generation pipeline.",
         linkText: "View Sri Ambica Laminates Project",
         image: "/sriowner.png",
     },
@@ -33,7 +33,7 @@ export default function Testimonials() {
     const router = useRouter();
     return (
         <section
-            aria-label="Client testimonials and case studies of DK Studios web design company"
+            aria-label="Client testimonials and case studies of Designuix web design company"
             className="py-10"
         >
             <div className="container mx-auto px-4">
@@ -82,7 +82,7 @@ export default function Testimonials() {
                                 <blockquote className="max-w-4xl mx-auto text-center">
                                     <p className=" text-gray-800 font-medium leading-relaxed">
                                         “Partnering with{" "}
-                                        <span className="font-semibold text-blue-700">DK Studios</span>{" "}
+                                        <span className="font-semibold text-blue-700">Designuix</span>{" "}
                                         was the best move we made. Their expertise took us from
                                         overlooked to fully booked in record time.”
                                     </p>
@@ -144,7 +144,7 @@ export default function Testimonials() {
                             <div className="pt-6">
                                 <Link
                                     href="/contact"
-                                    title="Get a free consultation from DK Studios web design company"
+                                    title="Get a free consultation from Designuix web design company"
                                     className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
                                 >
                                     Get a Free Consultation
@@ -171,7 +171,7 @@ export default function Testimonials() {
 
                 {/* Testimonials Grid */}
                 <section
-                    aria-label="Client testimonials for DK Studios web design company"
+                    aria-label="Client testimonials for Designuix web design company"
                     className="grid md:grid-cols-2 gap-8 mb-10"
                 >
                     {testimonials.map((testimonial, index) => (
@@ -199,7 +199,7 @@ export default function Testimonials() {
                                                 width={64}
                                                 height={64}
                                                 className="w-full h-full object-cover rounded-full"
-                                                title={`Profile image of ${testimonial.name}, ${testimonial.position} at DK Studios Web Design Company`}
+                                                title={`Profile image of ${testimonial.name}, ${testimonial.position} at Designuix Web Design Company`}
                                                 priority
                                             />
                                         </div>
@@ -247,7 +247,7 @@ export default function Testimonials() {
                 <div className="text-center mb-10">
                     <Link
                         href="/projects"
-                        title="See more success stories from DK Studios clients"
+                        title="See more success stories from Designuix clients"
                         className="inline-block px-6 py-3 rounded-full border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-xs lg:text-lg transition-all"
                     >
                         See more success stories from our clients →
@@ -258,7 +258,7 @@ export default function Testimonials() {
                 <motion.section
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    aria-label="Call to action to start web design project with DK Studios"
+                    aria-label="Call to action to start web design project with Designuix"
                     className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 shadow-2xl"
                 >
                     <div className="max-w-2xl mx-auto">
@@ -273,7 +273,7 @@ export default function Testimonials() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
-                            aria-label="Get a free web design consultation from DK Studios"
+                            aria-label="Get a free web design consultation from Designuix"
                         >
                             Get Free Consultation →
                         </motion.button>

@@ -15,7 +15,7 @@ export default function ServicesPage() {
             answer: "A professional web design company builds high-performing, mobile-friendly, and SEO-optimized websites that convert visitors into customers. DIY platforms often miss key features and long-term scalability."
         },
         {
-            question: "What makes DK Studios different from other web design companies?",
+            question: "What makes Designuix different from other web design companies?",
             answer: "We combine modern design, speed optimization, and SEO in one package. Unlike typical agencies, we offer lifetime support and a personal touch with every project."
         },
         {
@@ -40,7 +40,7 @@ export default function ServicesPage() {
         },
         {
             question: "How do I choose the best web design company?",
-            answer: "Look for proven experience, clear communication, SEO knowledge, and real reviews. DK Studios ticks all those boxes with satisfied clients and a strong design portfolio."
+            answer: "Look for proven experience, clear communication, SEO knowledge, and real reviews. Designuix ticks all those boxes with satisfied clients and a strong design portfolio."
         },
         {
             question: "How long does it take a web design company to build a website?",
@@ -72,7 +72,7 @@ export default function ServicesPage() {
         },
         {
             question: "Is it important to hire a local web design company?",
-            answer: "While local can be helpful, results matter more. DK Studios serves clients globally with seamless online communication and delivery."
+            answer: "While local can be helpful, results matter more. Designuix serves clients globally with seamless online communication and delivery."
         },
         {
             question: "Can I see examples of websites you’ve built?",
@@ -164,7 +164,7 @@ export default function ServicesPage() {
                             className="inline-block bg-white text-black font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transition cursor-pointer"
                         >
                             Get Free Consultation →
-                            
+
                         </motion.div>
                     </Link>
                 </div>
