@@ -41,8 +41,8 @@ async function processEmailAsync({ name, phone, email, business, services, messa
 
     // SIMPLIFIED ADMIN EMAIL
     const adminMailOptions = {
-      from: `"DK Studios" <${process.env.EMAIL_USER}>`,
-      to: "help.dkstudios@gmail.com",
+      from: `"Designuix" <${process.env.EMAIL_USER}>`,
+      to: "contact@designuix.com",
       subject: "🚀 New Consultation Request",
       text: `New consultation request:
         Name: ${name}
@@ -55,7 +55,7 @@ async function processEmailAsync({ name, phone, email, business, services, messa
 
     // SIMPLIFIED CLIENT EMAIL
     const clientMailOptions = {
-      from: `"DK Studios" <${process.env.EMAIL_USER}>`,
+      from: `"Designuix" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: "✅ Consultation Received",
       text: `Hi ${name}, we've received your consultation request. We'll contact you shortly.`

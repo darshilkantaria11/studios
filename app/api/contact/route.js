@@ -21,7 +21,7 @@ export async function POST(req) {
     // Email to you (admin)
     const adminMail = {
       from: `"Contact Form" <${email}>`,
-      to: process.env.ADMIN_EMAIL,
+      to: "contact@designuix.com",
       subject: `New Contact Form Submission`,
       html: `
   <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
@@ -44,7 +44,7 @@ export async function POST(req) {
         <td style="padding: 8px;">${message}</td>
       </tr>
     </table>
-    <p style="margin-top: 20px; font-size: 14px; color: #777;">This message was sent via your contact form on DK Studios.</p>
+    <p style="margin-top: 20px; font-size: 14px; color: #777;">This message was sent via your contact form on Designuix.</p>
   </div>
 `,
 
@@ -52,13 +52,13 @@ export async function POST(req) {
 
     // Email to client
     const clientMail = {
-      from: `"DK Studios" <${process.env.EMAIL_USER}>`,
+      from: `"Designuix" <${process.env.EMAIL_USER}>`,
       to: email,
-      subject: `Thanks for contacting DK Studios`,
+      subject: `Thanks for contacting Designuix`,
     html: `
   <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
     <h3 style="color: #0a0a0a;">Hi ${name},</h3>
-    <p style="font-size: 16px;">Thanks for reaching out to <strong>DK Studios</strong>! We've received your message and will get back to you as soon as possible.</p>
+    <p style="font-size: 16px;">Thanks for reaching out to <strong>Designuix</strong>! We've received your message and will get back to you as soon as possible.</p>
     
     <div style="margin-top: 20px; background-color: #f9f9f9; padding: 15px; border-left: 4px solid #6366f1;">
       <p style="margin: 0; font-style: italic;">"${message}"</p>
@@ -66,7 +66,7 @@ export async function POST(req) {
 
     <p style="margin-top: 20px;">If your message is urgent, feel free to contact us directly on WhatsApp at <a href="https://wa.me/917567393494?text=Hello%2C%20I'm%20interested%20in%20your%20services" style="color: #6366f1; text-decoration: none;">+91 75673 93494</a>.</p>
 
-    <p style="margin-top: 30px;">Best regards,<br><strong>DK Studios Team</strong></p>
+    <p style="margin-top: 30px;">Best regards,<br><strong>Designuix Team</strong></p>
     <p style="font-size: 12px; color: #999;">This is an automated response confirming receipt of your inquiry.</p>
   </div>
 `,

@@ -11,7 +11,7 @@ export const metadata = {
     openGraph: {
         title: "7 Reasons Why a Website Is Important for Your Business",
         description: "Discover why having a professional website is essential for modern businesses.",
-        url: "https://yourdomain.com/blogs/7-reasons-why-website-important-for-business",
+        url: "https://designuix.com/blogs/7-reasons-why-website-important-for-business",
         type: "article",
         images: [
             {
@@ -41,13 +41,14 @@ const WebsiteImportance = () => {
                 </h1>
                 <div className="max-w-3xl mx-auto ">
                     <p className="text-md text-gray-700 mb-4">
-                        dkstudios <span className="mx-2">·</span> 5 June 2025 <span className="mx-2">·</span> 10 min read
+                        designuix <span className="mx-2">·</span> 5 June 2025 <span className="mx-2">·</span> 10 min read
                     </p>
                 </div>
                 <div className="relative w-full h-[200px] md:h-[400px] lg:h-[400px] mb-10">
                     <Image
                         src="/blogs/7-reasons-why-website-important-for-business.webp" // replace with your actual image path
                         alt="7 Reasons Why a Website Is Important for Your Business"
+                        title="7 Reasons Why a Website Is Important for Your Business"
                         fill
                         priority
                         className="object-cover "
@@ -74,7 +75,7 @@ const WebsiteImportance = () => {
                 <ul className="mb-8 space-y-2">
                     <li><strong>A: Address (Domain Name)</strong>: This is your digital identity, like www.yourbrand.com. It's the first thing people see and remember about your business online.</li>
                     <li><strong>B: Base (Web Hosting)</strong>: Your website lives here. Reliable hosting ensures your site loads fast and stays online 24/7 — essential for a great user experience.</li>
-                    <li><strong>C: Code & CMS (Powered by Next.js)</strong>: This is the engine behind your site. At dkstudios, we build lightning-fast, SEO-friendly custom websites using Next.js — giving you full control, better performance, and scalable growth.</li>
+                    <li><strong>C: Code & CMS (Powered by Next.js)</strong>: This is the engine behind your site. At designuix, we build lightning-fast, SEO-friendly custom websites using Next.js — giving you full control, better performance, and scalable growth.</li>
                 </ul>
                 <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-10 px-6 rounded-2xl shadow-2xl mb-10">
                     <h3 className="text-2xl lg:text-4xl font-bold mb-6">
@@ -108,6 +109,7 @@ const WebsiteImportance = () => {
                     <Image
                         src="/blogs/blog1a.webp" // replace with your actual image path
                         alt="24/7 Lead Generation Machine"
+                        title="24/7 Lead Generation Machine"
                         fill
                         priority
                         className="object-cover "
@@ -125,6 +127,7 @@ const WebsiteImportance = () => {
                     <Image
                         src="/blogs/blog1b.webp" // replace with your actual image path
                         alt="Credibility That Converts Visitors"
+                        title="Credibility That Converts Visitors"
                         fill
                         priority
                         className="object-cover "
@@ -144,6 +147,7 @@ const WebsiteImportance = () => {
                     <Image
                         src="/blogs/blog1c.webp" // replace with your actual image path
                         alt="Cost-Effective Marketing Powerhouse"
+                        title="Cost-Effective Marketing Powerhouse"
                         fill
                         priority
                         className="object-cover "
@@ -160,6 +164,7 @@ const WebsiteImportance = () => {
                     <Image
                         src="/blogs/blog1d.webp" // replace with your actual image path
                         alt="Unlock Your Local Market Potential"
+                        title="Unlock Your Local Market Potential"
                         fill
                         priority
                         className="object-cover "
@@ -176,6 +181,7 @@ const WebsiteImportance = () => {
                     <Image
                         src="/blogs/blog1e.webp" // replace with your actual image path
                         alt="Customer Service Revolution"
+                        title="Customer Service Revolution"
                         fill
                         priority
                         className="object-cover "
@@ -193,6 +199,7 @@ const WebsiteImportance = () => {
                     <Image
                         src="/blogs/blog1f.webp" // replace with your actual image path
                         alt="Data-Driven Business Insights"
+                        title="Data-Driven Business Insights"
                         fill
                         priority
                         className="object-cover "
@@ -210,6 +217,7 @@ const WebsiteImportance = () => {
                     <Image
                         src="/blogs/blog1g.webp" // replace with your actual image path
                         alt="Competitive Necessity"
+                        title="Competitive Necessity"
                         fill
                         priority
                         className="object-cover "
@@ -264,7 +272,7 @@ const WebsiteImportance = () => {
                         Whether you need a powerful new website, an online store that sells, or Google rankings that matter — we&apos;re your tech team on demand.
                     </p>
 
-                    <Link href="/">
+                    <Link href="/get-free-consultation">
                         <div className="inline-block bg-white text-black font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transition cursor-pointer">
                             Get Free Consultation →
                         </div>

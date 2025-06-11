@@ -1,14 +1,10 @@
-
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-
 import { useState } from 'react';
-
-
-
 
 export default function GrowthSection() {
     const [openIndex, setOpenIndex] = useState(null);
@@ -19,11 +15,11 @@ export default function GrowthSection() {
     const faqs = [
         {
             question: "Can I see the SEO plan before starting?",
-            answer: "Yes. We first understand your business goals, then share a clear SEO strategy — including keyword plan, content ideas, and estimated timeline — so you know exactly what’s being done."
+            answer: "Yes. We first understand your business goals, then share a clear SEO strategy — including keyword plan, content ideas, and estimated timeline — so you know exactly what's being done."
         },
         {
             question: "Do I need a website to get SEO services?",
-            answer: "Yes, SEO works on your website. If you don’t have one, we can build it first or improve your current one to make it SEO-ready. A strong foundation is key for ranking."
+            answer: "Yes, SEO works on your website. If you don't have one, our best SEO company can build it first or improve your current one to make it SEO-ready. A strong foundation is key for ranking."
         },
         {
             question: "How long does it take to see results?",
@@ -31,11 +27,11 @@ export default function GrowthSection() {
         },
         {
             question: "Will my website rank #1 on Google?",
-            answer: "We aim for top rankings, but no agency can guarantee #1. What we guarantee is improved visibility, targeted traffic, and better performance using ethical SEO practices."
+            answer: "We aim for top rankings, but no agency can guarantee #1. What we guarantee as a top SEO company is improved visibility, targeted traffic, and better performance using ethical SEO practices."
         },
         {
             question: "Do you work on local SEO for my city or area?",
-            answer: "Yes. We optimize your business for local searches — including Google My Business setup, local keywords, and map rankings — so nearby customers can easily find you."
+            answer: "Yes. Our professional SEO services optimize your business for local searches — including Google My Business setup, local keywords, and map rankings — so nearby customers can easily find you."
         },
         {
             question: "What if I stop SEO after a few months?",
@@ -43,22 +39,21 @@ export default function GrowthSection() {
         },
         {
             question: "Do you provide reports or tracking?",
-            answer: "Yes. You get monthly reports showing keyword rankings, traffic growth, and what actions were taken. Everything is transparent, so you can measure your ROI."
+            answer: "Yes. You get monthly reports showing keyword rankings, traffic growth, and what actions were taken. Everything is transparent, so you can measure your ROI with our SEO services."
         },
         {
             question: "Is content creation included in your SEO plans?",
-            answer: "Yes. Our plans include writing SEO-optimized blogs and web content tailored to your business and keywords. Content is king — and we handle it for you."
+            answer: "Yes. Our plans include writing SEO-optimized blogs and web content tailored to your business and keywords. Content is king — and we handle it for you as part of our comprehensive SEO strategy."
         },
         {
             question: "Will SEO help my sales or just increase traffic?",
-            answer: "We focus on bringing *relevant* traffic — people who are actually looking for your product or service. More visibility + right visitors = more leads and sales."
+            answer: "We focus on bringing *relevant* traffic — people who are actually looking for your product or service. More visibility + right visitors = more leads and sales with our targeted SEO approach."
         },
         {
             question: "Do you offer support or help with changes?",
-            answer: "Yes. We offer support for SEO fixes, content updates, or quick help even after delivery. We stay with you as your long-term growth partner."
+            answer: "Yes. We offer support for SEO fixes, content updates, or quick help even after delivery. As the best SEO company, we stay with you as your long-term growth partner."
         }
     ];
-
 
     return (
         <section className="py-16 px-4 lg:px-0 bg-white">
@@ -71,17 +66,17 @@ export default function GrowthSection() {
                 >
                     <div className="max-w-6xl mx-auto text-center">
                         <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-                            How Our SEO Services Grow Your Business 🚀
+                            How Our Professional SEO Services Grow Your Business 🚀
                         </h2>
                         <p className="text-lg lg:text-xl text-white/90 max-w-3xl mx-auto mb-12">
-                            We go beyond rankings — our SEO solutions are engineered to bring you qualified traffic, convert visitors, and increase your bottom line.
+                            As the best SEO company, we go beyond rankings — our SEO solutions are engineered to bring you qualified traffic, convert visitors, and increase your bottom line.
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
                             {[
                                 {
                                     title: "🔑 Strategic Keyword Targeting",
-                                    desc: "We focus on revenue-driving keywords that attract ready-to-buy users — not just vanity rankings."
+                                    desc: "Our SEO experts focus on revenue-driving keywords that attract ready-to-buy users — not just vanity rankings."
                                 },
                                 {
                                     title: "🛠️ Technical SEO Fixes",
@@ -101,7 +96,7 @@ export default function GrowthSection() {
                                 },
                                 {
                                     title: "📊 Transparent Monthly Reports",
-                                    desc: "Know exactly what’s happening — keyword rankings, traffic, leads, and our next move."
+                                    desc: "Know exactly what's happening — keyword rankings, traffic, leads, and our next move."
                                 }
                             ].map((item, i) => (
                                 <motion.div
@@ -117,15 +112,10 @@ export default function GrowthSection() {
                     </div>
                 </motion.section>
 
-
                 <section className="mt-8 bg-yellow-50 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl">
-                    
-
-                    {/* Change grid to flex-col-reverse on mobile and row on large screens */}
-                            <p className="text-green-600 font-semibold uppercase tracking-wide text-xs mb-2">📊 SEO That Delivers</p>
+                    <p className="text-green-600 font-semibold uppercase tracking-wide text-xs mb-2">📊 SEO That Delivers</p>
                     <div className="relative z-10 flex flex-col-reverse lg:flex-row gap-12 items-center">
 
-                        {/* Text Side */}
                         <div className="space-y-8 lg:w-1/2">
                             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
                                 From <span className="text-red-500">Invisible on Google</span> to <span className="text-green-600">Top Rankings & Daily Leads</span> in Under <span className="bg-black text-white px-2 py-1 rounded-xl inline-block">6 Months</span>
@@ -135,11 +125,11 @@ export default function GrowthSection() {
                                 {[
                                     {
                                         title: "Before: No Online Visibility",
-                                        desc: "The website wasn’t ranking for any major keywords, leading to zero organic traffic.",
+                                        desc: "The website wasn't ranking for any major keywords, leading to zero organic traffic.",
                                     },
                                     {
                                         title: "Step 1: In-Depth SEO Audit & Keyword Plan",
-                                        desc: "Identified high-value, low-competition keywords to target for fast results.",
+                                        desc: "Our SEO company identified high-value, low-competition keywords to target for fast results.",
                                     },
                                     {
                                         title: "Step 2: On-Page + Technical SEO Fixes",
@@ -163,17 +153,16 @@ export default function GrowthSection() {
                             </div>
 
                             <div className="pt-6">
-                                <a
-                                    href="/contact"
+                                <Link
+                                    href="/get-free-consultation"
+                                    title="Get Free SEO Audit from Top SEO Company"
                                     className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
                                 >
                                     Want Results Like This? Claim Your Free SEO Audit →
-                                    
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
-                        {/* Video/Testimonial Side */}
                         <div className="lg:w-1/2">
                             <div className="p-2 overflow-hidden shadow-2xl bg-white">
                                 <div className="w-full h-auto shadow-2xl border-4 border-[#a0d8cb]">
@@ -185,25 +174,26 @@ export default function GrowthSection() {
 
                                 <div className="mt-6 bg-green-50 border-l-4 border-green-400 p-4 rounded-xl shadow-sm">
                                     <p className="text-sm md:text-base text-gray-800 font-medium">
-                                        <span className="text-green-700 font-semibold">Proof of Ranking:</span> This video shows Gulfside Painting ranking <span className="font-bold text-blue-600">#1 on Google</span> for the search term <span className="italic">“affordable painting contractors Sarasota Florida”</span>. A direct result of our targeted SEO strategy.
+                                        <span className="text-green-700 font-semibold">Proof of Ranking:</span> This video shows Gulfside Painting ranking <span className="font-bold text-blue-600">#1 on Google</span> for the search term <span className="italic">"affordable painting contractors Sarasota Florida"</span>. A direct result of our targeted SEO strategy.
                                     </p>
                                 </div>
 
                                 <div className="p-2 bg-gray-50">
                                     <div className="max-w-3xl mx-auto text-center">
                                         <p className="text-md md:text-lg text-gray-800 font-medium leading-relaxed">
-                                            “Working with <span className="font-semibold text-green-700">DK Studios</span> completely transformed our online presence. We're now getting daily leads — all thanks to their SEO strategy.”
+                                            "Working with <span className="font-semibold text-green-700">Designuix</span> completely transformed our online presence. We're now getting daily leads — all thanks to their professional SEO services."
                                         </p>
                                         <span className="block mt-4 text-gray-600 font-semibold test-md">– Gulfside Painting, Sarasota, Florida</span>
                                         <div className="mt-6">
-                                            <a
+                                            <Link
                                                 href="https://gulfsidepainting.com"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
+                                                title="Visit Gulfside Painting Website"
                                                 className="inline-block bg-green-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-green-700 transition"
                                             >
                                                 Visit gulfsidepainting.com
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -212,16 +202,16 @@ export default function GrowthSection() {
                     </div>
                 </section>
 
-
                 <section className="bg-green-50 py-12 px-6 md:px-20 rounded-3xl shadow-lg my-16 text-center">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-                        Ready to Boost Your Website&apos;s Google Rankings?
+                        Ready to Boost Your Website's Google Rankings?
                     </h2>
                     <p className="text-gray-700 text-lg mb-8">
-                        Proven SEO strategies. Transparent pricing. Real, measurable results.
+                        Proven SEO strategies from the best SEO company. Transparent pricing. Real, measurable results.
                     </p>
                     <Link
                         href="/pricing/seo-pricing"
+                        title="View SEO Services Pricing"
                         className="inline-block bg-gradient-to-r from-blue-600 to-green-500 text-white font-bold px-8 py-4 rounded-full shadow-md transition-transform transform hover:scale-105"
                     >
                         View SEO Pricing →
@@ -229,7 +219,7 @@ export default function GrowthSection() {
                 </section>
 
                 <div className="mb-28">
-                    <h2 className="text-3xl font-bold text-center text-gray-900 mb-10 ]">Frequently Asked Questions</h2>
+                    <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions About Our SEO Services</h2>
                     <div className="max-w-4xl mx-auto space-y-6">
                         {faqs.map((faq, i) => (
                             <div
@@ -275,19 +265,19 @@ export default function GrowthSection() {
                             Want to Rank Higher & Get More Leads?
                         </h3>
                         <p className="text-green-100 mb-8">
-                            Let us help you grow with smart SEO strategies that drive traffic and real business results. Let's start your SEO journey today.
+                            Let the best SEO company help you grow with smart SEO strategies that drive traffic and real business results. Let's start your SEO journey today.
                         </p>
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
-                        >
-                            Get Free SEO Consultation →
-                        </motion.button>
+                        <Link href="/get-free-consultation" title="Get Free SEO Consultation">
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
+                            >
+                                Get Free SEO Consultation →
+                            </motion.button>
+                        </Link>
                     </div>
                 </motion.div>
-
-
             </div>
         </section>
     );

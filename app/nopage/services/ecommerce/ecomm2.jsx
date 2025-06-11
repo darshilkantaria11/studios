@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { SparklesIcon, ChatBubbleLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 import { CheckBadgeIcon } from '@heroicons/react/24/solid'
 import { FaWhatsapp } from 'react-icons/fa'
@@ -11,98 +12,90 @@ import { useState } from 'react';
 
 export default function GrowthSection() {
 
-
     const features = [
         {
-            title: "Product Management",
-            desc: "Easily add, update, or remove products with unlimited listings and up to 10 categories.",
+            title: "E-commerce Product Management",
+            desc: "Easily add, update, or remove products with unlimited listings and up to 10 categories in your e-commerce store.",
         },
         {
             title: "Admin Dashboard",
-            desc: "Get daily order and revenue insights with built-in analytics and reporting.",
+            desc: "Get daily order and revenue insights with built-in analytics and reporting for your e-commerce business.",
         },
         {
             title: "SEO & Visibility",
-            desc: "On-page SEO with structured data markup helps boost your search engine rankings.",
+            desc: "Our e-commerce development company implements on-page SEO with structured data markup to boost your search rankings.",
         },
         {
             title: "Mobile-First Design",
-            desc: "Responsive store design ensures smooth shopping across all devices.",
+            desc: "Responsive e-commerce store design ensures smooth shopping across all devices.",
         },
         {
             title: "Payments & Checkout",
-            desc: "Seamless integration with Razorpay, Stripe and user-friendly cart experience.",
+            desc: "Seamless integration with Razorpay, Stripe and user-friendly cart experience for your online store.",
         },
         {
             title: "User Experience",
-            desc: "Includes login with Google, wishlist, customer reviews, and order history.",
+            desc: "Includes login with Google, wishlist, customer reviews, and order history in your e-commerce platform.",
         },
         {
             title: "Sales Tools",
-            desc: "Run promotions with coupon codes and notify customers with email alerts.",
+            desc: "Run promotions with coupon codes and notify customers with email alerts through your e-commerce website.",
         },
         {
             title: "Post-Launch Support",
-            desc: "1 year of free hosting, 1-month support, and unlimited revisions until launch.",
+            desc: "1 year of free hosting, 1-month support, and unlimited revisions until launch from our e-commerce development team.",
         },
         {
             title: "CRM & API Ready",
-            desc: "Optional integration with CRM tools, email, and WhatsApp for full automation.",
+            desc: "Optional integration with CRM tools, email, and WhatsApp for full automation of your e-commerce operations.",
         },
     ];
 
 
     const faqs = [
         {
-            question: "Can I request changes after the site is delivered?",
-            answer: "Yes, we provide free revisions after delivery. Whether it’s product changes, layout tweaks, or new sections — we make sure everything looks and works exactly how you want it."
+            question: "Can I request changes after my e-commerce site is delivered?",
+            answer: "Yes, we provide free revisions after delivery. Whether it's product changes, layout tweaks, or new sections — our e-commerce development company makes sure everything looks and works exactly how you want it."
         },
         {
-            question: "Is hosting included or do I need to buy it separately?",
-            answer: "Free basic hosting is included in all e-commerce packages. It’s fast and secure. If you need advanced features like high traffic support or custom email, we’ll guide you accordingly."
+            question: "Is hosting included for my e-commerce store or do I need to buy it separately?",
+            answer: "Free basic hosting is included in all e-commerce packages from our development company. It's fast and secure. If you need advanced features like high traffic support or custom email, we'll guide you accordingly."
         },
         {
-            question: "Do you help with buying a domain?",
-            answer: "Yes, if you don’t already own one, we help you choose and purchase the best domain for your brand. We handle all the technical work so you stay stress-free."
+            question: "Does your e-commerce development company help with buying a domain?",
+            answer: "Yes, if you don't already own one, we help you choose and purchase the best domain for your e-commerce brand. We handle all the technical work so you stay stress-free."
         },
         {
-            question: "Will I be able to manage products and orders myself?",
-            answer: "Yes. You’ll get a clean, easy-to-use dashboard where you can add products, manage orders, apply discounts, and track everything — no coding or tech skills needed."
+            question: "Will I be able to manage products and orders myself in my e-commerce store?",
+            answer: "Yes. You'll get a clean, easy-to-use dashboard where you can add products, manage orders, apply discounts, and track everything — no coding or tech skills needed for your online store."
         },
         {
-            question: "Will my online store work on mobile and load fast?",
-            answer: "Absolutely. Your store will be fully responsive and optimized for speed — ensuring fast loading times and a smooth shopping experience on all devices."
+            question: "Will my e-commerce website work on mobile and load fast?",
+            answer: "Absolutely. Your store will be fully responsive and optimized for speed by our e-commerce development experts — ensuring fast loading times and a smooth shopping experience on all devices."
         },
         {
-            question: "Can I accept online payments like UPI, cards, or COD?",
-            answer: "Yes. We integrate Razorpay, Paytm, Cashfree or any payment gateway you prefer. Your customers can pay using UPI, cards, wallets, or even opt for cash on delivery."
+            question: "Can I accept online payments like UPI, cards, or COD in my e-commerce store?",
+            answer: "Yes. Our e-commerce development company integrates Razorpay, Paytm, Cashfree or any payment gateway you prefer. Your customers can pay using UPI, cards, wallets, or even opt for cash on delivery."
         },
         {
-            question: "Can I connect WhatsApp for order updates or support?",
-            answer: "Yes. We integrate WhatsApp for order confirmation, customer chat, and even abandoned cart recovery. It helps increase sales and builds trust with your buyers."
+            question: "Can I connect WhatsApp for order updates or support in my e-commerce platform?",
+            answer: "Yes. We integrate WhatsApp for order confirmation, customer chat, and even abandoned cart recovery in your online store. It helps increase sales and builds trust with your buyers."
         },
         {
             question: "Is my e-commerce website secure?",
-            answer: "Yes. Every store comes with SSL encryption, protection against spam/bots, and daily backups. Your customer data and payments are always safe."
+            answer: "Yes. Every store built by our e-commerce development company comes with SSL encryption, protection against spam/bots, and daily backups. Your customer data and payments are always safe."
         },
         {
-            question: "Do you offer support after launch?",
-            answer: "Of course. We provide lifetime support for basic fixes, updates, or help. Whether you need to upload a new product or fix a layout issue — we’re just a message away."
+            question: "Does your e-commerce development company offer support after launch?",
+            answer: "Of course. We provide lifetime support for basic fixes, updates, or help. Whether you need to upload a new product or fix a layout issue in your online store — we're just a message away."
         }
     ];
-
-
 
     const [openIndex, setOpenIndex] = useState(null);
 
     const toggle = (index) => {
         setOpenIndex(openIndex === index ? null : index);
     };
-
-
-
-
-
 
     return (
         <section className="py-16 px-4 lg:px-0 bg-white">
@@ -120,7 +113,7 @@ export default function GrowthSection() {
                         </span> 🛒
                     </h2>
                     <p className="text-sm lg:text-xl text-gray-600">
-                        How DK Studios helped sellers 4X their sales with smart e-commerce stores
+                        How Designuix, a leading e-commerce development company, helped sellers 4X their sales with smart online stores
                     </p>
                 </motion.div>
 
@@ -155,7 +148,7 @@ export default function GrowthSection() {
                         className="bg-green-50 p-8 rounded-2xl border-2 border-green-200 relative overflow-hidden"
                     >
                         <div className="absolute top-0 right-0 bg-green-600 text-white px-4 py-1 text-sm">
-                            With DK Studios Store
+                            With Designuix Store
                         </div>
                         <h3 className="text-2xl font-bold mb-4 text-green-600">Sales Amplified</h3>
                         <ul className="space-y-4">
@@ -189,17 +182,18 @@ export default function GrowthSection() {
                             <div className="p-6 md:p-10 bg-gray-50">
                                 <div className="text-center">
                                     <p className="text-lg text-gray-800 font-medium">
-                                        “Our store now handles everything — product sales, tarot bookings, reiki appointments. <span className="font-semibold text-blue-700">DK Studios</span> made it all seamless.”
+                                        "Our store now handles everything — product sales, tarot bookings, reiki appointments. <span className="font-semibold text-blue-700">Designuix</span>, a top e-commerce development company, made it all seamless."
                                     </p>
                                     <span className="block mt-4 text-gray-600 font-semibold">– Chitrangdaa shany , Owner </span>
                                     <div className="mt-6">
-                                        <a
+                                        <Link
                                             href="https://cosmostarothealing.com"
                                             target="_blank"
+                                            title="Visit Cosmos Tarot Healing E-commerce Website"
                                             className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition"
                                         >
                                             Visit cosmostarothealing.com
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -219,7 +213,7 @@ export default function GrowthSection() {
                                         desc: "Scattered orders, no tracking, limited reach.",
                                     },
                                     {
-                                        title: "After: Launched with DK E-Store",
+                                        title: "After: Launched with Designuix E-Store",
                                         desc: "Mobile-optimized store for crystals, bracelets, and healing sessions.",
                                     },
                                     {
@@ -241,7 +235,8 @@ export default function GrowthSection() {
 
                             <div className="pt-6">
                                 <Link
-                                    href="/contact"
+                                    href="/get-free-consultation"
+                                    title="Get Free E-commerce Development Consultation"
                                     className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
                                 >
                                     Get Free Consultation to Start Your Store →
@@ -252,23 +247,22 @@ export default function GrowthSection() {
                     </div>
                 </section>
 
-
-
                 {/* CTA Section */}
-                <section className="bg-blue-50 py-12 px-6 md:px-20 rounded-3xl shadow-lg my-16 text-center">
+                {/* <section className="bg-blue-50 py-12 px-6 md:px-20 rounded-3xl shadow-lg my-16 text-center">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
                         Ready to Launch Your E-Commerce Store?
                     </h2>
                     <p className="text-gray-700 text-lg mb-8">
-                        Transparent pricing. Scalable tech. Full ownership.
+                        Transparent pricing. Scalable tech. Full ownership from our e-commerce development company.
                     </p>
                     <Link
                         href="/pricing/e-commerce-website-pricing"
+                        title="View E-commerce Development Pricing"
                         className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-8 py-4 rounded-full shadow-md transition-transform transform hover:scale-105"
                     >
                         View E-Commerce Pricing →
                     </Link>
-                </section>
+                </section> */}
 
 
                 <section className=" py-10 px-6 md:px-20 rounded-3xl   transition-shadow duration-300">
@@ -283,7 +277,7 @@ export default function GrowthSection() {
                                 Your Complete <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Ecommerce Toolkit</span>
                             </h2>
                             <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-                                We build sales-focused ecommerce stores with seamless automation, powerful integrations, and stunning design — ready to scale.
+                                Our e-commerce development company builds sales-focused online stores with seamless automation, powerful integrations, and stunning design — ready to scale.
                             </p>
                         </div>
 
@@ -316,7 +310,7 @@ export default function GrowthSection() {
                             <div className="relative z-10 flex flex-col md:flex-row items-start gap-6 text-white">
                                 {/* Icon Block */}
                                 <div className="bg-white p-4 rounded-full shadow-xl">
-                                    <FaWhatsapp className="w-8 h-8 text-green-600" />
+                                    <FaWhatsapp className="w-8 h-8 text-green-600" title="WhatsApp Integration" />
                                 </div>
 
                                 {/* Text Content */}
@@ -324,10 +318,9 @@ export default function GrowthSection() {
                                     <div className="flex items-center gap-2 ">
                                         <h3 className="text-2xl font-bold">Get Verified on WhatsApp </h3>
                                         <CheckBadgeIcon className="w-6 h-6 text-[#147ffe]" title="Official WhatsApp Verified" />
-
                                     </div>
                                     <p className="text-sm opacity-90 leading-relaxed ">
-                                        We help you set up your <span className="font-semibold underline underline-offset-2">official WhatsApp Business account with the verified blue tick</span>.
+                                        Our e-commerce development company helps you set up your <span className="font-semibold underline underline-offset-2">official WhatsApp Business account with the verified blue tick</span>.
                                         Boost your brand's credibility, automate order updates and abandoned cart reminders, and give customers real-time support — all through a trusted, official channel that drives more conversions.
                                     </p>
                                 </div>
@@ -343,7 +336,7 @@ export default function GrowthSection() {
                                 {/* Icon Block */}
                                 <div className="flex justify-around">
                                     <div className="bg-white p-4 rounded-full shadow-xl mr-4">
-                                        <FaWhatsapp className="w-8 h-8 text-green-600" />
+                                        <FaWhatsapp className="w-8 h-8 text-green-600" title="WhatsApp Integration" />
                                     </div>
                                     <h3 className="text-2xl font-bold">
                                         Get Verified on{' '}
@@ -352,26 +345,18 @@ export default function GrowthSection() {
                                             <CheckBadgeIcon className="w-6 h-6 text-[#147ffe]" title="Official WhatsApp Verified" />
                                         </span>
                                     </h3>
-
                                 </div>
 
                                 {/* Text Content */}
                                 <div className="space-y-2">
-
                                     <p className="text-sm opacity-90 leading-relaxed ">
-                                        We help you set up your <span className="font-semibold underline underline-offset-2">official WhatsApp Business account with the verified blue tick</span>.
+                                        Our e-commerce development company helps you set up your <span className="font-semibold underline underline-offset-2">official WhatsApp Business account with the verified blue tick</span>.
                                         Boost your brand's credibility, automate order updates and abandoned cart reminders, and give customers real-time support — all through a trusted, official channel that drives more conversions.
                                     </p>
                                 </div>
                             </div>
                         </div>
-
-
-                        {/* CTA Section */}
-
                     </div>
-
-
                 </section>
 
                 <div className="mb-28">
@@ -411,7 +396,6 @@ export default function GrowthSection() {
                     </div>
                 </div>
 
-
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -422,18 +406,19 @@ export default function GrowthSection() {
                             Ready to Skyrocket Your Ecommerce Sales?
                         </h3>
                         <p className="text-blue-100 mb-8">
-                            Join dozens of thriving online stores we&apos;ve helped grow with smart tools and seamless automation. Let&apos;s build your success story today!
+                            Join dozens of thriving online stores our e-commerce development company has helped grow with smart tools and seamless automation. Let's build your success story today!
                         </p>
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
-                        >
-                            Get Your Free Ecommerce Consultation →
-                        </motion.button>
+                        <Link href="/get-free-consultation" title="Get Free E-commerce Development Consultation">
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
+                            >
+                                Get Your Free Ecommerce Consultation →
+                            </motion.button>
+                        </Link>
                     </div>
                 </motion.div>
-
             </div>
         </section>
     );
