@@ -3,50 +3,44 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-
 import { useState } from 'react';
-
-
+import Link from 'next/link';
+import Image from 'next/image';
+import Growthgraph from "../../../../public/growth.png"
 
 export default function GrowthSection() {
-
-
   const faqs = [
     {
-      question: "What types of websites do you build under Website Development?",
-      answer: "We build all kinds of custom websites — business websites, landing pages, portfolio sites, service-based websites, and more. Each site is tailored specifically for your industry, goals, and audience."
+      question: "What makes your custom web development different?",
+      answer: "We build 100% custom websites from scratch tailored to your business goals. Unlike template-based solutions, our websites feature unique designs, optimized performance, and conversion-focused UX."
     },
     {
-      question: "Will my website work well on mobile phones and tablets?",
-      answer: "Yes. Every website we build is 100% responsive, meaning it works perfectly on all screen sizes — mobiles, tablets, laptops, and desktops. It’s designed for a smooth user experience everywhere."
+      question: "Do you develop custom web applications?",
+      answer: "Yes, we specialize in custom web applications including CRM systems, e-commerce platforms, SaaS products, and complex business tools with custom functionality."
     },
     {
-      question: "How fast can you deliver my website?",
-      answer: "Most websites are completed within 10–14 days after we receive your final content. If you’re in a rush, we also offer express delivery. We keep the process fast and smooth without compromising on quality."
+      question: "How long does custom web development take?",
+      answer: "Most projects take 4-8 weeks depending on complexity. We follow an agile process with weekly milestones to ensure timely delivery without compromising quality."
     },
     {
-      question: "Can I request changes after the site is built?",
-      answer: "Absolutely. We offer free revisions even after the website is delivered. Whether it’s a small tweak or a new section, we make sure the final result matches your expectations."
+      question: "Can you integrate with our existing systems?",
+      answer: "Absolutely. We specialize in API integrations with payment gateways, CRMs, ERPs, and other third-party systems to create seamless workflows."
     },
     {
-      question: "Is hosting included or do I need to buy it separately?",
-      answer: "We include free basic hosting in all our website development packages. It's fast, secure, and perfect for small businesses. If you ever need an upgrade, we’ll guide you through it."
+      question: "Do you provide ongoing maintenance?",
+      answer: "Yes, we offer comprehensive maintenance plans including security updates, performance optimization, and feature enhancements to keep your custom website running perfectly."
     },
     {
-      question: "Do you help me get a domain name?",
-      answer: "Yes. If you don’t already have a domain, we help you find and purchase the best one for your brand. We handle the entire process so you don’t have to worry about the technical stuff."
+      question: "What technologies do you use?",
+      answer: "We use modern stacks: React/Next.js frontends, Node.js/Python backends, headless CMS options, and cloud infrastructure (AWS/Vercel) for optimal performance."
     },
     {
-      question: "Will my website be optimized for speed and security?",
-      answer: "Yes. Your site will be fast-loading, have HTTPS security with SSL, and include essential protections like anti-spam and firewall tools. It’s built using the latest modern tech."
+      question: "Will my website be SEO-optimized?",
+      answer: "SEO is built into our development process. We implement technical SEO best practices, optimized architecture, and fast-loading experiences to help you rank higher."
     },
     {
-      question: "What happens after the website is live? Do you provide support?",
-      answer: "Yes. We provide free lifetime support for basic updates like changing text or images. You’ll always have us by your side. For bigger changes, we offer affordable upgrade packages."
-    },
-    {
-      question: "What if I don’t have any content or images?",
-      answer: "No worries! We can help with professional copywriting and use high-quality stock images if needed. If you already have content, we’ll polish it and make it look great."
+      question: "Do you offer redesigns of existing websites?",
+      answer: "Yes, we specialize in transforming outdated websites into modern, high-performing custom solutions while preserving SEO value."
     }
   ];
 
@@ -55,7 +49,6 @@ export default function GrowthSection() {
   const toggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-
 
   return (
     <section className="py-16 px-4 lg:px-0 bg-white">
@@ -68,12 +61,12 @@ export default function GrowthSection() {
           className="text-center mb-16"
         >
           <h2 className="text-2xl lg:text-4xl font-bold mb-4">
-            From Local Shop to <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Digital Empire
+            Transform Your Business with <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Custom Web Solutions
             </span> 🚀
           </h2>
           <p className="text-sm lg:text-xl text-gray-600">
-            How Dkstudios help Businesses Scaled Revenue 3X With Professional Websites
+            How Designuix Helps Companies Scale with Tailored Web Development
           </p>
         </motion.div>
 
@@ -85,15 +78,15 @@ export default function GrowthSection() {
             className="bg-red-50 p-8 rounded-2xl border-2 border-red-200 relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 bg-red-600 text-white px-4 py-1 text-sm">
-              Without Website
+              Template Websites
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-red-600">Offline Limitations</h3>
+            <h3 className="text-2xl font-bold mb-4 text-red-600">Generic Limitations</h3>
             <ul className="space-y-4">
               {[
-                "🚶‍♂️ Limited to walk-ins & local area",
-                "📞 Depends on referrals or chance walk-ins",
-                "📉 Unpredictable sales, low follow-up rate",
-                "🐌 3–5% monthly growth, limited scale"
+                "🚫 Rigid templates with limited customization",
+                "⚠️ Security vulnerabilities from common plugins",
+                "📉 Poor performance affecting user experience",
+                "🐌 Difficult to scale with business growth"
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-gray-700">
                   <span className="text-red-500 text-xl">✗</span> {item}
@@ -108,15 +101,15 @@ export default function GrowthSection() {
             className="bg-green-50 p-8 rounded-2xl border-2 border-green-200 relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 bg-green-600 text-white px-4 py-1 text-sm">
-              With Dkstudios Website
+              Designuix Custom Development
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-green-600">Digital Transformation</h3>
+            <h3 className="text-2xl font-bold mb-4 text-green-600">Tailored Advantages</h3>
             <ul className="space-y-4">
               {[
-                "🌐 Reach 1000+ potential customers searching online daily",
-                "📈 Average 10% conversion from visitors to paying customers",
-                "📩 Collect leads 24/7 via contact forms & WhatsApp",
-                "🚀 2X–3X faster growth with online visibility & reviews"
+                "✨ Unique solutions built for your specific needs",
+                "🔒 Enterprise-grade security architecture",
+                "⚡ Blazing fast performance & optimized UX",
+                "📈 Scalable architecture for future growth"
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-gray-700">
                   <span className="text-green-500 text-xl">✓</span> {item}
@@ -126,133 +119,146 @@ export default function GrowthSection() {
           </motion.div>
         </div>
 
-
-
         {/* Success Story */}
-
-        <section className="bg-blue-50 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl">
-
-          <p className="text-blue-600 font-semibold uppercase tracking-wide text-xs mb-2">✨ Proven Impact</p>
+        <article
+          className="bg-blue-50 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl"
+          aria-label="Case study of Gulfside Painting website design and SEO results"
+        >
+          <p className="text-blue-600 font-semibold uppercase tracking-wide text-xs mb-2">
+            ✨ Proven Impact of Our Web Design Services
+          </p>
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-            {/* Image Side */}
-            <div className="order-1 lg:order-2 p-2 overflow-hidden shadow-2xl bg-white">
-              {/* Video Section */}
-              <div className="w-full h-auto shadow-2xl border-4 border-[#a0d8cb]">
+            {/* Video Side */}
+            <div className="order-1 lg:order-2 p-2 overflow-hidden shadow-2xl bg-white rounded-xl">
+              <div className="w-full h-auto shadow-2xl border-4 border-[#a0d8cb] rounded-lg overflow-hidden">
                 <video
                   autoPlay
                   muted
                   loop
                   playsInline
                   className="w-full h-full object-cover"
+                  aria-label="Video showcasing Gulfside Painting web design project"
+                  title="Gulfside Painting website design project video"
                 >
                   <source src="/gulfside.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
 
-              {/* Text Section */}
-              <div className="p-6 md:p-10 bg-gray-50">
-                <div className="max-w-3xl mx-auto text-center">
-                  <p className="text-lg md:text-xl text-gray-800 font-medium leading-relaxed">
-                    “Partnering with <span className="font-semibold text-blue-700">DK Studios</span> was the best move we made. Their expertise took us from overlooked to fully booked in record time.”
+              <section className="p-6 md:p-10 bg-gray-50 rounded-b-xl text-sm lg:text-xl">
+                <blockquote className="max-w-4xl mx-auto text-center">
+                  <p className=" text-gray-800 font-medium leading-relaxed">
+                    “Partnering with{" "}
+                    <span className="font-semibold text-blue-700">Designuix</span>{" "}
+                    was the best move we made. Their expertise took us from
+                    overlooked to fully booked in record time.”
                   </p>
-                  <span className="block mt-4 text-gray-600 font-semibold">– Gulfside Painting, Sarasota, Florida</span>
-                  <div className="mt-6">
-                    <a
-                      href="https://gulfsidepainting.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-800 transition"
-                    >
-                      Visit gulfsidepainting.com
-                    </a>
-                  </div>
+                  <footer className="mt-4 text-gray-600 font-semibold">
+                    – Gulfside Painting, Sarasota, Florida
+                  </footer>
+                </blockquote>
+                <div className="mt-6 flex justify-center">
+                  <button
+                    onClick={() => window.open("https://gulfsidepainting.com", "_blank", "noopener,noreferrer")}
+                    title="Visit Gulfside Painting official website"
+                    className="inline-block bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-800 transition"
+                  >
+                    Visit gulfsidepainting.com
+                  </button>
+
                 </div>
-              </div>
+              </section>
             </div>
 
             {/* Text Side */}
             <div className="order-2 lg:order-1 space-y-8">
-              {/* <p className="text-blue-600 font-semibold uppercase tracking-wide text-xs">✨ Proven Impact</p> */}
-              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
-                From <span className="text-red-500">Zero Visibility</span> to <span className="text-green-600">Fully Booked</span> in <span className="bg-black text-white p-2 rounded-xl">Just 6 Months</span>
-              </h2>
+              <h3 className="text-2xl lg:text-3xl font-extrabold text-gray-900 leading-snug">
+                From{" "}
+                <span className="text-red-500">Zero Online Visibility</span> to{" "}
+                <span className="text-green-600">Fully Booked</span> in Just{" "}
+                <span className="bg-black text-white p-2 rounded-xl inline-block">6 Months</span>
+              </h3>
 
-              {/* Timeline Steps */}
-              <div className="space-y-6 border-l-2 border-blue-200 pl-6">
+              <dl className="space-y-6 border-l-2 border-blue-200 pl-6">
                 {[
                   {
                     title: "Starting Point: No Online Presence",
-                    desc: "Relied solely on word-of-mouth referrals.",
+                    desc: "Relied solely on word-of-mouth referrals without a professional website.",
                   },
                   {
                     title: "Our Solution: High-Performance Website",
-                    desc: "Mobile-friendly, SEO-optimized, and conversion-focused.",
+                    desc: "Developed a mobile-friendly, SEO-optimized, and conversion-focused website tailored to Gulfside Painting's needs.",
                   },
                   {
                     title: "Result: 20+ Major Projects Secured",
-                    desc: "Successfully booked over 20 large-scale projects along with multiple small renovation jobs within just 6 months.",
+                    desc: "Successfully booked over 20 large-scale projects and multiple small renovation jobs within 6 months of launching the new website.",
                   },
                   {
                     title: "Ongoing: Steady Leads Flow",
-                    desc: "Inquiries continue due to high search visibility.",
+                    desc: "Consistent high search visibility and organic traffic continue to generate quality leads daily.",
                   },
                 ].map((step, idx) => (
                   <div key={idx} className="relative pl-4">
-                    <div className="absolute -left-[14px] top-2 w-3 h-3 bg-blue-500 rounded-full border-2 border-white shadow-md"></div>
-                    <p className="font-semibold text-base text-gray-800">{step.title}</p>
-                    <p className="text-sm text-gray-600">{step.desc}</p>
+                    <dt>
+                      <span className="absolute -left-[14px] top-2 w-3 h-3 bg-blue-500 rounded-full border-2 border-white shadow-md"></span>
+                      <h3 className="font-semibold text-base text-gray-800">{step.title}</h3>
+                    </dt>
+                    <dd className="text-sm text-gray-600">{step.desc}</dd>
                   </div>
                 ))}
-              </div>
+              </dl>
 
-              {/* CTA */}
               <div className="pt-6">
-                <a
-                  href="/contact"
+                <Link
+                  href="/get-free-consultation"
+                  title="Get a free consultation from Designuix web design company"
                   className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
                 >
-                  Get a Free Consultation
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  Get Free Consultation
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
-
-        </section>
-
+        </article>
 
         <section className="bg-blue-50 py-12 px-6 md:px-20 rounded-3xl shadow-lg my-16 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-            Ready to Build Your High-Converting Website?
+            Ready for Your Custom Web Solution?
           </h2>
           <p className="text-gray-700 text-lg mb-8">
-            Transparent pricing. Proven results. No hidden fees.
+            Transparent process. Enterprise-grade results.
           </p>
-          <a
-            href="/pricing/website-development-pricing"
+          <Link
+            href="/get-free-consultation"
             className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-8 py-4 rounded-full shadow-md transition-transform transform hover:scale-105"
+            aria-label="View custom web development pricing"
           >
-            View Website Development Pricing →
-          </a>
+            Get Free Consultation →
+          </Link>
         </section>
 
-
-
-
-
-        {/* Conversion Funnel */}
-        {/* Why DK Studios Section */}
+        {/* Why Designuix Section */}
         <section className="mb-8 bg-gradient-to-br from-white via-blue-50 to-white py-20 px-6 md:px-12 rounded-3xl shadow-inner border border-blue-100">
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-4xl font-extrabold text-gray-900 mb-6">
-              Why Top Local Brands Trust <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                DK Studios
+              Why Businesses Choose Our <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Custom Development
               </span>
-
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg mb-16">
               We're not just building websites — we're building <span className="font-semibold text-gray-800">growth engines</span>. Every page, pixel, and CTA is optimized to convert clicks into customers.
@@ -282,17 +288,15 @@ export default function GrowthSection() {
             </div>
 
             <div className="mt-16">
-              <a
-                href="#contact"
+              <Link
+                href="/get-free-consultation"
                 className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white text-lg font-semibold py-3 px-8 rounded-full transition shadow-md"
               >
                 Let&apos;s Build Your Website That Sells →
-              </a>
+              </Link>
             </div>
           </div>
         </section>
-
-
 
         {/* Visual Proof Section */}
         <motion.div
@@ -301,13 +305,12 @@ export default function GrowthSection() {
           className="bg-white rounded-3xl p-10 mb-20 border border-blue-100 shadow-md"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            
             <div>
               <h3 className="text-3xl font-extrabold mb-4 text-gray-900">
-                Real Results. Real Business Growth.
+                Custom Website Development Impact
               </h3>
               <p className="text-gray-600 mb-6 text-base leading-relaxed">
-                Businesses working with <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">DK Studio</span> are gaining more traffic, converting more leads, and building lasting customer relationships — all through tailored, high-converting websites.
+                Companies using <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Designuix custom solutions</span> report significant improvements in operational efficiency, customer engagement, and revenue growth.
               </p>
 
               <div className="space-y-5">
@@ -329,28 +332,32 @@ export default function GrowthSection() {
               </div>
             </div>
 
-           
-            <div className="relative  rounded-2xl overflow-hidden  flex items-center justify-center">
+            <div className="relative rounded-2xl overflow-hidden flex items-center justify-center">
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 3, repeat: Infinity }}
-                  className="w-64 h-64rounded-full blur-3xl opacity-40"
+                  className="w-64 h-64 rounded-full blur-3xl opacity-40"
                 />
               </div>
-              <img
-                src="/growth.png"
-                alt="Growth Chart"
-                className="relative z-10 w-full max-w-md rounded-xl border-2 border-blue-200 "
+              <Image
+                src={Growthgraph}
+                width={720}
+                height={776}
+                alt="Custom web development performance metrics"
+                title="Designuix custom development results"
+                className="w-full max-w-md rounded-xl border-2 border-blue-200"
               />
+
+
             </div>
           </div>
         </motion.div>
 
-
-
         <div className="mb-28">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10 ]">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">
+            Custom Development FAQs
+          </h2>
           <div className="max-w-4xl mx-auto space-y-6">
             {faqs.map((faq, i) => (
               <div
@@ -386,9 +393,6 @@ export default function GrowthSection() {
           </div>
         </div>
 
-
-
-
         {/* Final CTA */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -397,18 +401,22 @@ export default function GrowthSection() {
         >
           <div className="max-w-2xl mx-auto">
             <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Digital Presence?
+              Ready to Build Your Custom Solution?
             </h3>
             <p className="text-blue-100 mb-8">
-              Be part of the success stories we're proud to build. Start Your Project Now !
+              Let's create a web application that transforms your business
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-black px-8 py-4 rounded-full font-bold  transition-colors"
-            >
-              Get Free Consultation →
-            </motion.button>
+            <Link href="/get-free-consultation" >
+              <motion.div
+
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
+                aria-label="Contact for custom web development consultation"
+              >
+                Start Your Project Now →
+              </motion.div>
+            </Link>
           </div>
         </motion.div>
       </div>

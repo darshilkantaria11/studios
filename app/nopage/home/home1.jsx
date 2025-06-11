@@ -38,8 +38,8 @@ export default function Home() {
         },
         {
             src: '/plumbing-web-design.webp',
-            alt: 'E-commerce website homepage design',
-            title: 'E-commerce website homepage design'
+            alt: 'Plumber website design',
+            title: 'Plumber website design'
         },
         {
             src: '/interior-web-design1.webp',
@@ -58,8 +58,8 @@ export default function Home() {
         },
         {
             src: '/home-renovation-service-web-design.webp',
-            alt: 'Home renovation contractors webiste design',
-            title: 'Home renovation contractors webiste design'
+            alt: 'Home renovation contractors website design',
+            title: 'Home renovation contractors website design'
         },
         {
             src: '/dentist-web-design.webp',

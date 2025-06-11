@@ -17,7 +17,7 @@ export default function ServicesPage() {
         "Fully custom UI/UX that fits your brand",
         "Built with modern, scalable tech stack",
       ],
-      link: "/services/website-development-services",
+      link: "/services/custom-web-development-services",
     },
     {
       title: "E-Commerce Websites",
@@ -73,7 +73,7 @@ export default function ServicesPage() {
                 </p>
 
                 <div className=" mb-12 text-white text-center ">
-                    <Link href="/" title="Get your free website consultation with Designuix">
+                    <Link href="/get-free-consultation" title="Get your free website consultation with Designuix">
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}

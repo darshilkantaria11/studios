@@ -143,11 +143,11 @@ export default function Testimonials() {
 
                             <div className="pt-6">
                                 <Link
-                                    href="/contact"
+                                    href="/get-free-consultation"
                                     title="Get a free consultation from Designuix web design company"
                                     className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
                                 >
-                                    Get a Free Consultation
+                                    Get Free Consultation
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         className="h-5 w-5"
@@ -269,14 +269,16 @@ export default function Testimonials() {
                             Join the growing list of successful businesses powered by our expert
                             web design and digital marketing solutions.
                         </p>
-                        <motion.button
+                        <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
                             aria-label="Get a free web design consultation from Designuix"
                         >
-                            Get Free Consultation →
-                        </motion.button>
+                            <Link href="/get-free-consultation" title="Get a free consultation from Designuix web design company">
+                                Get Free Consultation →
+                            </Link>
+                        </motion.div>
                     </div>
                 </motion.section>
             </div>

@@ -157,7 +157,7 @@ export default function ServicesPage() {
                         Whether you need a powerful new website, an online store that sells, or Google rankings that matter — we’re your tech team on demand.
                     </motion.p>
 
-                    <Link href="/">
+                    <Link href="/get-free-consultation">
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
