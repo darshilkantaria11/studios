@@ -75,13 +75,7 @@ export default function Testimonials() {
                                     title="Gulfside Painting website design project video"
                                 >
                                     <source src="/gulfside.mp4" type="video/mp4" />
-                                    <track
-                                        kind="captions"
-                                        srcLang="en"
-                                        src="/captions/gulfside.vtt"
-                                        label="English captions"
-                                        default
-                                    />
+                                    
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
