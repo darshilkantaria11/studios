@@ -142,13 +142,7 @@ export default function GrowthSection() {
                   title="Gulfside Painting website design project video"
                 >
                   <source src="/gulfside.mp4" type="video/mp4" />
-                  <track
-                    kind="captions"
-                    srcLang="en"
-                    src="/captions/gulfside.vtt"
-                    label="English captions"
-                    default
-                  />
+                
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -289,7 +283,7 @@ export default function GrowthSection() {
                   className="bg-white rounded-2xl p-6 border border-gray-200 shadow hover:shadow-md transition-all"
                 >
                   <div className="text-3xl mb-3">{icon}</div>
-                  <h4 className="text-xl font-semibold text-gray-800 mb-2">{title}</h4>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
                   <p className="text-gray-600 text-sm">{desc}</p>
                 </motion.div>
               ))}

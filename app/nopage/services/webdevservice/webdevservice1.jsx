@@ -213,7 +213,7 @@ export default function Home() {
                                 </p>
                             </div>
                             <div className="text-center">
-                                <Link href="/projects" title="Browse our latest custom web development projects" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex justify-center items-center gap-2">
+                                <Link href="/projects" title="Browse our latest custom web development projects" className="text-black text-sm font-medium flex justify-center items-center gap-2">
                                     Explore Recent Projects →
                                 </Link>
                             </div>
