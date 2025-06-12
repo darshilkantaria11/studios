@@ -461,9 +461,9 @@ const ContactUs = () => {
                                     <p className="text-gray-600">
                                         We typically respond within 24 hours.
                                     </p>
-                                    <p className="text-gray-600 mt-2">
+                                    {/* <p className="text-gray-600 mt-2">
                                         Looking for quick answers? Check out our <a href="#" className="text-blue-600 hover:underline">FAQs</a>.
-                                    </p>
+                                    </p> */}
                                 </div>
                             </div>
                         </motion.div>
