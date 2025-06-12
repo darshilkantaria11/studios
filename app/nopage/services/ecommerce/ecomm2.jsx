@@ -269,7 +269,7 @@ export default function GrowthSection() {
 
                         {/* Header Section */}
                         <div className="text-center space-y-5 animate-fade-in-up">
-                            <span className="inline-block bg-blue-100 text-blue-600 px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm">
+                            <span className="inline-block bg-blue-100 text-blue-900 px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm">
                                 🚀 All-in-One Solution
                             </span>
                             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
