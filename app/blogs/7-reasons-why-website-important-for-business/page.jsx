@@ -232,7 +232,7 @@ const WebsiteImportance = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
                     <div className="border border-gray-200 p-5 rounded-lg shadow-sm">
-                        <h4 className="!mt-0 text-lg sm:text-xl">Small Business Advantage</h4>
+                        <h3 className="!mt-0 text-lg sm:text-xl">Small Business Advantage</h3>
                         <p className="text-gray-700">Websites level the playing field, allowing boutique businesses to compete with industry giants through niche targeting and personalized experiences.</p>
                     </div>
                     <div className="border border-gray-200 p-5 rounded-lg shadow-sm">
