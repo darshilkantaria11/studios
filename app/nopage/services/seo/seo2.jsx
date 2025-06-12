@@ -113,7 +113,7 @@ export default function GrowthSection() {
                 </motion.section>
 
                 <section className="mt-8 bg-yellow-50 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl">
-                    <p className="text-green-600 font-semibold uppercase tracking-wide text-xs mb-2">📊 SEO That Delivers</p>
+                    <p className="text-green-900 font-semibold uppercase tracking-wide text-xs mb-2">📊 SEO That Delivers</p>
                     <div className="relative z-10 flex flex-col-reverse lg:flex-row gap-12 items-center">
 
                         <div className="space-y-8 lg:w-1/2">
@@ -190,7 +190,7 @@ export default function GrowthSection() {
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 title="Visit Gulfside Painting Website"
-                                                className="inline-block bg-green-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-green-700 transition"
+                                                className="inline-block bg-green-900 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-green-700 transition"
                                             >
                                                 Visit gulfsidepainting.com
                                             </Link>
