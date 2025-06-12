@@ -121,16 +121,17 @@ export default function GrowthSection() {
 
         {/* Success Story */}
         <article
-          className="bg-blue-50 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl"
+          className="bg-blue-100 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl"
           aria-label="Case study of Gulfside Painting website design and SEO results"
         >
-          <p className="text-blue-600 font-semibold uppercase tracking-wide text-xs mb-2">
+          <p className="text-blue-800 font-semibold uppercase tracking-wide text-xs mb-2">
             ✨ Proven Impact of Our Web Design Services
           </p>
+
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Video Side */}
             <div className="order-1 lg:order-2 p-2 overflow-hidden shadow-2xl bg-white rounded-xl">
-              <div className="w-full h-auto shadow-2xl border-4 border-[#a0d8cb] rounded-lg overflow-hidden">
+              <div className="w-full h-auto shadow-2xl border-4 border-[#319e8e] rounded-lg overflow-hidden">
                 <video
                   autoPlay
                   muted
@@ -141,19 +142,26 @@ export default function GrowthSection() {
                   title="Gulfside Painting website design project video"
                 >
                   <source src="/gulfside.mp4" type="video/mp4" />
+                  <track
+                    kind="captions"
+                    srcLang="en"
+                    src="/captions/gulfside.vtt"
+                    label="English captions"
+                    default
+                  />
                   Your browser does not support the video tag.
                 </video>
               </div>
 
-              <section className="p-6 md:p-10 bg-gray-50 rounded-b-xl text-sm lg:text-xl">
+              <section className="p-6 md:p-10 bg-gray-100 rounded-b-xl text-sm lg:text-xl">
                 <blockquote className="max-w-4xl mx-auto text-center">
-                  <p className=" text-gray-800 font-medium leading-relaxed">
+                  <p className="text-gray-900 font-medium leading-relaxed">
                     “Partnering with{" "}
-                    <span className="font-semibold text-blue-700">Designuix</span>{" "}
+                    <span className="font-semibold text-blue-900">Designuix</span>{" "}
                     was the best move we made. Their expertise took us from
                     overlooked to fully booked in record time.”
                   </p>
-                  <footer className="mt-4 text-gray-600 font-semibold">
+                  <footer className="mt-4 text-gray-700 font-semibold">
                     – Gulfside Painting, Sarasota, Florida
                   </footer>
                 </blockquote>
@@ -161,11 +169,10 @@ export default function GrowthSection() {
                   <button
                     onClick={() => window.open("https://gulfsidepainting.com", "_blank", "noopener,noreferrer")}
                     title="Visit Gulfside Painting official website"
-                    className="inline-block bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-800 transition"
+                    className="inline-block bg-blue-800 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-900 transition"
                   >
                     Visit gulfsidepainting.com
                   </button>
-
                 </div>
               </section>
             </div>
@@ -174,12 +181,12 @@ export default function GrowthSection() {
             <div className="order-2 lg:order-1 space-y-8">
               <h3 className="text-2xl lg:text-3xl font-extrabold text-gray-900 leading-snug">
                 From{" "}
-                <span className="text-red-500">Zero Online Visibility</span> to{" "}
-                <span className="text-green-600">Fully Booked</span> in Just{" "}
+                <span className="text-red-600">Zero Online Visibility</span> to{" "}
+                <span className="text-green-800">Fully Booked</span> in Just{" "}
                 <span className="bg-black text-white p-2 rounded-xl inline-block">6 Months</span>
               </h3>
 
-              <dl className="space-y-6 border-l-2 border-blue-200 pl-6">
+              <dl className="space-y-6 border-l-2 border-blue-300 pl-6">
                 {[
                   {
                     title: "Starting Point: No Online Presence",
@@ -200,10 +207,10 @@ export default function GrowthSection() {
                 ].map((step, idx) => (
                   <div key={idx} className="relative pl-4">
                     <dt>
-                      <span className="absolute -left-[14px] top-2 w-3 h-3 bg-blue-500 rounded-full border-2 border-white shadow-md"></span>
-                      <h3 className="font-semibold text-base text-gray-800">{step.title}</h3>
+                      <span className="absolute -left-[14px] top-2 w-3 h-3 bg-blue-700 rounded-full border-2 border-white shadow-md"></span>
+                      <h3 className="font-semibold text-base text-gray-900">{step.title}</h3>
                     </dt>
-                    <dd className="text-sm text-gray-600">{step.desc}</dd>
+                    <dd className="text-sm text-gray-700">{step.desc}</dd>
                   </div>
                 ))}
               </dl>
@@ -212,7 +219,7 @@ export default function GrowthSection() {
                 <Link
                   href="/get-free-consultation"
                   title="Get a free consultation from Designuix web design company"
-                  className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-700 to-purple-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
                 >
                   Get Free Consultation
                   <svg
@@ -235,6 +242,7 @@ export default function GrowthSection() {
             </div>
           </div>
         </article>
+
 
         <section className="bg-blue-50 py-12 px-6 md:px-20 rounded-3xl shadow-lg my-16 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">

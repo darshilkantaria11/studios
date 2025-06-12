@@ -167,85 +167,84 @@ export default function GrowthSection() {
                 </div>
 
                 {/* Success Story */}
-                <section className="bg-green-50 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl">
-                    <p className="text-blue-600 font-semibold uppercase tracking-wide text-xs mb-2">✨ Real Client Success</p>
-                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+               <section className="bg-green-50 py-14 px-6 md:px-20 rounded-3xl mb-16 relative overflow-hidden shadow-xl">
+  <p className="text-blue-600 font-semibold uppercase tracking-wide text-xs mb-2">✨ Real Client Success</p>
+  
+  <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-                        {/* Video/Image Side - Show first on mobile */}
-                        <div className="order-1 lg:order-2 p-2 overflow-hidden shadow-2xl bg-white">
-                            <div className="w-full h-auto border-4 border-red-800">
-                                <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-                                    <source src="/cosmos.mp4" type="video/mp4" />
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div className="p-6 md:p-10 bg-gray-50">
-                                <div className="text-center">
-                                    <p className="text-lg text-gray-800 font-medium">
-                                        "Our store now handles everything — product sales, tarot bookings, reiki appointments. <span className="font-semibold text-blue-700">Designuix</span>, a top e-commerce development company, made it all seamless."
-                                    </p>
-                                    <span className="block mt-4 text-gray-600 font-semibold">– Chitrangdaa shany , Owner </span>
-                                    <div className="mt-6">
-                                        <Link
-                                            href="https://cosmostarothealing.com"
-                                            target="_blank"
-                                            title="Visit Cosmos Tarot Healing E-commerce Website"
-                                            className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition"
-                                        >
-                                            Visit cosmostarothealing.com
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    {/* Video Section */}
+    <div className="order-1 lg:order-2 p-2 overflow-hidden shadow-2xl bg-white rounded-xl">
+      <div className="w-full h-auto border-4 border-red-800 rounded-xl overflow-hidden">
+        <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+          <source src="/cosmos.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div className="p-6 md:p-10 bg-gray-50 text-center">
+        <p className="text-lg text-gray-800 font-medium">
+          "We went from scattered orders to a streamlined online store handling crystals, tarot, and healing sessions — all thanks to <span className="font-semibold text-blue-700">Designuix</span>. Their e-commerce expertise brought everything together seamlessly."
+        </p>
+        <span className="block mt-4 text-gray-600 font-semibold">– Chitrangdaa Shany, Founder</span>
+        <div className="mt-6">
+          <Link
+            href="https://cosmostarothealing.com"
+            target="_blank"
+            title="Visit Cosmos Tarot Healing E-commerce Website"
+            className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition"
+          >
+            Visit cosmostarothealing.com
+          </Link>
+        </div>
+      </div>
+    </div>
 
-                        {/* Text Side - Show second on mobile */}
-                        <div className="order-2 lg:order-1 space-y-8">
-                            
-                            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
-                                From <span className="text-red-500">Offline Bookings</span> to <span className="text-green-600">Fully Managed E-Store</span> in Just <span className="bg-black text-white inline-block px-2 rounded-xl">19 Days</span>
-                            </h2>
+    {/* Text Section */}
+    <div className="order-2 lg:order-1 space-y-8">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
+        From <span className="text-red-500">Offline DMs</span> to <span className="text-green-600">Fully Automated E-Store</span> in Just <span className="bg-black text-white inline-block px-2 rounded-xl">19 Days</span>
+      </h2>
 
-                            <div className="space-y-6 border-l-2 border-blue-300 pl-6">
-                                {[
-                                    {
-                                        title: "Before: Selling via DMs & WhatsApp",
-                                        desc: "Scattered orders, no tracking, limited reach.",
-                                    },
-                                    {
-                                        title: "After: Launched with Designuix E-Store",
-                                        desc: "Mobile-optimized store for crystals, bracelets, and healing sessions.",
-                                    },
-                                    {
-                                        title: "Result: Increased Bookings & Product Sales",
-                                        desc: "More traffic, smoother checkout, and improved conversion.",
-                                    },
-                                    {
-                                        title: "Ongoing: Everything Managed in One Dashboard",
-                                        desc: "Clients book tarot & reiki sessions directly via custom forms.",
-                                    },
-                                ].map((step, idx) => (
-                                    <div key={idx} className="relative pl-4">
-                                        <div className="absolute -left-[14px] top-2 w-3 h-3 bg-blue-500 rounded-full border-2 border-white shadow-md"></div>
-                                        <p className="font-semibold text-base text-gray-800">{step.title}</p>
-                                        <p className="text-sm text-gray-600">{step.desc}</p>
-                                    </div>
-                                ))}
-                            </div>
+      <div className="space-y-6 border-l-2 border-blue-300 pl-6">
+        {[
+          {
+            title: "Before: Manual Orders via DMs & WhatsApp",
+            desc: "Unorganized, hard to scale, and no payment tracking.",
+          },
+          {
+            title: "After: Custom Store Launched by Designuix",
+            desc: "Responsive store for selling crystals, bracelets, and services like tarot & reiki.",
+          },
+          {
+            title: "Results: More Traffic, More Orders",
+            desc: "Visitors can explore products & book sessions easily with secure checkout.",
+          },
+          {
+            title: "Now: Everything Managed in One Dashboard",
+            desc: "From product orders to bookings — all handled in one place.",
+          },
+        ].map((step, idx) => (
+          <div key={idx} className="relative pl-4">
+            <div className="absolute -left-[14px] top-2 w-3 h-3 bg-blue-500 rounded-full border-2 border-white shadow-md"></div>
+            <p className="font-semibold text-base text-gray-800">{step.title}</p>
+            <p className="text-sm text-gray-600">{step.desc}</p>
+          </div>
+        ))}
+      </div>
 
-                            <div className="pt-6">
-                                <Link
-                                    href="/get-free-consultation"
-                                    title="Get Free E-commerce Development Consultation"
-                                    className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
-                                >
-                                    Get Free Consultation to Start Your Store →
-                                </Link>
-                            </div>
-                        </div>
+      <div className="pt-6">
+        <Link
+          href="/get-free-consultation"
+          title="Get Free E-commerce Development Consultation"
+          className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
+        >
+          Get Your Free Store Consultation →
+        </Link>
+      </div>
+    </div>
 
-                    </div>
-                </section>
+  </div>
+</section>
+
 
                 {/* CTA Section */}
                 {/* <section className="bg-blue-50 py-12 px-6 md:px-20 rounded-3xl shadow-lg my-16 text-center">
