@@ -184,14 +184,18 @@ export default function Home() {
                             >
                                 {projectImages.map((item, index) => (
                                     <SwiperSlide key={index}>
-                                        <Image
-                                            src={item.src}
-                                            alt={item.alt}
-                                            title={item.title}
-                                            width={600}
-                                            height={400}
-                                            className="w-full h-[200px] lg:h-[250px] object-fit rounded-lg"
-                                        />
+                                        <div className="aspect-[3/2] w-full rounded-lg overflow-hidden">
+                                            <Image
+                                                src={item.src}
+                                                alt={item.alt}
+                                                title={item.title}
+                                                width={600}
+                                                height={400}
+                                                sizes="(min-width: 1024px) 250px, 200px"
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+
                                         <h3 className="mt-2 text-sm lg:text-base font-semibold text-gray-800 text-center">
                                             {item.title}
                                         </h3>
@@ -209,7 +213,7 @@ export default function Home() {
                                 </motion.div>
                             </Link>
 
-                          
+
                         </motion.div>
                     </aside>
                 </motion.section>

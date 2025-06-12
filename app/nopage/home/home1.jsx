@@ -97,9 +97,9 @@ export default function Home() {
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.4 }}
-                            className="text-2xl lg:text-5xl font-bold mb-4 leading-tight uppercase"
+                            className="text-xl lg:text-5xl font-bold mb-4 leading-tight uppercase pt-4 lg:pt-0"
                         >
-                            🚀 Get Your Professional <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Website</span> in Just
+                            Get Your Professional <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Website</span> in Just
                             <motion.span
                                 initial={{ scale: 0.9 }}
                                 animate={{ scale: 1 }}
@@ -185,14 +185,19 @@ export default function Home() {
                             >
                                 {projectImages.map((item, index) => (
                                     <SwiperSlide key={index}>
-                                        <Image
-                                            src={item.src}
-                                            alt={item.alt}
-                                            title={item.title}
-                                            width={600}
-                                            height={400}
-                                            className="w-full h-[200px] lg:h-[250px] object-fit rounded-lg"
-                                        />
+                                        <div className="aspect-[3/2] w-full rounded-lg overflow-hidden">
+                                            <Image
+                                                src={item.src}
+                                                alt={item.alt}
+                                                title={item.title}
+                                                width={600}
+                                                height={400}
+                                                sizes="(min-width: 1024px) 250px, 200px"
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+
+
                                         <h3 className="mt-2 text-sm lg:text-base font-semibold text-gray-800 text-center">
                                             {item.title}
                                         </h3>
@@ -216,7 +221,7 @@ export default function Home() {
                                 </p>
                             </div>
                             <div className="text-center">
-                                <Link href="/projects"  title="Browse our latest website design projects" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex justify-center items-center gap-2">
+                                <Link href="/projects" title="Browse our latest website design projects" className="text-balck text-sm font-medium flex justify-center items-center gap-2">
                                     Explore Recent Projects →
                                 </Link>
                             </div>
