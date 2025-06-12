@@ -1,6 +1,9 @@
 "use client";
 import { motion } from 'framer-motion';
-import { Mail, Phone, Instagram, Facebook, Linkedin, Twitter } from 'lucide-react';
+
+import { Mail, Phone, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { SiX } from 'react-icons/si';
+
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -21,11 +24,11 @@ export default function Footer() {
                     >
                         <Link href="/" title="Designuix Home - Web Design Company">
                             <p className="flex items-center gap-2 mb-6">
-                                <Image 
-                                    src="/Logo1.png" 
-                                    alt="Designuix Company Logo - Web Design Company" 
-                                    width={120} 
-                                    height={40} 
+                                <Image
+                                    src="/Logo1.png"
+                                    alt="Designuix Company Logo - Web Design Company"
+                                    width={120}
+                                    height={40}
                                     priority
                                     title="Designuix Logo"
                                 />
@@ -52,7 +55,7 @@ export default function Footer() {
                             </h2>
                             <ul className="space-y-3">
                                 <motion.li whileHover={{ x: 5 }}>
-                                    <Link href="/services/website-development-services" title="Website Development Services by Designuix">
+                                    <Link href="/services/custom-web-development-services" title="Website Development Services by Designuix">
                                         <p className="text-gray-600 hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:bg-clip-text hover:text-transparent transition-all">
                                             Web Development
                                         </p>
@@ -122,9 +125,9 @@ export default function Footer() {
                             <ul className="space-y-4">
                                 <motion.li whileHover={{ x: 5 }} className="flex items-center gap-2">
                                     <Mail className="w-5 h-5 text-blue-600" aria-hidden="true" />
-                                    <p 
-                                        href="mailto:contact@designuix.com" 
-                                        className="text-gray-600" 
+                                    <p
+                                        href="mailto:contact@designuix.com"
+                                        className="text-gray-600"
                                         title="Email Designuix for inquiries"
                                     >
                                         contact@designuix.com
@@ -132,15 +135,15 @@ export default function Footer() {
                                 </motion.li>
                                 <motion.li whileHover={{ x: 5 }} className="flex items-center gap-2">
                                     <Phone className="w-5 h-5 text-purple-600" aria-hidden="true" />
-                                    <p
-                                        href={`https://wa.me/91${whatsappNumber}?text=${whatsappText}`}
+                                      <a
+                                        href="https://wa.me/917567393494?text=Hello%2C%20I%20have%20visited%20your%20company%27s%20website%20Designuix%20and%20I%20really%20like%20it.%20I%27m%20interested%20in%20your%20services.."
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-gray-600"
-                                        title="Chat with Designuix on WhatsApp for free consultation"
+                                        className="flex items-center justify-between  rounded-xl transition"
                                     >
+                                    
                                         +91 {whatsappNumber}
-                                    </p>
+                                    </a>
                                 </motion.li>
                             </ul>
                         </motion.div>
@@ -155,10 +158,9 @@ export default function Footer() {
                     aria-label="Follow Designuix on social media"
                 >
                     {[
-                        { icon: <Instagram aria-hidden="true" />, link: "https://www.instagram.com/yourpage", name: "Instagram" },
-                        { icon: <Facebook aria-hidden="true" />, link: "https://www.facebook.com/yourpage", name: "Facebook" },
-                        { icon: <Linkedin aria-hidden="true" />, link: "https://www.linkedin.com/in/yourprofile", name: "LinkedIn" },
-                        { icon: <Twitter aria-hidden="true" />, link: "https://twitter.com/yourprofile", name: "Twitter" },
+                        { icon: <Instagram aria-hidden="true" />, link: "https://www.instagram.com/_designuix_/", name: "Instagram" },
+                        // { icon: <Linkedin aria-hidden="true" />, link: "https://www.linkedin.com/in/yourprofile", name: "LinkedIn" },
+                        { icon: <SiX aria-hidden="true" />, link: "https://x.com/designuix_team", name: "Twitter (X)" },
                     ].map((social, index) => (
                         <motion.a
                             key={index}
@@ -174,6 +176,7 @@ export default function Footer() {
                         </motion.a>
                     ))}
                 </motion.nav>
+
 
                 {/* Copyright */}
                 <motion.div

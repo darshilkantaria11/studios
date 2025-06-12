@@ -54,7 +54,7 @@ export default function CompletedProjects() {
             <h2 className="text-4xl font-bold mb-4">Showcasing Our Finest Projects</h2>
             <p className="text-gray-600 mb-8 max-w-2xl">
                 Every project we deliver reflects our dedication to quality, smart design, and client-first execution.
-                At Dk Studios, we turn ideas into powerful digital experiences — from sleek business websites to full-scale custom solutions that drive real results.
+                At Designuix, we turn ideas into powerful digital experiences — from sleek business websites to full-scale custom solutions that drive real results.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

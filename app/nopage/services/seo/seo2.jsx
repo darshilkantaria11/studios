@@ -202,7 +202,7 @@ export default function GrowthSection() {
                     </div>
                 </section>
 
-                <section className="bg-green-50 py-12 px-6 md:px-20 rounded-3xl shadow-lg my-16 text-center">
+                {/* <section className="bg-green-50 py-12 px-6 md:px-20 rounded-3xl shadow-lg my-16 text-center">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
                         Ready to Boost Your Website's Google Rankings?
                     </h2>
@@ -216,7 +216,7 @@ export default function GrowthSection() {
                     >
                         View SEO Pricing →
                     </Link>
-                </section>
+                </section> */}
 
                 <div className="mb-28">
                     <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions About Our SEO Services</h2>
