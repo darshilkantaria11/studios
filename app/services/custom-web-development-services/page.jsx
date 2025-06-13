@@ -1,6 +1,6 @@
 import Webdevservice1 from "../../nopage/services/webdevservice/webdevservice1"
 import Webdevservice2 from "../../nopage/services/webdevservice/webdevservice2"
-
+import Head from "next/head";
 
 export const metadata = {
     title: "Custom Web Development Company [Get Free Consultation]",
@@ -63,10 +63,69 @@ export const metadata = {
 
 
 export default function Page() {
+
+
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Custom Web Development Company",
+        "url": "https://designuix.com/services/custom-web-development-services",
+        "description": "As a full-service custom web development company, we handle all your website needs under one roof. Book a free consultation and receive a quote within 24 hours.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Designuix",
+            "url": "https://designuix.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://designuix.com/opengraph-designuix-custom-web-development-company.png"
+            }
+        },
+        "mainEntity": {
+            "@type": "Service",
+            "name": "Custom Web Development Services",
+            "description": "Professional custom website development tailored for your business, including responsive design, SEO-ready code, and scalable web applications.",
+            "provider": {
+                "@type": "Organization",
+                "name": "Designuix",
+                "url": "https://designuix.com"
+            },
+            "areaServed": [
+                { "@type": "Country", "name": "United States" },
+                { "@type": "Country", "name": "United Kingdom" },
+                { "@type": "Country", "name": "Canada" },
+                { "@type": "Country", "name": "Australia" },
+                { "@type": "Country", "name": "Germany" },
+                { "@type": "Country", "name": "United Arab Emirates" },
+                { "@type": "Country", "name": "Singapore" },
+                { "@type": "Country", "name": "Switzerland" },
+                { "@type": "Country", "name": "Netherlands" },
+                { "@type": "Country", "name": "Sweden" },
+                { "@type": "Text", "name": "Worldwide" }
+            ],
+            
+
+            "serviceType": "Custom Web Development",
+            "availableChannel": {
+                "@type": "ServiceChannel",
+                "serviceUrl": "https://designuix.com/get-free-consultation",
+                "availableLanguage": ["English"]
+            }
+        }
+    };
     return (
         <>
+            <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+                />
+            </Head>
             <Webdevservice1 />
             <Webdevservice2 />
         </>
     )
 };
+
+
+
+

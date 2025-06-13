@@ -5,6 +5,7 @@ import Home3 from "./nopage/home/home3"
 import Home4 from "./nopage/home/home4"
 import Home5 from "./nopage/home/home5"
 import Home6 from "./nopage/home/home6"
+import Head from "next/head"
 
 export const metadata = {
     title: "Designuix - Best Web Design Company [Get Free Consultation]",
@@ -69,8 +70,81 @@ export const metadata = {
 
 
 export default function Page() {
+
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Designuix - Best Web Design Company",
+        "url": "https://designuix.com",
+        "description": "Designuix is a top-rated web design and development company offering custom websites tailored to drive results.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Designuix",
+            "url": "https://designuix.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://designuix.com/opengraph-designuix.png"
+            }
+        },
+        "mainEntity": {
+            "@type": "Service",
+            "name": "Website Design & Development Services",
+            "description": "End-to-end web design and development services, including custom designs, responsive layouts, SEO optimization, and scalable solutions for businesses of all sizes.",
+            "provider": {
+                "@type": "Organization",
+                "name": "Designuix",
+                "url": "https://designuix.com"
+            },
+            "areaServed": [
+                { "@type": "Country", "name": "United States" },
+                { "@type": "Country", "name": "United Kingdom" },
+                { "@type": "Country", "name": "Canada" },
+                { "@type": "Country", "name": "Australia" },
+                { "@type": "Country", "name": "Germany" },
+                { "@type": "Country", "name": "United Arab Emirates" },
+                { "@type": "Country", "name": "Singapore" },
+                { "@type": "Country", "name": "Switzerland" },
+                { "@type": "Country", "name": "Netherlands" },
+                { "@type": "Country", "name": "Sweden" },
+                { "@type": "Text", "name": "Worldwide" }
+            ],
+
+            "serviceType": "Web Design & Development",
+            "availableChannel": {
+                "@type": "ServiceChannel",
+                "serviceUrl": "https://designuix.com/get-free-consultation",
+                "availableLanguage": ["English"]
+            }
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "India",
+            "addressCountry": "IN"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "support@designuix.com",
+            "url": "https://designuix.com/contact-us"
+        },
+        "sameAs": [
+            "https://www.instagram.com/_designuix_",
+            "https://x.com/designuix_team"
+        ]
+    };
+
+
+
     return (
         <>
+            <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+                />
+
+            </Head>
+
             <Home1 />
             <Home2 />
             <Home2a />
