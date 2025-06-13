@@ -1,5 +1,6 @@
-import Ecommerce1 from "../../nopage/services/ecommerce/ecomm1"
-import Ecommerce2 from "../../nopage/services/ecommerce/ecomm2"
+import Ecommerce1 from "../../nopage/services/ecommerce/ecomm1";
+import Ecommerce2 from "../../nopage/services/ecommerce/ecomm2";
+import Head from "next/head";
 
 export const metadata = {
     title: "E-commerce Development Company [Get a Custom Online Store]",
@@ -41,7 +42,7 @@ export const metadata = {
         siteName: "Designuix",
         images: [
             {
-                url: "https://designuix.com/opengraph-designuix-ecommerce.png", // 🔁 Replace with a relevant OG image
+                url: "https://designuix.com/opengraph-designuix-ecommerce.png", // ✅ Ensure this image exists
                 alt: "E-commerce Development by Designuix",
             },
         ],
@@ -53,18 +54,62 @@ export const metadata = {
         title: "E-commerce Development Company [Get a Custom Online Store]",
         description:
             "As a full-service e-commerce development company, we handle all your website needs under one roof. Book a free consultation and receive a quote within 24 hours.",
-        images: ["https://designuix.com/opengraph-designuix-ecommerce.png"], // 🔁 Replace if needed
+        images: ["https://designuix.com/opengraph-designuix-ecommerce.png"],
         creator: "@designuix_team",
     },
     metadataBase: new URL("https://designuix.com"),
 };
 
+export default function Page() {
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "E-commerce Development Company",
+        "url": "https://designuix.com/services/ecommerce",
+        "description": "As a full-service e-commerce development company, we handle all your website needs under one roof. Book a free consultation and receive a quote within 24 hours.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Designuix",
+            "url": "https://designuix.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://designuix.com/opengraph-designuix-ecommerce.png"
+            }
+        },
+        "mainEntity": {
+            "@type": "Service",
+            "name": "E-commerce Development Services",
+            "description": "Custom e-commerce website development tailored to your business using scalable platforms like Shopify, WooCommerce, and more.",
+            "provider": {
+                "@type": "Organization",
+                "name": "Designuix",
+                "url": "https://designuix.com"
+            },
+            "areaServed": [
+                { "@type": "Country", "name": "United States" },
+                { "@type": "Country", "name": "United Kingdom" },
+                { "@type": "Country", "name": "Canada" },
+                { "@type": "Text", "name": "Worldwide" }
+            ],
+            "serviceType": "E-commerce Website Development",
+            "availableChannel": {
+                "@type": "ServiceChannel",
+                "serviceUrl": "https://designuix.com/get-free-consultation",
+                "availableLanguage": ["English"]
+            }
+        }
+    };
 
-export default function Page(){
-    return(
+    return (
         <>
-        <Ecommerce1/>
-        <Ecommerce2/>
+            <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+                />
+            </Head>
+            <Ecommerce1 />
+            <Ecommerce2 />
         </>
-    )
+    );
 }
