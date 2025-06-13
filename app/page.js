@@ -49,7 +49,7 @@ export const metadata = {
         siteName: "Designuix",
         images: [
             {
-                url: "https://designuix.com/web-design-company-logo.png", // replace with actual OG image URL
+                url: "https://designuix.com/opengraph-designuix.png", // replace with actual OG image URL
                 alt: "Designuix - Web Design Company",
             },
         ],
@@ -61,7 +61,7 @@ export const metadata = {
         title: "Designuix - Best Web Design Company [Get Free Consultation]",
         description:
             "As a full-service web design company, we handle all your website needs under one roof. 🚀 Book a free consultation and get a custom quote today!",
-        images: ["https://designuix.com/web-design-company-logo.png"], // replace if needed
+        images: ["https://designuix.com/opengraph-designuix.png"], // replace if needed
         creator: "@designuix_team", // optional, if you have a Twitter handle
     },
     metadataBase: new URL("https://designuix.com"),
