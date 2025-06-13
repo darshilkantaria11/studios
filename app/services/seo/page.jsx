@@ -43,7 +43,7 @@ export const metadata = {
         siteName: "Designuix",
         images: [
             {
-                url: "https://designuix.com/web-design-company-logo.png", // ✅ Replace if needed
+                url: "https://designuix.com/opengraph-designuix-seo.png", // ✅ Replace if needed
                 alt: "Designuix - Best SEO Company",
             },
         ],
@@ -55,7 +55,7 @@ export const metadata = {
         title: "Best SEO Company – Drive Traffic & Grow Your Business",
         description:
             "Looking for the best SEO company to boost your online visibility and rank higher on Google? Designuix offers custom strategies book a free consultation today!",
-        images: ["https://designuix.com/web-design-company-logo.png"], // ✅ Replace if needed
+        images: ["https://designuix.com/opengraph-designuix-seo.png"], // ✅ Replace if needed
         creator: "@designuix_team",
     },
     metadataBase: new URL("https://designuix.com"),

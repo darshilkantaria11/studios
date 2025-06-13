@@ -40,7 +40,7 @@ export const metadata = {
         siteName: "Designuix",
         images: [
             {
-                url: "https://designuix.com/web-design-company-logo.png", // ✅ Replace with actual OG image if available
+                url: "https://designuix.com/opengraph-designuix.png", // ✅ Replace with actual OG image if available
                 alt: "Designuix Client Projects",
             },
         ],
@@ -52,7 +52,7 @@ export const metadata = {
         title: "Client Projects – Web Design & Development Portfolio | Designuix",
         description:
             "Explore our client work to see how Designuix builds high-converting, scalable websites. Book a consultation to get started on your project.",
-        images: ["https://designuix.com/web-design-company-logo.png"], // ✅ Replace with actual image
+        images: ["https://designuix.com/opengraph-designuix.png"], // ✅ Replace with actual image
         creator: "@designuix_team",
     },
     metadataBase: new URL("https://designuix.com"),

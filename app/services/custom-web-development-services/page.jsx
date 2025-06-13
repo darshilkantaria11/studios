@@ -42,7 +42,7 @@ export const metadata = {
         siteName: "Designuix",
         images: [
             {
-                url: "https://designuix.com/web-design-company-logo.png", // ✅ Replace with actual OG image
+                url: "https://designuix.com/opengraph-designuix-custom-web-development-company.png", // ✅ Replace with actual OG image
                 alt: "Custom Web Development by Designuix",
             },
         ],
@@ -54,7 +54,7 @@ export const metadata = {
         title: "Custom Web Development Company [Get Free Consultation]",
         description:
             "As a full-service custom web development company, we handle all your website needs under one roof. Book a free consultation and receive a quote within 24 hours.",
-        images: ["https://designuix.com/web-design-company-logo.png"], // ✅ Replace with actual image
+        images: ["https://designuix.com/opengraph-designuix-custom-web-development-company.png"], // ✅ Replace with actual image
         creator: "@designuix_team",
     },
     metadataBase: new URL("https://designuix.com"),

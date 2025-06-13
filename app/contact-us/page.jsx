@@ -41,7 +41,7 @@ export const metadata = {
         siteName: "Designuix",
         images: [
             {
-                url: "https://designuix.com/web-design-company-logo.png",
+                url: "https://designuix.com/opengraph-designuix.png",
                 alt: "Contact Designuix Team",
             },
         ],
@@ -53,7 +53,7 @@ export const metadata = {
         title: "Contact Designuix – Let's Talk About Your Project",
         description:
             "Start the conversation with Designuix. We offer quick support and expert guidance on web development, SEO, and more.",
-        images: ["https://designuix.com/web-design-company-logo.png"],
+        images: ["https://designuix.com/opengraph-designuix.png"],
         creator: "@designuix_team",
     },
     metadataBase: new URL("https://designuix.com"),

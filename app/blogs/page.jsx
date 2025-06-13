@@ -40,7 +40,7 @@ export const metadata = {
         siteName: "Designuix",
         images: [
             {
-                url: "https://designuix.com/web-design-company-logo.png", // ✅ Replace with actual OG image
+                url: "https://designuix.com/opengraph-designuix.png", // ✅ Replace with actual OG image
                 alt: "Designuix Blog - Web Design & SEO Insights",
             },
         ],
@@ -52,7 +52,7 @@ export const metadata = {
         title: "Web Design & SEO Blog – Tips, Trends & Insights | Designuix",
         description:
             "Get practical tips and strategies from the Designuix team on web design, SEO, and online growth. Perfect for startups, founders, and marketers.",
-        images: ["https://designuix.com/web-design-company-logo.png"], // ✅ Replace if you have a better blog OG image
+        images: ["https://designuix.com/opengraph-designuix.png"], // ✅ Replace if you have a better blog OG image
         creator: "@designuix_team",
     },
     metadataBase: new URL("https://designuix.com"),

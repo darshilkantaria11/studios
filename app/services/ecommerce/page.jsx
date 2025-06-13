@@ -41,7 +41,7 @@ export const metadata = {
         siteName: "Designuix",
         images: [
             {
-                url: "https://designuix.com/web-design-company-logo.png", // 🔁 Replace with a relevant OG image
+                url: "https://designuix.com/opengraph-designuix-ecommerce.png", // 🔁 Replace with a relevant OG image
                 alt: "E-commerce Development by Designuix",
             },
         ],
@@ -53,7 +53,7 @@ export const metadata = {
         title: "E-commerce Development Company [Get a Custom Online Store]",
         description:
             "As a full-service e-commerce development company, we handle all your website needs under one roof. Book a free consultation and receive a quote within 24 hours.",
-        images: ["https://designuix.com/web-design-company-logo.png"], // 🔁 Replace if needed
+        images: ["https://designuix.com/opengraph-designuix-ecommerce.png"], // 🔁 Replace if needed
         creator: "@designuix_team",
     },
     metadataBase: new URL("https://designuix.com"),
