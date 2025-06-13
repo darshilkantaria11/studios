@@ -61,6 +61,8 @@ export const metadata = {
 };
 
 export default function Page() {
+
+    
     const schemaData = {
         "@context": "https://schema.org",
         "@type": "WebPage",
