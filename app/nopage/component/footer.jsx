@@ -140,6 +140,7 @@ export default function Footer() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex items-center justify-between  rounded-xl transition"
+                                        title='Contact Designuix on whatapp'
                                     >
                                     
                                         +91 {whatsappNumber}

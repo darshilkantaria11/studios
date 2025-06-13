@@ -24,7 +24,7 @@ export default function Benefits() {
             className="text-3xl md:text-4xl font-bold mb-4 text-gray-900"
           >
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Why Choose Our Web Design Company
+              Why Designuix Is the Right Web Design Company
             </span>
           </h2>
           <p className="text-gray-700 max-w-2xl mx-auto text-lg">

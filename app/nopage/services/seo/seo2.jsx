@@ -66,7 +66,7 @@ export default function GrowthSection() {
                 >
                     <div className="max-w-6xl mx-auto text-center">
                         <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-                            How Our Professional SEO Services Grow Your Business 🚀
+                            How Our Professional SEO Company Grow Your Business 🚀
                         </h2>
                         <p className="text-lg lg:text-xl text-white/90 max-w-3xl mx-auto mb-12">
                             As the best SEO company, we go beyond rankings — our SEO solutions are engineered to bring you qualified traffic, convert visitors, and increase your bottom line.
@@ -219,7 +219,7 @@ export default function GrowthSection() {
                 </section> */}
 
                 <div className="mb-28">
-                    <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions About Our SEO Services</h2>
+                    <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions About Our SEO Company</h2>
                     <div className="max-w-4xl mx-auto space-y-6">
                         {faqs.map((faq, i) => (
                             <div

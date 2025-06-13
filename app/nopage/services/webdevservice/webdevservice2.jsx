@@ -62,7 +62,7 @@ export default function GrowthSection() {
         >
           <h2 className="text-2xl lg:text-4xl font-bold mb-4">
             Transform Your Business with <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Custom Web Solutions
+              Custom Web Development Company
             </span> 🚀
           </h2>
           <p className="text-sm lg:text-xl text-gray-600">
@@ -142,7 +142,7 @@ export default function GrowthSection() {
                   title="Gulfside Painting website design project video"
                 >
                   <source src="/gulfside.mp4" type="video/mp4" />
-                
+
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -240,7 +240,7 @@ export default function GrowthSection() {
 
         <section className="bg-blue-50 py-12 px-6 md:px-20 rounded-3xl shadow-lg my-16 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-            Ready for Your Custom Web Solution?
+            Ready for Your Custom Web Development?
           </h2>
           <p className="text-gray-700 text-lg mb-8">
             Transparent process. Enterprise-grade results.
@@ -257,11 +257,13 @@ export default function GrowthSection() {
         {/* Why Designuix Section */}
         <section className="mb-8 bg-gradient-to-br from-white via-blue-50 to-white py-20 px-6 md:px-12 rounded-3xl shadow-inner border border-blue-100">
           <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-6">
-              Why Businesses Choose Our <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Custom Development
+            <h2 className="text-2xl lg:text-3xl font-extrabold text-gray-900 mb-6">
+              Why Businesses Choose Us as Their{" "}
+              <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Custom Web Development Company
               </span>
             </h2>
+
             <p className="text-gray-600 max-w-2xl mx-auto text-lg mb-16">
               We're not just building websites — we're building <span className="font-semibold text-gray-800">growth engines</span>. Every page, pixel, and CTA is optimized to convert clicks into customers.
             </p>

@@ -6,23 +6,63 @@ import Link from 'next/link';
 
 export const metadata = {
     title: "7 Reasons Why a Website Is Important for Your Business",
-    description: "Discover why having a professional website is essential for modern businesses. Learn about domains, hosting, and how an online presence can transform your growth.",
-    keywords: "business website, online presence, website benefits, digital marketing, small business strategy",
+    description:
+        "Discover the top 7 reasons why your business needs a professional website. From credibility to 24/7 accessibility, learn how a website drives growth and builds trust.",
+    keywords: [
+        "importance of a business website",
+        "why website is important",
+        "website benefits for business",
+        "online presence for small business",
+        "business website strategy",
+        "professional website advantages",
+        "web development for business",
+        "website credibility",
+        "small business digital growth",
+        "Designuix",
+    ],
+    alternates: {
+        canonical: "/blogs/7-reasons-why-website-important-for-business",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        nocache: false,
+        googleBot: {
+            index: true,
+            follow: true,
+        },
+    },
+    authors: [{ name: "Designuix", url: "https://designuix.com" }],
+    creator: "Designuix",
+    publisher: "Designuix",
     openGraph: {
         title: "7 Reasons Why a Website Is Important for Your Business",
-        description: "Discover why having a professional website is essential for modern businesses.",
+        description:
+            "Explore why having a website boosts your business growth. Build trust, improve credibility, and reach more customers with a strong online presence.",
         url: "https://designuix.com/blogs/7-reasons-why-website-important-for-business",
-        type: "article",
+        siteName: "Designuix",
         images: [
             {
-                url: "/blogs/7-reasons-why-website-important-for-business.webp",
+                url: "https://designuix.com/blogs/7-reasons-why-website-important-for-business.webp", // ✅ Use full domain path
                 width: 1200,
                 height: 630,
                 alt: "Website Importance for Business",
             },
         ],
+        locale: "en_US",
+        type: "article",
     },
+    twitter: {
+        card: "summary_large_image",
+        title: "7 Reasons Why a Website Is Important for Your Business",
+        description:
+            "From building trust to generating leads, discover why every business needs a professional website today.",
+        images: ["https://designuix.com/blogs/7-reasons-why-website-important-for-business.webp"], // ✅ Ensure image exists at this URL
+        creator: "@designuix_team",
+    },
+    metadataBase: new URL("https://designuix.com"),
 };
+
 
 const WebsiteImportance = () => {
     return (
@@ -101,9 +141,13 @@ const WebsiteImportance = () => {
 
                 <h3 className="text-2xl sm:text-3xl font-bold mb-4">1. 24/7 Lead Generation Machine</h3>
                 <p className="mb-6 text-lg">
-                    One of the biggest benefits of having a professional website for your business is that it works around the clock — even when you don&apos;t. Unlike a physical store or office that has fixed working hours, your website stays live and accessible 24/7. It becomes your tireless sales assistant, capturing leads, answering questions, and showcasing your services or products at any time of the day or night.
-                    <br />
-                    Whether it&apos;s a potential customer browsing late at night or someone from another time zone checking out your offerings during their workday, your digital storefront is always open. This constant accessibility means you're never missing an opportunity to attract new business. With proper contact forms, WhatsApp integrations, or booking systems in place, your website can bring in inquiries, quote requests, and leads while you sleep — turning it into a powerful lead generation machine that scales without extra effort.
+                    <p>
+                        One of the biggest benefits of having a professional website for your business is that it works around the clock — even when you don&apos;t. Unlike a physical store or office that has fixed working hours, your website stays live and accessible 24/7. It becomes your tireless sales assistant, capturing leads, answering questions, and showcasing your services or products at any time of the day or night.
+                        <br />
+                        Whether it&apos;s a potential customer browsing late at night or someone from another time zone checking out your offerings during their workday, your digital storefront is always open. This constant accessibility means you're never missing an opportunity to attract new business. With proper contact forms, WhatsApp integrations, or booking systems in place, your website can bring in inquiries, quote requests, and leads while you sleep — turning it into a powerful lead generation machine that scales without extra effort.
+                        <br />
+                        If you're looking to build a 24/7 online presence that attracts leads and converts visitors, <Link href="/" className="text-blue-600 underline font-semibold">partner with a trusted web design company</Link> like us and get started today.
+                    </p>
                 </p>
                 <div className="relative w-full h-[300px] md:h-[400px] lg:h-[400px] mb-10">
                     <Image
@@ -143,7 +187,7 @@ const WebsiteImportance = () => {
                     <br /><br />
                     Whether it's through search engine optimization (SEO), blog content that ranks for months or years, or integration with email and social media campaigns — your website acts as a central hub for all your marketing channels. Instead of renting space in someone else&apos;s media, you're building your own platform that drives repeat traffic, captures leads, and promotes your brand 24/7 without draining your budget.
                 </p>
-                 <div className="relative w-full h-[300px] md:h-[400px] lg:h-[400px] mb-10">
+                <div className="relative w-full h-[300px] md:h-[400px] lg:h-[400px] mb-10">
                     <Image
                         src="/blogs/blog1c.webp" // replace with your actual image path
                         alt="Cost-Effective Marketing Powerhouse"
@@ -160,7 +204,7 @@ const WebsiteImportance = () => {
                     <br /><br />
                     By incorporating local SEO strategies like Google Business Profile integration, location-specific landing pages, and customer reviews, you can attract more neighborhood clients who are ready to take action. Even simple updates like adding your address, service areas, and localized content can increase visibility and foot traffic by up to 35%. Your website becomes the digital front door to your local business.
                 </p>
-                 <div className="relative w-full h-[300px] md:h-[400px] lg:h-[400px] mb-10">
+                <div className="relative w-full h-[300px] md:h-[400px] lg:h-[400px] mb-10">
                     <Image
                         src="/blogs/blog1d.webp" // replace with your actual image path
                         alt="Unlock Your Local Market Potential"
@@ -177,7 +221,7 @@ const WebsiteImportance = () => {
                     <br /><br />
                     This not only improves response times but also enhances customer satisfaction by offering instant solutions anytime, day or night. Meanwhile, your team can focus on resolving more complex issues, providing personalized service where it matters most. A well-designed website becomes a powerful extension of your customer service, streamlining operations and improving overall efficiency.
                 </p>
-                 <div className="relative w-full h-[300px] md:h-[400px] lg:h-[400px] mb-10">
+                <div className="relative w-full h-[300px] md:h-[400px] lg:h-[400px] mb-10">
                     <Image
                         src="/blogs/blog1e.webp" // replace with your actual image path
                         alt="Customer Service Revolution"
@@ -195,7 +239,7 @@ const WebsiteImportance = () => {
                     <br /><br />
                     This data helps you identify exactly where visitors lose interest, so you can optimize your content, improve user experience, and tailor your marketing strategies effectively. By leveraging analytics tools like Google Analytics or Hotjar, you transform your website into a dynamic feedback loop, empowering smarter business decisions and maximizing growth opportunities based on real customer behavior.
                 </p>
-                 <div className="relative w-full h-[300px] md:h-[400px] lg:h-[400px] mb-10">
+                <div className="relative w-full h-[300px] md:h-[400px] lg:h-[400px] mb-10">
                     <Image
                         src="/blogs/blog1f.webp" // replace with your actual image path
                         alt="Data-Driven Business Insights"
@@ -213,7 +257,7 @@ const WebsiteImportance = () => {
                     <br /><br />
                     By not having a website, you risk losing valuable leads and sales to competitors who are just a click away. Your website serves as your digital storefront and brand ambassador, showcasing your products, services, and unique value propositions 24/7. To stay competitive and relevant in your industry, establishing a well-designed, user-friendly website is now the baseline expectation, not a luxury.
                 </p>
-                 <div className="relative w-full h-[300px] md:h-[400px] lg:h-[400px] mb-10">
+                <div className="relative w-full h-[300px] md:h-[400px] lg:h-[400px] mb-10">
                     <Image
                         src="/blogs/blog1g.webp" // replace with your actual image path
                         alt="Competitive Necessity"
@@ -246,11 +290,17 @@ const WebsiteImportance = () => {
                     <li className="pl-2">Secure your domain name (keep it simple and brandable)</li>
                     <li className="pl-2">Choose reliable hosting (prioritize speed and security)</li>
                     <li className="pl-2">Select a platform matching your technical comfort</li>
-                    <li className="pl-2">Develop core pages: Home, About, Services, Contact</li>
+                    <li className="pl-2">
+                        Develop core pages: Home, About, Services, Contact — or work with a team offering
+                        <Link href="/services/custom-web-development-services" className="text-blue-600 underline font-semibold ml-1">
+                            custom web development services
+                        </Link> to ensure it&apos;s done right.
+                    </li>
                     <li className="pl-2">Implement basic SEO fundamentals</li>
-                    <li className="pl-2">Launch with 3-5 valuable content pieces</li>
+                    <li className="pl-2">Launch with 3–5 valuable content pieces</li>
                     <li className="pl-2">Establish regular maintenance routine</li>
                 </ol>
+
 
                 <div className="bg-yellow-50 p-6 rounded-lg my-8 border border-yellow-200">
                     <h3 className="text-2xl sm:text-3xl font-bold mb-4">Pro Tip:</h3>
@@ -264,7 +314,7 @@ const WebsiteImportance = () => {
                 <p>
                     The question isn't "Can I afford a website?" but "Can I afford to miss the 4.5 billion people searching online daily?" Your digital storefront awaits - and with today's user-friendly platforms, establishing your professional online presence has never been more accessible.
                 </p>
-                 <div className="mt-10 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-10 px-6 rounded-2xl shadow-2xl mb-10">
+                <div className="mt-10 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-10 px-6 rounded-2xl shadow-2xl mb-10">
                     <h3 className="text-2xl lg:text-4xl font-bold mb-6">
                         Let's Build Something Incredible
                     </h3>
