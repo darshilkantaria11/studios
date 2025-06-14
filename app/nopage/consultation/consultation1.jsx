@@ -597,21 +597,7 @@ const ContactUs = () => {
                                     We've received your information and will get back to you within 24 hours with a personalized strategy and budget estimate.
                                 </motion.p>
 
-                                {/* <motion.div
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ delay: 0.6 }}
-                                >
-                                    <p className="text-gray-700 mb-4">
-                                        In the meantime, check out our portfolio:
-                                    </p>
-                                    <a
-                                        href="/projects"
-                                        className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
-                                    >
-                                        View Our Work
-                                    </a>
-                                </motion.div> */}
+                               
                             </div>
                         </motion.div>
                     )}

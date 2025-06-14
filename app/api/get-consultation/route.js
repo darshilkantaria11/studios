@@ -13,31 +13,34 @@ const transporter = nodemailer.createTransport({
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { name, phone, email, business, services, message } = body;
-
-    // Send response immediately
-    const response = new Response(JSON.stringify({ success: true }), { 
+    
+    // Wait for email sending to complete
+    await processEmailAsync(body);
+    
+    return new Response(JSON.stringify({ success: true }), { 
       status: 200 
     });
-
-    // Process email in background
-    processEmailAsync(body);
-
-    return response;
   } catch (error) {
-    console.error("Consultation API Error:", error);
+    console.error("API Error:", error);
     return new Response(JSON.stringify({ error: "Failed to process request" }), { 
       status: 500 
     });
   }
 }
 
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
 // Background email processing
 async function processEmailAsync({ name, phone, email, business, services, message }) {
+  if (!validateEmail(email)) {
+  console.error("Invalid email:", email);
+  return;
+}
   try {
-    const serviceListHTML = Array.isArray(services) && services.length
-      ? `<ul>${services.map(service => `<li>${service}</li>`).join("")}</ul>`
-      : "None";
+  
 
     // SIMPLIFIED ADMIN EMAIL
     const adminMailOptions = {
