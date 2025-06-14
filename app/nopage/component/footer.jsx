@@ -25,7 +25,7 @@ export default function Footer() {
                         <Link href="/" title="Designuix Home - Web Design Company">
                             <p className="flex items-center gap-2 mb-6">
                                 <Image
-                                    src="/Logo1.png"
+                                    src="/web-design-company-logo.png"
                                     alt="Designuix Company Logo - Web Design Company"
                                     width={120}
                                     height={40}
