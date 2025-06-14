@@ -14,6 +14,7 @@ const ContactUs = () => {
     const [step, setStep] = useState(1);
     const [budgetAnswers, setBudgetAnswers] = useState({});
     const [currentBudgetQuestion, setCurrentBudgetQuestion] = useState(0);
+    const [error, setError] = useState(''); // New state for error messages
 
     const budgetQuestions = [
         {
@@ -153,29 +154,33 @@ const ContactUs = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setError(''); // Reset previous errors
 
+        // Save to localStorage (optional)
         const savedContacts = JSON.parse(localStorage.getItem('contactFormData') || '[]');
         const newContacts = [...savedContacts, formData];
         localStorage.setItem('contactFormData', JSON.stringify(newContacts));
-        setStep(2);
-        fetch('/api/get-consultation', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData),
-        })
-            .then(response => {
-                if (!response.ok) {
-                    console.error('Background submission failed');
-                }
-            })
-            .catch(err => {
-                console.error('Background submission error:', err);
-            })
-            .finally(() => {
-                setIsSubmitting(false);
+
+        try {
+            const response = await fetch('/api/get-consultation', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
             });
 
-        setIsSubmitting(false);
+            if (response.ok) {
+                setSubmitMessage('Form submitted successfully!');
+                setTimeout(() => setStep(2), 1500); // Show success briefly before moving on
+            } else {
+                const errorData = await response.json();
+                throw new Error(errorData.error || 'Submission failed');
+            }
+        } catch (err) {
+            console.error('Submission error:', err);
+            setError(err.message || 'Failed to submit form. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
     const resetBudgetForm = () => {
         setBudgetAnswers({});
@@ -422,6 +427,12 @@ const ContactUs = () => {
                                                 placeholder="Tell us anything specific you&apos;re looking for..."
                                             ></textarea>
                                         </div>
+                                        {/* Error message display */}
+                                        {error && (
+                                            <div className="mt-4 p-4 bg-red-50 text-red-700 rounded-lg">
+                                                {error}
+                                            </div>
+                                        )}
 
                                         {/* Submit Button */}
                                         <div>
@@ -451,6 +462,7 @@ const ContactUs = () => {
                                                     {submitMessage}
                                                 </div>
                                             )}
+
                                         </div>
                                     </form>
 
@@ -597,7 +609,7 @@ const ContactUs = () => {
                                     We've received your information and will get back to you within 24 hours with a personalized strategy and budget estimate.
                                 </motion.p>
 
-                               
+
                             </div>
                         </motion.div>
                     )}
