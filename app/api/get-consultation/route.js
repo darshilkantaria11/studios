@@ -42,7 +42,7 @@ async function processEmailAsync({ name, phone, email, business, services, messa
     // SIMPLIFIED ADMIN EMAIL
     const adminMailOptions = {
       from: `"Designuix" <${process.env.EMAIL_USER}>`,
-      to: "contact@designuix.com",
+      to: "designuixteam@gmail.com",
       subject: "🚀 New Consultation Request",
       text: `New consultation request:
         Name: ${name}

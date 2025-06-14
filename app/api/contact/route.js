@@ -21,7 +21,7 @@ export async function POST(req) {
     // Email to you (admin)
     const adminMail = {
       from: `"Contact Form" <${email}>`,
-      to: "contact@designuix.com",
+      to: "designuixteam@gmail.com",
       subject: `New Contact Form Submission`,
       html: `
   <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">

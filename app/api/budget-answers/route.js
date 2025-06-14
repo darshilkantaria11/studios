@@ -108,7 +108,7 @@ async function processBudgetAnswersAsync(payload) {
     // SIMPLIFIED ADMIN EMAIL
     const adminMailOptions = {
       from: `"Designuix" <${process.env.EMAIL_USER}>`,
-      to: "contact@designuix.com",
+      to: "designuixteam@gmail.com",
       subject: "📊 Budget Answers Received",
       text: `Budget answers from ${name} (${email}):\n\n${answersText}`
     };
