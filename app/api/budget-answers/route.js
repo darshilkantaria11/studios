@@ -71,27 +71,9 @@ const budgetQuestions = [
 export async function POST(req) {
   try {
     const body = await req.json();
-    
-    // Send response immediately
-    const response = new Response(JSON.stringify({ success: true }), { 
-      status: 200 
-    });
 
-    // Process in background
-    processBudgetAnswersAsync(body);
-
-    return response;
-  } catch (error) {
-    console.error("Budget Answers API Error:", error);
-    return new Response(JSON.stringify({ error: "Failed to process request" }), { 
-      status: 500 
-    });
-  }
-}
-
-async function processBudgetAnswersAsync(payload) {
-  try {
-    const { initialFormData, budgetAnswers } = payload;
+    // Process and send email immediately
+    const { initialFormData, budgetAnswers } = body;
     const { name, email } = initialFormData;
 
     // Format budget answers
@@ -99,22 +81,45 @@ async function processBudgetAnswersAsync(payload) {
       .map(([questionId, answerValue]) => {
         const question = budgetQuestions.find(q => q.id === questionId);
         if (!question) return "";
-        
+
         const selectedOption = question.options.find(opt => opt.value === answerValue);
         return `${question.question}: ${selectedOption?.text || answerValue}`;
       })
-      .join("\n");
+      .join("\n\n");
 
-    // SIMPLIFIED ADMIN EMAIL
-    const adminMailOptions = {
-      from: `"Designuix" <${process.env.EMAIL_USER}>`,
+    // Send email
+    await transporter.sendMail({
+      from: `"Designuix Contact Form" <${process.env.EMAIL_USER}>`,
       to: "designuixteam@gmail.com",
-      subject: "📊 Budget Answers Received",
-      text: `Budget answers from ${name} (${email}):\n\n${answersText}`
-    };
+      subject: "📊 New Budget Answers Submission",
+      text: `
+        New Budget Answers Submission:
+        
+        Contact Details:
+        Name: ${name}
+        Email: ${email}
+        
+        Budget Answers:
+        ${answersText}
+        
+        ---
+        Sent from Designuix Contact Form
+      `
+    });
 
-    await transporter.sendMail(adminMailOptions);
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' }
+    });
+
   } catch (error) {
-    console.error("Background budget answers error:", error);
+    console.error("Budget Answers API Error:", error);
+    return new Response(JSON.stringify({
+      error: "Failed to process request",
+      details: error.message
+    }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' }
+    });
   }
 }

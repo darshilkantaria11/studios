@@ -15,6 +15,7 @@ const ContactUs = () => {
     const [budgetAnswers, setBudgetAnswers] = useState({});
     const [currentBudgetQuestion, setCurrentBudgetQuestion] = useState(0);
     const [error, setError] = useState(''); // New state for error messages
+    const [budgetError, setBudgetError] = useState('');
 
     const budgetQuestions = [
         {
@@ -79,14 +80,29 @@ const ContactUs = () => {
             [questionId]: answer
         };
         setBudgetAnswers(updatedAnswers);
+        setBudgetError('');
 
         // Move to next question or complete
         if (currentBudgetQuestion < budgetQuestions.length - 1) {
             setCurrentBudgetQuestion(prev => prev + 1);
-        } else {
-            // Submit budget answers
-            submitBudgetAnswers(updatedAnswers);
-            setStep(3);
+        }
+    };
+
+    const handleBudgetSubmit = async () => {
+        const lastQuestionId = budgetQuestions[budgetQuestions.length - 1].id;
+        if (!budgetAnswers[lastQuestionId]) {
+            setBudgetError('Please answer this question to proceed');
+            return;
+        }
+        try {
+            setIsSubmitting(true);
+            await submitBudgetAnswers(budgetAnswers);
+            setStep(3); // Only move to thank you page after successful submission
+        } catch (err) {
+            console.log('Error submitting budget answers:', err);
+            setBudgetError('Failed to submit budget answers. Please try again.');
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -538,6 +554,17 @@ const ContactUs = () => {
                                             ))}
                                         </div>
 
+                                        {budgetError && currentBudgetQuestion === budgetQuestions.length - 1 && (
+                                            <motion.div
+                                                initial={{ opacity: 0, y: -10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                className="p-3 bg-red-50 text-red-600 rounded-lg"
+                                            >
+                                                {budgetError}
+                                            </motion.div>
+                                        )}
+
+
                                         <div className="flex justify-between mt-8">
                                             <button
                                                 type="button"
@@ -553,23 +580,37 @@ const ContactUs = () => {
                                             >
                                                 ← Back
                                             </button>
-                                            <div className="mt-4 flex justify-center">
-                                                {budgetQuestions.map((_, idx) => (
-                                                    <div
-                                                        key={idx}
-                                                        className={`mx-1 w-3 h-3 rounded-full ${idx === currentBudgetQuestion
-                                                            ? 'bg-blue-600 scale-125'
-                                                            : idx < currentBudgetQuestion
-                                                                ? 'bg-green-500'
-                                                                : 'bg-gray-300'
-                                                            }`}
-                                                    />
-                                                ))}
-                                            </div>
+                                            <div className="flex items-center">
+                                                {/* <div className="mt-4 flex justify-center">
+                                                    {budgetQuestions.map((_, idx) => (
+                                                        <div
+                                                            key={idx}
+                                                            className={`mx-1 w-3 h-3 rounded-full ${idx === currentBudgetQuestion
+                                                                ? 'bg-blue-600 scale-125'
+                                                                : idx < currentBudgetQuestion
+                                                                    ? 'bg-green-500'
+                                                                    : 'bg-gray-300'
+                                                                }`}
+                                                        />
+                                                    ))}
+                                                </div> */}
 
-                                            <span className="text-gray-500 mt-2">
-                                                {currentBudgetQuestion + 1} of {budgetQuestions.length}
-                                            </span>
+                                                <span className="text-gray-500 mt-2">
+                                                    {currentBudgetQuestion + 1} of {budgetQuestions.length}
+                                                </span>
+                                            </div>
+                                            {currentBudgetQuestion === budgetQuestions.length - 1 && (
+                                                <button
+                                                    onClick={handleBudgetSubmit}
+                                                    disabled={isSubmitting}
+                                                    className={`px-4 py-2 rounded-lg text-white font-medium ${isSubmitting
+                                                        ? 'bg-gray-400 cursor-not-allowed'
+                                                        : 'bg-blue-600 hover:bg-blue-700'
+                                                        }`}
+                                                >
+                                                    {isSubmitting ? 'Submitting...' : 'Submit'}
+                                                </button>
+                                            )}
                                         </div>
                                     </motion.div>
                                 </AnimatePresence>
