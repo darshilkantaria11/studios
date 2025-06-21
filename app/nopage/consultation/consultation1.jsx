@@ -11,7 +11,7 @@ const ContactUs = () => {
         services: [], // multiple checkboxes
         message: ''
     });
-    const [step, setStep] = useState(1);
+    const [step, setStep] = useState(2);
     const [budgetAnswers, setBudgetAnswers] = useState({});
     const [currentBudgetQuestion, setCurrentBudgetQuestion] = useState(0);
     const [error, setError] = useState(''); // New state for error messages
@@ -85,8 +85,8 @@ const ContactUs = () => {
             setCurrentBudgetQuestion(prev => prev + 1);
         } else {
             // Submit budget answers
-            setStep(3);
             submitBudgetAnswers(updatedAnswers);
+            setStep(3);
         }
     };
 
