@@ -4,6 +4,7 @@ import Home2a from "./nopage/home/home2a"
 import Home3 from "./nopage/home/home3"
 import Home4 from "./nopage/home/home4"
 import Home5 from "./nopage/home/home5"
+import Home5a from "./nopage/home/home5a"
 import Home6 from "./nopage/home/home6"
 import Head from "next/head"
 
@@ -151,6 +152,7 @@ export default function Page() {
             <Home3 />
             <Home4 />
             <Home5 />
+            <Home5a />
             <Home6 />
         </>
     )
