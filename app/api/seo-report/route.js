@@ -25,7 +25,7 @@ export async function POST(req) {
         // Email to admin (you)
         const adminMail = {
             from: `"SEO Report Request" <${process.env.EMAIL_USER}>`,
-            to: "contact@designuix.com",
+            to: "designuixteam@gmail.com",
             subject: `New SEO Report Request: ${website}`,
             html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
