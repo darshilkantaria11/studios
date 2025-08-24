@@ -144,11 +144,11 @@ export default function Testimonials() {
 
                             <div className="pt-6">
                                 <Link
-                                    href="/get-free-consultation"
-                                    title="Get a free consultation from Designuix web design company"
-                                    className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-700 to-purple-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
+                                    href="/request-a-quote"
+                                    title="Get a Quote from Designuix web design company"
+                                    className="shine-button inline-flex items-center gap-3 bg-gradient-to-r from-blue-700 to-purple-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
                                 >
-                                    Get Free Consultation
+                                    Request a Quote
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         className="h-5 w-5"
@@ -273,11 +273,11 @@ export default function Testimonials() {
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
+                            className="shine-button1 bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
                             aria-label="Get a free web design consultation from Designuix"
                         >
-                            <Link href="/get-free-consultation" title="Get a free consultation from Designuix web design company">
-                                Get Free Consultation →
+                            <Link href="/request-a-quote" title="Get a Quote from Designuix web design company">
+                                Request a Quote →
                             </Link>
                         </motion.div>
                     </div>

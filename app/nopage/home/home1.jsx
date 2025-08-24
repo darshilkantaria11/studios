@@ -151,7 +151,7 @@ export default function Home() {
                             transition={{ type: 'spring', stiffness: 200 }}
                             className="hidden lg:block"
                         >
-                            <Link href="/get-free-consultation" passHref title="Get free website templates by filling the form">
+                            <Link href="/request-a-quote" passHref title="Get free website templates by filling the form">
                                 <div className="bg-blue-600 text-white px-4 py-2 rounded-full text-center text-sm cursor-pointer hover:bg-blue-700">
                                     🎁 Get free web design templates (fill the form) →
                                 </div>
@@ -160,13 +160,13 @@ export default function Home() {
                         </motion.div>
 
                         {/* Mobile CTA */}
-                        <Link href="/get-free-consultation" passHref title="Claim your free consultation now" className='lg:hidden'>
+                        <Link href="/request-a-quote" passHref title="Request a Quote" className='lg:hidden'>
                             <motion.div
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="lg:hidden w-full bg-gradient-to-r from-blue-700 to-purple-700 text-white font-semibold py-3 rounded-lg text-center"
+                                className="lg:hidden shine-button w-full bg-gradient-to-r from-blue-700 to-purple-700 text-white font-semibold py-3 rounded-lg text-center"
                             >
-                                Get Free Consultation →
+                                Request a Quote →
                             </motion.div>
                         </Link>
 
@@ -206,13 +206,13 @@ export default function Home() {
                                 ))}
                             </Swiper>
 
-                            <Link href="/get-free-consultation" passHref title="Claim your free consultation now">
+                            <Link href="/request-a-quote" passHref title="Request a Quote">
                                 <motion.div
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
-                                    className=" w-full bg-gradient-to-r from-blue-700 to-purple-700 text-white font-semibold py-3 rounded-lg text-center"
+                                    className="shine-button w-full bg-gradient-to-r from-blue-700 to-purple-700 text-white font-semibold py-3 rounded-lg text-center"
                                 >
-                                    Get Free Consultation →
+                                    Request a Quote →
                                 </motion.div>
                             </Link>
                             <div className="text-center mt-2">

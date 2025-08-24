@@ -303,7 +303,7 @@ export default function ServicesPage() {
             answer: (
                 <div className="text-gray-700">
                     <p className="mb-3">
-                        Getting started is simple: click "Get Free Consultation" on our homepage or contact us via WhatsApp/email. We'll schedule a 15-20 minute discovery call at your convenience to discuss your project goals and requirements.
+                        Getting started is simple: click "Request a Quote" on our homepage or contact us via WhatsApp/email. We'll schedule a 15-20 minute discovery call at your convenience to discuss your project goals and requirements.
                     </p>
                     <p className="mb-3">
                         During this no-obligation consultation, we'll: 1) Understand your business and goals, 2) Discuss your vision for the website, 3) Review your timeline and budget, and 4) Explain our process in detail. If we're a good fit, we'll provide a customized proposal within 24 hours.
@@ -395,11 +395,11 @@ export default function ServicesPage() {
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
-                            aria-label="Get a free web design consultation from Designuix"
+                            className="shine-button1 bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
+                            aria-label="Get a free web design Quote from Designuix"
                         >
-                            <Link href="/get-free-consultation" title="Get a free consultation from Designuix web design company">
-                                Get Free Consultation →
+                            <Link href="/request-a-quote" title="Get a Quote from Designuix web design company">
+                                Request a Quote →
                             </Link>
                         </motion.div>
                     </div>

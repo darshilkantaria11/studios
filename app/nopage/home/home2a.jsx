@@ -73,13 +73,13 @@ export default function ServicesPage() {
                 </p>
 
                 <div className=" mb-12 text-white text-center ">
-                    <Link href="/get-free-consultation" title="Get your free website consultation with Designuix">
+                    <Link href="/request-a-quote" title="Get your free website development Quote with Designuix">
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transition cursor-pointer"
+                            className="shine-button inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transition cursor-pointer"
                         >
-                            Get Free Consultation →
+                            Request a Quote →
                         </motion.div>
                     </Link>
                 </div>

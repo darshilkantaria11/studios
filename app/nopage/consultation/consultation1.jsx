@@ -292,7 +292,7 @@ const ContactUs = () => {
                                             {/* Copy Button */}
                                             <button
                                                 onClick={handleCopy}
-                                                className="text-sm text-blue-600 hover:text-blue-800 px-3 py-1 bg-white border border-blue-200 rounded-lg"
+                                                className="hidden md:block text-sm text-blue-600 hover:text-blue-800 px-3 py-1 bg-white border border-blue-200 rounded-lg"
                                             >
                                                 {copied ? "Copied!" : "Copy"}
                                             </button>
@@ -314,10 +314,10 @@ const ContactUs = () => {
                             <div className="lg:w-3/5">
                                 <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200 ">
                                     <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2">
-                                        Book Your Free Consultation
+                                        Request a Quote
                                     </h2>
                                     <p className="text-gray-600 mb-8 text-sm">
-                                        Tell us a bit about your business and goals — we&apos;ll review your needs and get back to you with a personalized strategy to grow your online presence. No hard selling, just real solutions.
+                                        Share your requirements — get a custom quote within 24 hours.
                                     </p>
 
 

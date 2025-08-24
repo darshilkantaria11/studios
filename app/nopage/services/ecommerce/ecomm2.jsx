@@ -233,11 +233,11 @@ export default function GrowthSection() {
 
       <div className="pt-6">
         <Link
-          href="/get-free-consultation"
-          title="Get Free E-commerce Development Consultation"
-          className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
+          href="/request-a-quote"
+          title="Get Free E-commerce Development Quote"
+          className="shine-button inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
         >
-          Get Your Free Store Consultation →
+          Request a Quote →
         </Link>
       </div>
     </div>
@@ -407,13 +407,13 @@ export default function GrowthSection() {
                         <p className="text-blue-100 mb-8">
                             Join dozens of thriving online stores our e-commerce development company has helped grow with smart tools and seamless automation. Let's build your success story today!
                         </p>
-                        <Link href="/get-free-consultation" title="Get Free E-commerce Development Consultation">
+                        <Link href="/request-a-quote" title="Get Free E-commerce Development Quote">
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
+                                className="shine-button1 bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
                             >
-                                Get Your Free Ecommerce Consultation →
+                                Request a Quote →
                             </motion.button>
                         </Link>
                     </div>

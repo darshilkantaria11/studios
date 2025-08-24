@@ -147,15 +147,15 @@ export default function Onboarding() {
             </div>
             
             <Link
-              href="/get-free-consultation"
+              href="/request-a-quote"
               title="Get started with our web design company"
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-5 rounded-full font-bold hover:shadow-2xl transition-all text-lg shadow-lg hover:shadow-yellow-400/30"
+                className="shine-button bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-5 rounded-full font-bold hover:shadow-2xl transition-all text-lg shadow-lg hover:shadow-yellow-400/30"
               >
-                <span className="drop-shadow-md">Start With Free Consultation →</span>
+                <span className="drop-shadow-md">Request a Quote →</span>
               </motion.button>
             </Link>
             

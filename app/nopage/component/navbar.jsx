@@ -30,13 +30,13 @@ const Navbar = () => {
     return (
         <header className="sticky top-0 z-50 bg-white shadow-sm" role="banner">
             <div className="container mx-auto">
-                <div className="flex justify-between items-center h-14 lg:h-20 px-2 lg:px-0">
+                <div className="flex justify-between items-center h-16 py-2 lg:h-20 px-2 lg:px-0">
                     {/* Logo with semantic h1 for homepage SEO */}
                     <div className="m-0 p-0 text-lg font-semibold">
                         <Link href="/" title="Web Design Company - Home">
                             <motion.div
                                 whileHover={{ scale: 1.05 }}
-                                className="w-[120px] lg:w-[150px] cursor-pointer"
+                                className="w-[100px] lg:w-[150px] cursor-pointer"
                             >
                                 <Image
                                     src={Logo}
@@ -81,17 +81,30 @@ const Navbar = () => {
                             className="ml-8 flex items-center"
                         >
                             <Link
-                                href="/get-free-consultation"
+                                href="/request-a-quote"
                                 title="Book Your Free Web Design Consultation"
                                 className="shine-button bg-black text-white hover:bg-white hover:text-black border border-black px-4 font-medium py-3 rounded-full hover:scale-105 transition-all text-md shadow-lg"
                             >
-                                Get Free Consultation →
+                                Request a Quote →
                             </Link>
                         </motion.div>
                     </nav>
 
                     {/* Mobile Menu Button */}
                     <div className="lg:hidden flex items-center">
+                        <motion.div
+                            initial={{ x: 20 }}
+                            animate={{ x: 0 }}
+                            className="ml-8 flex items-center"
+                        >
+                            <Link
+                                href="/request-a-quote"
+                                title="Book Your Free Web Design Consultation"
+                                className="shine-button bg-black text-white hover:bg-white hover:text-black border border-black px-3 font-medium py-2 rounded-full hover:scale-105 transition-all text-sm shadow-lg"
+                            >
+                                Request a Quote →
+                            </Link>
+                        </motion.div>
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="text-black focus:outline-none p-2"
@@ -128,11 +141,11 @@ const Navbar = () => {
                                 </Link>
                             ))}
                             <Link
-                                href="/get-free-consultation"
+                                href="/request-a-quote"
                                 title="Book a Free Website Consultation"
                                 className="bg-black text-white hover:bg-white hover:text-black border border-black block text-center px-6 py-3 rounded-lg transition-colors font-semibold shadow-md"
                             >
-                                Get Free Consultation →
+                                Request a Quote →
                             </Link>
                         </div>
                     </motion.nav>

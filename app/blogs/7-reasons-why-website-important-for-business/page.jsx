@@ -173,9 +173,9 @@ const WebsiteImportance = () => {
                             Whether you need a powerful new website, an online store that sells, or Google rankings that matter — we&apos;re your tech team on demand.
                         </p>
 
-                        <Link href="/">
-                            <div className="inline-block bg-white text-black font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transition cursor-pointer">
-                                Get Free Consultation →
+                        <Link href="/request-a-quote">
+                            <div className="shine-button1 inline-block bg-white text-black font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transition cursor-pointer">
+                                Request a Quote →
                             </div>
                         </Link>
                     </div>
@@ -188,7 +188,7 @@ const WebsiteImportance = () => {
                     <h2 className="text-3xl md:text-4xl font-bold mb-8">7 Undeniable Reasons Your Business Needs a Website</h2>
 
                     <h3 className="text-2xl sm:text-3xl font-bold mb-4">1. 24/7 Lead Generation Machine</h3>
-                    <p className="mb-6 text-lg">
+                    <div className="mb-6 text-lg">
                         <p>
                             One of the biggest benefits of having a professional website for your business is that it works around the clock — even when you don&apos;t. Unlike a physical store or office that has fixed working hours, your website stays live and accessible 24/7. It becomes your tireless sales assistant, capturing leads, answering questions, and showcasing your services or products at any time of the day or night.
                             <br />
@@ -196,7 +196,7 @@ const WebsiteImportance = () => {
                             <br />
                             If you're looking to build a 24/7 online presence that attracts leads and converts visitors, <Link href="/" className="text-blue-600 underline font-semibold">partner with a trusted web design company</Link> like us and get started today.
                         </p>
-                    </p>
+                    </div>
                     <div className="relative w-full h-[300px] md:h-[400px] lg:h-[400px] mb-10">
                         <Image
                             src="/blogs/blog1a.webp" // replace with your actual image path
@@ -370,9 +370,9 @@ const WebsiteImportance = () => {
                             Whether you need a powerful new website, an online store that sells, or Google rankings that matter — we&apos;re your tech team on demand.
                         </p>
 
-                        <Link href="/get-free-consultation">
-                            <div className="inline-block bg-white text-black font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transition cursor-pointer">
-                                Get Free Consultation →
+                        <Link href="/request-a-quote">
+                            <div className="shine-button1 inline-block bg-white text-black font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transition cursor-pointer">
+                                Request a Quote →
                             </div>
                         </Link>
                     </div>

@@ -105,9 +105,9 @@ export default function ServicesPage() {
         </p>
 
         <div className="text-center mb-12">
-          <Link href="/get-free-consultation" title="Get Web Development and SEO Services">
-            <motion.div className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transition scale-100 hover:scale-105">
-              Get Free Consultation →
+          <Link href="/request-a-quote" title="Get Web Development and SEO Services">
+            <motion.div className="shine-button inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transition scale-100 hover:scale-105">
+              Request a Quote →
             </motion.div>
           </Link>
         </div>
@@ -167,9 +167,9 @@ export default function ServicesPage() {
           <motion.p className="mb-6 max-w-xl mx-auto text-lg">
             Whether you're launching a new site, building an online store, or boosting your rankings—we offer full web development and SEO services to meet your goals.
           </motion.p>
-          <Link href="/get-free-consultation" title="Start Web Development and SEO Services">
-            <motion.div className="inline-block bg-white text-black font-bold px-8 py-4 rounded-full shadow-lg transition hover:shadow-2xl">
-              Get Free Consultation →
+          <Link href="/request-a-quote" title="Start Web Development and SEO Services">
+            <motion.div className="shine-button1 inline-block bg-white text-black font-bold px-8 py-4 rounded-full shadow-lg transition hover:shadow-2xl">
+               Request a Quote →
             </motion.div>
           </Link>
         </div>

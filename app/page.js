@@ -9,9 +9,9 @@ import Home6 from "./nopage/home/home6"
 import Head from "next/head"
 
 export const metadata = {
-    title: "Designuix - Best Web Design Company [Get Free Consultation]",
+    title: "Designuix - Best Web Design Company [Request a Quote]",
     description:
-        "As a full-service web design company, we handle all your website needs under one roof. Book a free consultation and receive a tailored quote within 24 hours.",
+        "As a full-service web design company, we handle all your website needs under one roof. Request a free quote and receive a tailored estimate within 24 hours.",
     keywords: [
         "web design company",
         "web design agency",
@@ -25,7 +25,6 @@ export const metadata = {
         "custome web development",
         "custom web design",
         "designuix",
-
     ],
     alternates: {
         canonical: "/",
@@ -44,9 +43,9 @@ export const metadata = {
     creator: "Designuix",
     publisher: "Designuix",
     openGraph: {
-        title: "Designuix - Best Web Design Company [Get Free Consultation]",
+        title: "Designuix - Best Web Design Company [Request a Quote]",
         description:
-            "As a full-service web design company, we handle all your website needs under one roof. 🚀 Book a free consultation and get a custom quote in 24 hours!",
+            "As a full-service web design company, we handle all your website needs under one roof. 🚀 Request a free quote and get a custom estimate in 24 hours!",
         url: "https://designuix.com",
         siteName: "Designuix",
         images: [
@@ -60,14 +59,15 @@ export const metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Designuix - Best Web Design Company [Get Free Consultation]",
+        title: "Designuix - Best Web Design Company [Request a Quote]",
         description:
-            "As a full-service web design company, we handle all your website needs under one roof. 🚀 Book a free consultation and get a custom quote today!",
+            "As a full-service web design company, we handle all your website needs under one roof. 🚀 Request a free quote and get your custom estimate today!",
         images: ["https://designuix.com/opengraph-designuix.png"], // replace if needed
         creator: "@designuix_team", // optional, if you have a Twitter handle
     },
     metadataBase: new URL("https://designuix.com"),
 };
+
 
 
 export default function Page() {

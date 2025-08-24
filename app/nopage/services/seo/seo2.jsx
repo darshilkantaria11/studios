@@ -154,9 +154,9 @@ export default function GrowthSection() {
 
                             <div className="pt-6">
                                 <Link
-                                    href="/get-free-consultation"
+                                    href="/request-a-quote"
                                     title="Get Free SEO Audit from Top SEO Company"
-                                    className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
+                                    className="shine-button inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
                                 >
                                     Want Results Like This? Claim Your Free SEO Audit →
                                 </Link>
@@ -267,13 +267,13 @@ export default function GrowthSection() {
                         <p className="text-green-100 mb-8">
                             Let the best SEO company help you grow with smart SEO strategies that drive traffic and real business results. Let's start your SEO journey today.
                         </p>
-                        <Link href="/get-free-consultation" title="Get Free SEO Consultation">
+                        <Link href="/request-a-quote" title="Get SEO Quote">
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
+                                className="shine-button1 bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
                             >
-                                Get Free SEO Consultation →
+                                Request a Quote →
                             </motion.button>
                         </Link>
                     </div>

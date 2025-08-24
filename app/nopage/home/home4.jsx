@@ -263,9 +263,9 @@ export default function Benefits() {
         {/* CTA */}
         <div className="mt-16 text-center">
           <Link
-            href="/get-free-consultation"
+            href="/request-a-quote"
             title="Get Free Consultation with Our Web Design Experts"
-            className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 px-8 py-4 rounded-full text-lg font-medium transition-all shadow-lg hover:shadow-xl"
+            className="shine-button inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 px-8 py-4 rounded-full text-lg font-medium transition-all shadow-lg hover:shadow-xl"
           >
             Get Your Free Website Consultation Today
           </Link>

@@ -211,11 +211,11 @@ export default function GrowthSection() {
 
               <div className="pt-6">
                 <Link
-                  href="/get-free-consultation"
-                  title="Get a free consultation from Designuix web design company"
-                  className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-700 to-purple-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
+                  href="/request-a-quote"
+                  title="Get a free Quote from Designuix web design company"
+                  className="shine-button inline-flex items-center gap-3 bg-gradient-to-r from-blue-700 to-purple-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
                 >
-                  Get Free Consultation
+                  Request a Quote
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -246,11 +246,11 @@ export default function GrowthSection() {
             Transparent process. Enterprise-grade results.
           </p>
           <Link
-            href="/get-free-consultation"
-            className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-8 py-4 rounded-full shadow-md transition-transform transform hover:scale-105"
+            href="/request-a-quote"
+            className="shine-button inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-8 py-4 rounded-full shadow-md transition-transform transform hover:scale-105"
             aria-label="View custom web development pricing"
           >
-            Get Free Consultation →
+            Request a Quote →
           </Link>
         </section>
 
@@ -293,8 +293,8 @@ export default function GrowthSection() {
 
             <div className="mt-16">
               <Link
-                href="/get-free-consultation"
-                className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white text-lg font-semibold py-3 px-8 rounded-full transition shadow-md"
+                href="/request-a-quote"
+                className="shine-button inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white text-lg font-semibold py-3 px-8 rounded-full transition shadow-md"
               >
                 Let&apos;s Build Your Website That Sells →
               </Link>
@@ -410,13 +410,13 @@ export default function GrowthSection() {
             <p className="text-blue-100 mb-8">
               Let's create a web application that transforms your business
             </p>
-            <Link href="/get-free-consultation" >
+            <Link href="/request-a-quote" >
               <motion.div
 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
-                aria-label="Contact for custom web development consultation"
+                className="shine-button1 inline-block bg-white text-black px-8 py-4 rounded-full font-bold transition-colors"
+                aria-label="Contact for custom web development quote"
               >
                 Start Your Project Now →
               </motion.div>

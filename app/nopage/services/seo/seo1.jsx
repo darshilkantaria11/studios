@@ -216,7 +216,7 @@ export default function Home() {
                                             disabled={isSubmitting}
                                             whileHover={{ scale: 1.02 }}
                                             whileTap={{ scale: 0.98 }}
-                                            className="w-full bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold py-3 rounded-lg transition-all duration-300 flex justify-center items-center gap-2 relative overflow-hidden mt-6 disabled:opacity-70"
+                                            className="shine-button w-full bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold py-3 rounded-lg transition-all duration-300 flex justify-center items-center gap-2 relative overflow-hidden mt-6 disabled:opacity-70"
                                         >
                                             <span className="relative z-10">
                                                 {isSubmitting ? 'Processing...' : '🔍 Get My Free SEO Report'}
@@ -235,11 +235,11 @@ export default function Home() {
                                         Want personalized SEO recommendations?
                                     </h3>
                                     <Link
-                                        href="/get-free-consultation"
+                                        href="/request-a-quote"
                                         title="Schedule Free SEO Consultation"
-                                        className="block w-full bg-black text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:bg-gray-800 text-center"
+                                        className="shine-button block w-full bg-black text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:bg-gray-800 text-center"
                                     >
-                                        Get Free SEO Consultation →
+                                        Request a Quote →
                                     </Link>
                                 </div>
                             </div>
