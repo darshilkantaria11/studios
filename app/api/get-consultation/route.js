@@ -47,7 +47,7 @@ async function processEmailAsync({ name, phone, email, business, services, messa
       from: `"Designuix" <${process.env.EMAIL_USER}>`,
       to: "designuixteam@gmail.com",
       subject: "🚀 New Consultation Request",
-      text: `New consultation request:
+      text: `New Quote request:
         Name: ${name}
         Email: ${email}
         Phone: ${phone}
@@ -60,8 +60,8 @@ async function processEmailAsync({ name, phone, email, business, services, messa
     const clientMailOptions = {
       from: `"Designuix" <${process.env.EMAIL_USER}>`,
       to: email,
-      subject: "✅ Consultation Received",
-      text: `Hi ${name}, we've received your consultation request. We'll contact you shortly.`
+      subject: "✅ Quote Request Received",
+      text: `Hi ${name}, we've received your Quote request. We'll contact you shortly.`
     };
 
     await transporter.sendMail(adminMailOptions);
