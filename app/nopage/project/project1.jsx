@@ -5,12 +5,12 @@ import Link from "next/link";
 
 const projects = [
     {
-    title: "Sovanoca Construction",
-    description: "We helped Sovanoca establish a strong digital presence by building a fully personalized website with dedicated service pages. Through strategic SEO, we ranked them at the top for key services and helped them consistently generate 10–15 qualified leads per month within just 6 months.",
-    image: "/project7.png",
-    link: "https://sovanoca.com",
-}
-,
+        title: "Sovanoca Construction",
+        description: "We helped Sovanoca establish a strong digital presence by building a fully personalized website with dedicated service pages. Through strategic SEO, we ranked them at the top for key services and helped them consistently generate 10–15 qualified leads per month within just 6 months.",
+        image: "/project7.png",
+        link: "https://sovanoca.com",
+    }
+    ,
     {
         title: "Knottin Daycare Centre",
         description: "We helped Knottin Day Care Centre boost trust and visibility online — resulting in a noticeable increase in student admissions.",
@@ -52,6 +52,13 @@ const projects = [
         image: "/project6.png",
 
         link: "https://shankerwoodlam.com",
+    },
+      {
+        title: "Vasud Exim",
+        description: "We built a sleek website for Vasud Exim, a chemical trading company, to showcase their products and attract more leads.",
+
+        image: "/project8.png",
+        link: "https://vasudexim.com",
     },
 ];
 
