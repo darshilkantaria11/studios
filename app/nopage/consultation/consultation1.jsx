@@ -185,6 +185,13 @@ const ContactUs = () => {
             });
 
             if (response.ok) {
+                if (typeof window.gtag !== "undefined") {
+                    window.gtag("event", "conversion", {
+                        send_to: "AW-17274749876/Aqu7CKLWs-0aELSHn61A",
+                        value: 1.0,
+                        currency: "INR",
+                    });
+                }
                 setSubmitMessage('Form submitted successfully!');
                 setTimeout(() => setStep(2), 1500); // Show success briefly before moving on
             } else {
