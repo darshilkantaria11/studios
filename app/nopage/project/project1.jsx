@@ -7,7 +7,7 @@ const projects = [
     {
         title: "Ruveri Jewel",
         description: "We designed and developed a premium eCommerce platform for Ruveri Jewel, showcasing exquisite gold and silver jewelry with a seamless shopping experience. The website features real-time metal pricing, secure online payments, advanced product management, and a modern user interface that reflects the elegance of the brand while delivering exceptional performance across all devices.",
-        image: "/project9.png",
+        image: "/Project9.png",
         link: "https://www.ruverijewel.com",
     },
     {
@@ -19,7 +19,7 @@ const projects = [
     {
         title: "Erroneous Gold",
         description: "We built a fully customized eCommerce website for Erroneous Gold, specializing in personalized jewelry including custom name necklaces, keychains, bracelets, and unique gifts. Customers can easily personalize products, place secure orders, and enjoy a smooth shopping experience through a fast, mobile-friendly, and conversion-focused platform designed to bring custom creations to life.",
-        image: "/project10.png",
+        image: "/Project10.png",
         link: "https://erroneousgold.com",
     },
     ,
