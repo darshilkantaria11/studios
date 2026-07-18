@@ -5,11 +5,23 @@ import Link from "next/link";
 
 const projects = [
     {
+        title: "Ruveri Jewel",
+        description: "We designed and developed a premium eCommerce platform for Ruveri Jewel, showcasing exquisite gold and silver jewelry with a seamless shopping experience. The website features real-time metal pricing, secure online payments, advanced product management, and a modern user interface that reflects the elegance of the brand while delivering exceptional performance across all devices.",
+        image: "/project9.png",
+        link: "https://www.ruverijewel.com",
+    },
+    {
         title: "Sovanoca Construction",
         description: "We helped Sovanoca establish a strong digital presence by building a fully personalized website with dedicated service pages. Through strategic SEO, we ranked them at the top for key services and helped them consistently generate 10–15 qualified leads per month within just 6 months.",
         image: "/project7.png",
         link: "https://sovanoca.com",
-    }
+    },
+    {
+        title: "Erroneous Gold",
+        description: "We built a fully customized eCommerce website for Erroneous Gold, specializing in personalized jewelry including custom name necklaces, keychains, bracelets, and unique gifts. Customers can easily personalize products, place secure orders, and enjoy a smooth shopping experience through a fast, mobile-friendly, and conversion-focused platform designed to bring custom creations to life.",
+        image: "/project10.png",
+        link: "https://erroneousgold.com",
+    },
     ,
     {
         title: "Knottin Daycare Centre",
@@ -53,7 +65,7 @@ const projects = [
 
         link: "https://shankerwoodlam.com",
     },
-      {
+    {
         title: "Vasud Exim",
         description: "We built a sleek website for Vasud Exim, a chemical trading company, to showcase their products and attract more leads.",
 
